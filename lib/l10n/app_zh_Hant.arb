@@ -464,9 +464,9 @@
   "powertrainRefusedProfileNotInCatalog": "未授權：這個設定檔不在已驗證的目錄中。",
   "powertrainRefusedProfileNotProbeable": "未授權：這個設定檔不是可以單次實驗讀取的設定檔。",
   "powertrainRefusedQuarantinedAfterRejectedRead": "本次連線已隔離：先前一次單次讀取沒有通過結構檢查。請重新連線後再試。",
-  "powertrainRefusedNotConnectedOrNotInForeground": "\u9019\u6b21\u55ae\u6b21\u8b80\u53d6\u6c92\u6709\u958b\u59cb\uff1a\u76ee\u524d\u6c92\u6709\u9023\u7dda\uff0c\u6216 App \u4e0d\u5728\u524d\u666f\u3002",
-  "powertrainRefusedNoLiveAuthorization": "\u9019\u6b21\u55ae\u6b21\u8b80\u53d6\u6c92\u6709\u958b\u59cb\uff1a\u76ee\u524d\u6c92\u6709\u6301\u6709\u55ae\u6b21\u6388\u6b0a\u3002\u6388\u6b0a\u4e0d\u5b58\u5728\u3001\u5df2\u904e\u671f\u3001\u51b7\u537b\u4e2d\u6216\u5df2\u88ab\u9694\u96e2\u3002",
-  "powertrainRefusedDiscardedAtLifecycleBoundary": "\u55ae\u6b21\u8b80\u53d6\u9032\u884c\u4e2d\uff0c\u9023\u7dda\u6216\u524d\u666f\u72c0\u614b\u6539\u8b8a\u4e86\uff0c\u56e0\u6b64\u5b83\u7684\u7d50\u679c\u88ab\u4e1f\u68c4\u800c\u6c92\u6709\u986f\u793a\u3002\u6c92\u6709\u4efb\u4f55\u5931\u6557\uff0c\u4e5f\u6c92\u6709\u4fdd\u7559\u4efb\u4f55\u7d50\u679c\u3002",
+  "powertrainRefusedNotConnectedOrNotInForeground": "這次單次讀取沒有開始：目前沒有連線，或 App 不在前景。",
+  "powertrainRefusedNoLiveAuthorization": "這次單次讀取沒有開始：目前沒有持有單次授權。授權不存在、已過期、冷卻中或已被隔離。",
+  "powertrainRefusedDiscardedAtLifecycleBoundary": "單次讀取進行中，連線或前景狀態改變了，因此它的結果被丟棄而沒有顯示。沒有任何失敗，也沒有保留任何結果。",
   "powertrainRefusedQuarantinedAtAttemptCap": "本次連線已隔離：同一個指令已經嘗試 {attemptCap} 次。請重新連線後再試。",
   "powertrainResearchOnlyNeverQueries": "僅研究，不會查詢",
   "powertrainRestoreStorageErrorRetry": "還原先前安裝時發生儲存錯誤，已重新排程，請再試一次。",
@@ -1029,12 +1029,12 @@
   "settingsManualCommandRawIsoTpModeUnavailable": "此 ELM327 路徑不提供主機可見的 ISO-TP 重組。",
   "settingsManualCommandCanPriorityUnavailable": "此 ELM327 路徑不提供 CAN 優先權程式設計。",
   "settingsManualCommandCanReceiveFilterUnavailable": "此 ELM327 路徑不提供 CAN 接收過濾。",
-  "manualCommandRefusedEmpty": "\u6c92\u6709\u8f38\u5165\u6307\u4ee4\u3002",
-  "manualCommandRefusedMoreThanOneCommand": "\u6307\u4ee4\u88e1\u6709\u63db\u884c\u6216\u63a7\u5236\u5b57\u5143\uff0c\u9019\u6a23\u6703\u4e00\u6b21\u9001\u51fa\u591a\u500b\u6307\u4ee4\u3002\u8f49\u63a5\u5668\u4ee5\u63db\u884c\u5206\u9694\u6307\u4ee4\uff0c\u6240\u4ee5\u7b2c\u4e8c\u500b\u6307\u4ee4\u4e0d\u6703\u7d93\u904e\u9019\u88e1\u7684\u4efb\u4f55\u6aa2\u67e5 \u2014\u2014 \u5305\u62ec\u7981\u6b62\u6e05\u9664\u6545\u969c\u78bc\u7684\u90a3\u4e00\u9805\u3002\u8acb\u4e00\u6b21\u53ea\u8f38\u5165\u4e00\u500b\u6307\u4ee4\u3002",
-  "manualCommandRefusedAdapterStateWouldChange": "\u624b\u52d5\u6307\u4ee4\u53ea\u63a5\u53d7\u67e5\u8a62\uff0c\u4e0d\u63a5\u53d7\u6703\u6539\u8b8a\u8f49\u63a5\u5668\u8a2d\u5b9a\u7684\u6307\u4ee4\u3002\u300c{command}\u300d\u6703\u6539\u52d5\u8f49\u63a5\u5668\u72c0\u614b\uff0c\u800c App \u5c0d\u8f49\u63a5\u5668\u7684\u8a8d\u77e5\u4e0d\u6703\u8ddf\u8457\u66f4\u65b0 \u2014\u2014 \u63a5\u4e0b\u4f86\u7684\u8b80\u6578\u53ef\u80fd\u4f86\u81ea\u53e6\u4e00\u500b\u63a7\u5236\u5668\uff0c\u800c\u756b\u9762\u4e0a\u770b\u4e0d\u51fa\u4f86\u3002\n\u53ef\u7528\u7684\u67e5\u8a62\uff1a{allowed}\u3002",
-  "manualCommandRefusedClearHasItsOwnButton": "\u6e05\u9664\u6545\u969c\u78bc\u8acb\u7528\u6545\u969c\u78bc\u756b\u9762\u7684\u300c\u6e05\u9664\u300d\u6309\u9215\u3002\u5f9e\u9019\u88e1\u9001\u51fa\u6703\u8df3\u904e\u78ba\u8a8d\u3001\u8986\u84cb\u7387\u6aa2\u67e5\u8207\u56de\u61c9\u9a57\u8b49\uff0c\u800c\u4e14\u53ea\u6703\u6e05\u5230\u76ee\u524d\u9078\u4e2d\u7684\u90a3\u4e00\u500b\u63a7\u5236\u5668\u3002",
-  "manualCommandRefusedCharactersNoObdCommandHas": "\u6307\u4ee4\u300c{command}\u300d\u542b\u6709 OBD \u6307\u4ee4\u4e0d\u6703\u51fa\u73fe\u7684\u5b57\u5143\u3002\u9019\u88e1\u53ea\u63a5\u53d7\u5341\u516d\u9032\u4f4d\u7684\u670d\u52d9\u78bc\u8207\u53c3\u6578\uff08\u4f8b\u5982 0100\u300103\u30012211A6\uff09\uff0c\u6216 AT \u958b\u982d\u7684\u8f49\u63a5\u5668\u67e5\u8a62\u3002",
-  "manualCommandRefusedNotAReadOnlyQuery": "\u4e0d\u8a8d\u5f97\u7684\u6307\u4ee4\u300c{command}\u300d\u3002\u9019\u88e1\u53ea\u63a5\u53d7\u552f\u8b80\u67e5\u8a62\uff08Mode {allowed}\uff09\u8207\u8f49\u63a5\u5668\u67e5\u8a62\u6307\u4ee4\u3002",
+  "manualCommandRefusedEmpty": "沒有輸入指令。",
+  "manualCommandRefusedMoreThanOneCommand": "指令裡有換行或控制字元，這樣會一次送出多個指令。轉接器以換行分隔指令，所以第二個指令不會經過這裡的任何檢查 —— 包括禁止清除故障碼的那一項。請一次只輸入一個指令。",
+  "manualCommandRefusedAdapterStateWouldChange": "手動指令只接受查詢，不接受會改變轉接器設定的指令。「{command}」會改動轉接器狀態，而 App 對轉接器的認知不會跟著更新 —— 接下來的讀數可能來自另一個控制器，而畫面上看不出來。\n可用的查詢：{allowed}。",
+  "manualCommandRefusedClearHasItsOwnButton": "清除故障碼請用故障碼畫面的「清除」按鈕。從這裡送出會跳過確認、覆蓋率檢查與回應驗證，而且只會清到目前選中的那一個控制器。",
+  "manualCommandRefusedCharactersNoObdCommandHas": "指令「{command}」含有 OBD 指令不會出現的字元。這裡只接受十六進位的服務碼與參數（例如 0100、03、2211A6），或 AT 開頭的轉接器查詢。",
+  "manualCommandRefusedNotAReadOnlyQuery": "不認得的指令「{command}」。這裡只接受唯讀查詢（Mode {allowed}）與轉接器查詢指令。",
   "commandFailureQueryHeaderRefused": "轉接器拒絕將這條要求對準到控制器 {header}，因此它沒有送出。如果留在轉接器實際持有的位址上，回應會來自沒有人詢問的控制器。",
   "commandFailureWholeVehicleHeaderRefused": "轉接器拒絕切換到 {address} 這個位址，而向全車提出的問題必須從它送出。沒有它，回應就無法對應到送出它們的控制器，因此這個要求沒有送出。",
   "commandFailureLegacyScanWouldBePartial": "這輛車使用的舊式匯流排沒有能觸及每個控制器的標準位址，而轉接器目前指定在控制器 {installed}。掃描只會涵蓋那一個控制器，卻會被當成全車結果呈現，因此沒有送出。請重新連線後再掃描一次。",
@@ -1171,8 +1171,12 @@
   "@settingsCaPickerScope": {
     "description": "Stops CA/US/TW namesake join. ICE/BEV/PHEV are not collapsed.",
     "placeholders": {
-      "firstYear": { "type": "int" },
-      "lastYear": { "type": "int" }
+      "firstYear": {
+        "type": "int"
+      },
+      "lastYear": {
+        "type": "int"
+      }
     }
   },
   "settingsCaMotorNotPower": "電機功率（kW）不是輪馬力，不會套用。",
@@ -1182,8 +1186,59 @@
   "settingsCaWillApplyOnly": "只會套用 {fields}。電機 kW、油耗、續航、CO2、VE、Cd、迎風面積、Crr 與傳動效率維持未解。",
   "@settingsCaWillApplyOnly": {
     "placeholders": {
-      "fields": { "type": "String" }
+      "fields": {
+        "type": "String"
+      }
     }
-  }
-
+  },
+  "pidNameEngineRpm": "引擎轉速",
+  "pidShortEngineRpm": "轉速",
+  "pidNameVehicleSpeed": "車速",
+  "pidShortVehicleSpeed": "車速",
+  "pidNameCoolantTemp": "引擎冷卻液溫度",
+  "pidShortCoolantTemp": "水溫",
+  "pidNameIntakeAirTemp": "進氣溫度",
+  "pidShortIntakeAirTemp": "進氣",
+  "pidNameEngineLoad": "引擎負荷",
+  "pidShortEngineLoad": "負荷",
+  "pidNameThrottlePosition": "節氣門位置",
+  "pidShortThrottlePosition": "節氣門",
+  "pidNameManifoldPressure": "進氣歧管絕對壓力",
+  "pidShortManifoldPressure": "MAP",
+  "pidNameMafRate": "空氣流量",
+  "pidShortMafRate": "MAF",
+  "pidNameTimingAdvance": "點火提前角",
+  "pidShortTimingAdvance": "點火",
+  "pidNameFuelPressure": "燃油壓力",
+  "pidShortFuelPressure": "油壓",
+  "pidNameFuelLevel": "燃油液位",
+  "pidShortFuelLevel": "油量",
+  "pidNameBarometricPressure": "大氣壓力",
+  "pidShortBarometricPressure": "大氣壓",
+  "pidNameControlModuleVoltage": "控制模組電壓",
+  "pidShortControlModuleVoltage": "電壓",
+  "pidNameAmbientAirTemp": "環境溫度",
+  "pidShortAmbientAirTemp": "環境",
+  "pidNameEngineOilTemp": "引擎機油溫度",
+  "pidShortEngineOilTemp": "油溫",
+  "pidNameEngineFuelRate": "引擎燃油消耗率",
+  "pidShortEngineFuelRate": "油耗",
+  "pidNameShortFuelTrimB1": "短期燃油修正（第 1 組）",
+  "pidShortShortFuelTrimB1": "短油修 B1",
+  "pidNameLongFuelTrimB1": "長期燃油修正（第 1 組）",
+  "pidShortLongFuelTrimB1": "長油修 B1",
+  "pidNameRunTime": "引擎啟動後運轉時間",
+  "pidShortRunTime": "運轉時間",
+  "pidNameDistanceWithMil": "故障燈亮起後行駛距離",
+  "pidShortDistanceWithMil": "故障燈里程",
+  "pidNameAbsoluteLoad": "絕對負荷",
+  "pidShortAbsoluteLoad": "絕對負荷",
+  "pidNameCommandedEgr": "EGR 指令",
+  "pidShortCommandedEgr": "EGR",
+  "pidNameRelativeThrottle": "相對節氣門位置",
+  "pidShortRelativeThrottle": "相對節氣門",
+  "pidNameBoostPressure": "渦輪增壓壓力",
+  "pidShortBoostPressure": "增壓",
+  "pidNameSpeedMph": "車速（mph）",
+  "pidShortSpeedMph": "車速 mph"
 }

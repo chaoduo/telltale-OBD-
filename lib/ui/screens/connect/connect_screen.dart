@@ -654,11 +654,17 @@ class _Header extends StatelessWidget {
                   showModalBottomSheet<void>(
                     context: context,
                     showDragHandle: true,
+                    // The picker grows with the number of shipped languages;
+                    // the default sheet height fits three and would clip the
+                    // fourth row.
+                    isScrollControlled: true,
                     builder: (sheetContext) {
                       return const SafeArea(
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB(24, 0, 24, 24),
-                          child: LanguagePicker(),
+                        child: SingleChildScrollView(
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(24, 0, 24, 24),
+                            child: LanguagePicker(),
+                          ),
                         ),
                       );
                     },

@@ -12,6 +12,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:torque_obd/core/theme/app_theme.dart';
+import 'package:torque_obd/l10n/generated/app_localizations.dart';
 import 'package:torque_obd/l10n/locale_resolution.dart';
 import 'package:torque_obd/obd/pid/pid.dart';
 import 'package:torque_obd/obd/pid/pid_library.dart';
@@ -204,17 +205,19 @@ void main() {
 
     expect(find.byKey(const Key('wear_dial')), findsOneWidget);
     // The dial paints its label; assert on the widget contract instead of
-    // rendered text.
+    // rendered text. The label is the shipped one for this locale, not
+    // `Pid.shortName`: the built-ins are named from the ARBs.
+    final zh = lookupAppLocalizations(testUiLocale);
     DialGauge gauge() => tester.widget<DialGauge>(find.byType(DialGauge));
-    expect(gauge().label, 'Speed');
+    expect(gauge().label, zh.pidShortVehicleSpeed);
 
     await tester.tap(find.byKey(const Key('wear_dial')));
     await tester.pump(const Duration(milliseconds: 400));
-    expect(gauge().label, 'RPM');
+    expect(gauge().label, zh.pidShortEngineRpm);
 
     await tester.tap(find.byKey(const Key('wear_dial')));
     await tester.pump(const Duration(milliseconds: 400));
-    expect(gauge().label, 'Coolant');
+    expect(gauge().label, zh.pidShortCoolantTemp);
   });
 
   testWidgets('long-press asks before disconnecting', (tester) async {

@@ -4551,4 +4551,154 @@ class AppLocalizationsEn extends AppLocalizations {
   String settingsCaWillApplyOnly(String fields) {
     return 'Only $fields will be applied. Motor kW, fuel consumption, range, CO2, VE, Cd, frontal area, Crr and transmission efficiency stay unresolved.';
   }
+
+  @override
+  String get pidNameEngineRpm => 'Engine RPM';
+
+  @override
+  String get pidShortEngineRpm => 'RPM';
+
+  @override
+  String get pidNameVehicleSpeed => 'Vehicle Speed';
+
+  @override
+  String get pidShortVehicleSpeed => 'Speed';
+
+  @override
+  String get pidNameCoolantTemp => 'Engine Coolant Temperature';
+
+  @override
+  String get pidShortCoolantTemp => 'Coolant';
+
+  @override
+  String get pidNameIntakeAirTemp => 'Intake Air Temperature';
+
+  @override
+  String get pidShortIntakeAirTemp => 'IAT';
+
+  @override
+  String get pidNameEngineLoad => 'Calculated Engine Load';
+
+  @override
+  String get pidShortEngineLoad => 'Load';
+
+  @override
+  String get pidNameThrottlePosition => 'Throttle Position';
+
+  @override
+  String get pidShortThrottlePosition => 'Throttle';
+
+  @override
+  String get pidNameManifoldPressure => 'Intake Manifold Absolute Pressure';
+
+  @override
+  String get pidShortManifoldPressure => 'MAP';
+
+  @override
+  String get pidNameMafRate => 'MAF Air Flow Rate';
+
+  @override
+  String get pidShortMafRate => 'MAF';
+
+  @override
+  String get pidNameTimingAdvance => 'Timing Advance';
+
+  @override
+  String get pidShortTimingAdvance => 'Timing';
+
+  @override
+  String get pidNameFuelPressure => 'Fuel Pressure';
+
+  @override
+  String get pidShortFuelPressure => 'Fuel Press';
+
+  @override
+  String get pidNameFuelLevel => 'Fuel Tank Level';
+
+  @override
+  String get pidShortFuelLevel => 'Fuel';
+
+  @override
+  String get pidNameBarometricPressure => 'Barometric Pressure';
+
+  @override
+  String get pidShortBarometricPressure => 'Baro';
+
+  @override
+  String get pidNameControlModuleVoltage => 'Control Module Voltage';
+
+  @override
+  String get pidShortControlModuleVoltage => 'Voltage';
+
+  @override
+  String get pidNameAmbientAirTemp => 'Ambient Air Temperature';
+
+  @override
+  String get pidShortAmbientAirTemp => 'Ambient';
+
+  @override
+  String get pidNameEngineOilTemp => 'Engine Oil Temperature';
+
+  @override
+  String get pidShortEngineOilTemp => 'Oil Temp';
+
+  @override
+  String get pidNameEngineFuelRate => 'Engine Fuel Rate';
+
+  @override
+  String get pidShortEngineFuelRate => 'Fuel Rate';
+
+  @override
+  String get pidNameShortFuelTrimB1 => 'Short Term Fuel Trim — Bank 1';
+
+  @override
+  String get pidShortShortFuelTrimB1 => 'STFT B1';
+
+  @override
+  String get pidNameLongFuelTrimB1 => 'Long Term Fuel Trim — Bank 1';
+
+  @override
+  String get pidShortLongFuelTrimB1 => 'LTFT B1';
+
+  @override
+  String get pidNameRunTime => 'Run Time Since Engine Start';
+
+  @override
+  String get pidShortRunTime => 'Run Time';
+
+  @override
+  String get pidNameDistanceWithMil => 'Distance Travelled With MIL On';
+
+  @override
+  String get pidShortDistanceWithMil => 'MIL Dist';
+
+  @override
+  String get pidNameAbsoluteLoad => 'Absolute Load Value';
+
+  @override
+  String get pidShortAbsoluteLoad => 'Abs Load';
+
+  @override
+  String get pidNameCommandedEgr => 'Commanded EGR';
+
+  @override
+  String get pidShortCommandedEgr => 'EGR';
+
+  @override
+  String get pidNameRelativeThrottle => 'Relative Throttle Position';
+
+  @override
+  String get pidShortRelativeThrottle => 'Rel Thr';
+
+  @override
+  String get pidNameBoostPressure => 'Turbo Boost (MAP − Baro)';
+
+  @override
+  String get pidShortBoostPressure => 'Boost';
+
+  @override
+  String get pidNameSpeedMph => 'Vehicle Speed (mph)';
+
+  @override
+  String get pidShortSpeedMph => 'Speed';
 }

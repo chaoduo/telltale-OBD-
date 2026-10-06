@@ -1168,8 +1168,12 @@
   "@settingsCaPickerScope": {
     "description": "Stops CA/US/TW namesake join. ICE/BEV/PHEV are not collapsed.",
     "placeholders": {
-      "firstYear": { "type": "int" },
-      "lastYear": { "type": "int" }
+      "firstYear": {
+        "type": "int"
+      },
+      "lastYear": {
+        "type": "int"
+      }
     }
   },
   "settingsCaMotorNotPower": "Motorleistung in Kilowatt ist keine Radleistung und wird nicht übernommen.",
@@ -1179,8 +1183,59 @@
   "settingsCaWillApplyOnly": "Nur {fields} werden übernommen. Motor-kW, Verbrauch, Reichweite, CO2, VE, Cd, Stirnfläche, Crr und Getriebewirkungsgrad bleiben unbestimmt.",
   "@settingsCaWillApplyOnly": {
     "placeholders": {
-      "fields": { "type": "String" }
+      "fields": {
+        "type": "String"
+      }
     }
-  }
-
+  },
+  "pidNameEngineRpm": "Motordrehzahl",
+  "pidShortEngineRpm": "Drehzahl",
+  "pidNameVehicleSpeed": "Fahrzeuggeschwindigkeit",
+  "pidShortVehicleSpeed": "Geschwindigkeit",
+  "pidNameCoolantTemp": "Kühlmitteltemperatur",
+  "pidShortCoolantTemp": "Kühlmittel",
+  "pidNameIntakeAirTemp": "Ansauglufttemperatur",
+  "pidShortIntakeAirTemp": "Ansaugluft",
+  "pidNameEngineLoad": "Berechnete Motorlast",
+  "pidShortEngineLoad": "Last",
+  "pidNameThrottlePosition": "Drosselklappenstellung",
+  "pidShortThrottlePosition": "Drosselklappe",
+  "pidNameManifoldPressure": "Absoluter Saugrohrdruck",
+  "pidShortManifoldPressure": "Saugrohrdruck",
+  "pidNameMafRate": "Luftmassenstrom",
+  "pidShortMafRate": "Luftmasse",
+  "pidNameTimingAdvance": "Zündzeitpunktverstellung",
+  "pidShortTimingAdvance": "Zündung",
+  "pidNameFuelPressure": "Kraftstoffdruck",
+  "pidShortFuelPressure": "Kraftstoffdruck",
+  "pidNameFuelLevel": "Tankfüllstand",
+  "pidShortFuelLevel": "Tank",
+  "pidNameBarometricPressure": "Luftdruck",
+  "pidShortBarometricPressure": "Luftdruck",
+  "pidNameControlModuleVoltage": "Steuergerätespannung",
+  "pidShortControlModuleVoltage": "Spannung",
+  "pidNameAmbientAirTemp": "Umgebungstemperatur",
+  "pidShortAmbientAirTemp": "Umgebung",
+  "pidNameEngineOilTemp": "Motoröltemperatur",
+  "pidShortEngineOilTemp": "Öltemperatur",
+  "pidNameEngineFuelRate": "Kraftstoffverbrauch",
+  "pidShortEngineFuelRate": "Verbrauch",
+  "pidNameShortFuelTrimB1": "Kurzzeit-Lambdakorrektur, Bank 1",
+  "pidShortShortFuelTrimB1": "KZLK B1",
+  "pidNameLongFuelTrimB1": "Langzeit-Lambdakorrektur, Bank 1",
+  "pidShortLongFuelTrimB1": "LZLK B1",
+  "pidNameRunTime": "Laufzeit seit Motorstart",
+  "pidShortRunTime": "Laufzeit",
+  "pidNameDistanceWithMil": "Fahrstrecke mit MIL",
+  "pidShortDistanceWithMil": "MIL-Strecke",
+  "pidNameAbsoluteLoad": "Absoluter Lastwert",
+  "pidShortAbsoluteLoad": "Abs. Last",
+  "pidNameCommandedEgr": "AGR-Vorgabe",
+  "pidShortCommandedEgr": "AGR",
+  "pidNameRelativeThrottle": "Relative Drosselklappenstellung",
+  "pidShortRelativeThrottle": "Rel. Drossel",
+  "pidNameBoostPressure": "Ladedruck",
+  "pidShortBoostPressure": "Ladedruck",
+  "pidNameSpeedMph": "Geschwindigkeit (mph)",
+  "pidShortSpeedMph": "mph"
 }

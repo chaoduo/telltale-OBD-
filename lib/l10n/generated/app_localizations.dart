@@ -98,6 +98,7 @@ abstract class AppLocalizations {
     Locale('en'),
     Locale('de'),
     Locale('zh'),
+    Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'),
     Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'),
   ];
 
@@ -7145,6 +7146,306 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Only {fields} will be applied. Motor kW, fuel consumption, range, CO2, VE, Cd, frontal area, Crr and transmission efficiency stay unresolved.'**
   String settingsCaWillApplyOnly(String fields);
+
+  /// No description provided for @pidNameEngineRpm.
+  ///
+  /// In en, this message translates to:
+  /// **'Engine RPM'**
+  String get pidNameEngineRpm;
+
+  /// No description provided for @pidShortEngineRpm.
+  ///
+  /// In en, this message translates to:
+  /// **'RPM'**
+  String get pidShortEngineRpm;
+
+  /// No description provided for @pidNameVehicleSpeed.
+  ///
+  /// In en, this message translates to:
+  /// **'Vehicle Speed'**
+  String get pidNameVehicleSpeed;
+
+  /// No description provided for @pidShortVehicleSpeed.
+  ///
+  /// In en, this message translates to:
+  /// **'Speed'**
+  String get pidShortVehicleSpeed;
+
+  /// No description provided for @pidNameCoolantTemp.
+  ///
+  /// In en, this message translates to:
+  /// **'Engine Coolant Temperature'**
+  String get pidNameCoolantTemp;
+
+  /// No description provided for @pidShortCoolantTemp.
+  ///
+  /// In en, this message translates to:
+  /// **'Coolant'**
+  String get pidShortCoolantTemp;
+
+  /// No description provided for @pidNameIntakeAirTemp.
+  ///
+  /// In en, this message translates to:
+  /// **'Intake Air Temperature'**
+  String get pidNameIntakeAirTemp;
+
+  /// No description provided for @pidShortIntakeAirTemp.
+  ///
+  /// In en, this message translates to:
+  /// **'IAT'**
+  String get pidShortIntakeAirTemp;
+
+  /// No description provided for @pidNameEngineLoad.
+  ///
+  /// In en, this message translates to:
+  /// **'Calculated Engine Load'**
+  String get pidNameEngineLoad;
+
+  /// No description provided for @pidShortEngineLoad.
+  ///
+  /// In en, this message translates to:
+  /// **'Load'**
+  String get pidShortEngineLoad;
+
+  /// No description provided for @pidNameThrottlePosition.
+  ///
+  /// In en, this message translates to:
+  /// **'Throttle Position'**
+  String get pidNameThrottlePosition;
+
+  /// No description provided for @pidShortThrottlePosition.
+  ///
+  /// In en, this message translates to:
+  /// **'Throttle'**
+  String get pidShortThrottlePosition;
+
+  /// No description provided for @pidNameManifoldPressure.
+  ///
+  /// In en, this message translates to:
+  /// **'Intake Manifold Absolute Pressure'**
+  String get pidNameManifoldPressure;
+
+  /// No description provided for @pidShortManifoldPressure.
+  ///
+  /// In en, this message translates to:
+  /// **'MAP'**
+  String get pidShortManifoldPressure;
+
+  /// No description provided for @pidNameMafRate.
+  ///
+  /// In en, this message translates to:
+  /// **'MAF Air Flow Rate'**
+  String get pidNameMafRate;
+
+  /// No description provided for @pidShortMafRate.
+  ///
+  /// In en, this message translates to:
+  /// **'MAF'**
+  String get pidShortMafRate;
+
+  /// No description provided for @pidNameTimingAdvance.
+  ///
+  /// In en, this message translates to:
+  /// **'Timing Advance'**
+  String get pidNameTimingAdvance;
+
+  /// No description provided for @pidShortTimingAdvance.
+  ///
+  /// In en, this message translates to:
+  /// **'Timing'**
+  String get pidShortTimingAdvance;
+
+  /// No description provided for @pidNameFuelPressure.
+  ///
+  /// In en, this message translates to:
+  /// **'Fuel Pressure'**
+  String get pidNameFuelPressure;
+
+  /// No description provided for @pidShortFuelPressure.
+  ///
+  /// In en, this message translates to:
+  /// **'Fuel Press'**
+  String get pidShortFuelPressure;
+
+  /// No description provided for @pidNameFuelLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'Fuel Tank Level'**
+  String get pidNameFuelLevel;
+
+  /// No description provided for @pidShortFuelLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'Fuel'**
+  String get pidShortFuelLevel;
+
+  /// No description provided for @pidNameBarometricPressure.
+  ///
+  /// In en, this message translates to:
+  /// **'Barometric Pressure'**
+  String get pidNameBarometricPressure;
+
+  /// No description provided for @pidShortBarometricPressure.
+  ///
+  /// In en, this message translates to:
+  /// **'Baro'**
+  String get pidShortBarometricPressure;
+
+  /// No description provided for @pidNameControlModuleVoltage.
+  ///
+  /// In en, this message translates to:
+  /// **'Control Module Voltage'**
+  String get pidNameControlModuleVoltage;
+
+  /// No description provided for @pidShortControlModuleVoltage.
+  ///
+  /// In en, this message translates to:
+  /// **'Voltage'**
+  String get pidShortControlModuleVoltage;
+
+  /// No description provided for @pidNameAmbientAirTemp.
+  ///
+  /// In en, this message translates to:
+  /// **'Ambient Air Temperature'**
+  String get pidNameAmbientAirTemp;
+
+  /// No description provided for @pidShortAmbientAirTemp.
+  ///
+  /// In en, this message translates to:
+  /// **'Ambient'**
+  String get pidShortAmbientAirTemp;
+
+  /// No description provided for @pidNameEngineOilTemp.
+  ///
+  /// In en, this message translates to:
+  /// **'Engine Oil Temperature'**
+  String get pidNameEngineOilTemp;
+
+  /// No description provided for @pidShortEngineOilTemp.
+  ///
+  /// In en, this message translates to:
+  /// **'Oil Temp'**
+  String get pidShortEngineOilTemp;
+
+  /// No description provided for @pidNameEngineFuelRate.
+  ///
+  /// In en, this message translates to:
+  /// **'Engine Fuel Rate'**
+  String get pidNameEngineFuelRate;
+
+  /// No description provided for @pidShortEngineFuelRate.
+  ///
+  /// In en, this message translates to:
+  /// **'Fuel Rate'**
+  String get pidShortEngineFuelRate;
+
+  /// No description provided for @pidNameShortFuelTrimB1.
+  ///
+  /// In en, this message translates to:
+  /// **'Short Term Fuel Trim — Bank 1'**
+  String get pidNameShortFuelTrimB1;
+
+  /// No description provided for @pidShortShortFuelTrimB1.
+  ///
+  /// In en, this message translates to:
+  /// **'STFT B1'**
+  String get pidShortShortFuelTrimB1;
+
+  /// No description provided for @pidNameLongFuelTrimB1.
+  ///
+  /// In en, this message translates to:
+  /// **'Long Term Fuel Trim — Bank 1'**
+  String get pidNameLongFuelTrimB1;
+
+  /// No description provided for @pidShortLongFuelTrimB1.
+  ///
+  /// In en, this message translates to:
+  /// **'LTFT B1'**
+  String get pidShortLongFuelTrimB1;
+
+  /// No description provided for @pidNameRunTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Run Time Since Engine Start'**
+  String get pidNameRunTime;
+
+  /// No description provided for @pidShortRunTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Run Time'**
+  String get pidShortRunTime;
+
+  /// No description provided for @pidNameDistanceWithMil.
+  ///
+  /// In en, this message translates to:
+  /// **'Distance Travelled With MIL On'**
+  String get pidNameDistanceWithMil;
+
+  /// No description provided for @pidShortDistanceWithMil.
+  ///
+  /// In en, this message translates to:
+  /// **'MIL Dist'**
+  String get pidShortDistanceWithMil;
+
+  /// No description provided for @pidNameAbsoluteLoad.
+  ///
+  /// In en, this message translates to:
+  /// **'Absolute Load Value'**
+  String get pidNameAbsoluteLoad;
+
+  /// No description provided for @pidShortAbsoluteLoad.
+  ///
+  /// In en, this message translates to:
+  /// **'Abs Load'**
+  String get pidShortAbsoluteLoad;
+
+  /// No description provided for @pidNameCommandedEgr.
+  ///
+  /// In en, this message translates to:
+  /// **'Commanded EGR'**
+  String get pidNameCommandedEgr;
+
+  /// No description provided for @pidShortCommandedEgr.
+  ///
+  /// In en, this message translates to:
+  /// **'EGR'**
+  String get pidShortCommandedEgr;
+
+  /// No description provided for @pidNameRelativeThrottle.
+  ///
+  /// In en, this message translates to:
+  /// **'Relative Throttle Position'**
+  String get pidNameRelativeThrottle;
+
+  /// No description provided for @pidShortRelativeThrottle.
+  ///
+  /// In en, this message translates to:
+  /// **'Rel Thr'**
+  String get pidShortRelativeThrottle;
+
+  /// No description provided for @pidNameBoostPressure.
+  ///
+  /// In en, this message translates to:
+  /// **'Turbo Boost (MAP − Baro)'**
+  String get pidNameBoostPressure;
+
+  /// No description provided for @pidShortBoostPressure.
+  ///
+  /// In en, this message translates to:
+  /// **'Boost'**
+  String get pidShortBoostPressure;
+
+  /// No description provided for @pidNameSpeedMph.
+  ///
+  /// In en, this message translates to:
+  /// **'Vehicle Speed (mph)'**
+  String get pidNameSpeedMph;
+
+  /// No description provided for @pidShortSpeedMph.
+  ///
+  /// In en, this message translates to:
+  /// **'Speed'**
+  String get pidShortSpeedMph;
 }
 
 class _AppLocalizationsDelegate
@@ -7170,6 +7471,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
     case 'zh':
       {
         switch (locale.scriptCode) {
+          case 'Hans':
+            return AppLocalizationsZhHans();
           case 'Hant':
             return AppLocalizationsZhHant();
         }

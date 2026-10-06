@@ -19,6 +19,7 @@ abstract final class PidLibrary {
   // ---------------------------------------------------------------- core ----
 
   static const engineRpm = Pid(
+    l10nId: 'engineRpm',
     name: 'Engine RPM',
     shortName: 'RPM',
     modeAndPid: '010C',
@@ -31,6 +32,7 @@ abstract final class PidLibrary {
   );
 
   static const vehicleSpeed = Pid(
+    l10nId: 'vehicleSpeed',
     name: 'Vehicle Speed',
     shortName: 'Speed',
     modeAndPid: '010D',
@@ -42,6 +44,7 @@ abstract final class PidLibrary {
   );
 
   static const coolantTemp = Pid(
+    l10nId: 'coolantTemp',
     name: 'Engine Coolant Temperature',
     shortName: 'Coolant',
     modeAndPid: '0105',
@@ -54,6 +57,7 @@ abstract final class PidLibrary {
   );
 
   static const intakeAirTemp = Pid(
+    l10nId: 'intakeAirTemp',
     name: 'Intake Air Temperature',
     shortName: 'IAT',
     modeAndPid: '010F',
@@ -65,6 +69,7 @@ abstract final class PidLibrary {
   );
 
   static const engineLoad = Pid(
+    l10nId: 'engineLoad',
     name: 'Calculated Engine Load',
     shortName: 'Load',
     modeAndPid: '0104',
@@ -76,6 +81,7 @@ abstract final class PidLibrary {
   );
 
   static const throttlePosition = Pid(
+    l10nId: 'throttlePosition',
     name: 'Throttle Position',
     shortName: 'Throttle',
     modeAndPid: '0111',
@@ -87,6 +93,7 @@ abstract final class PidLibrary {
   );
 
   static const manifoldPressure = Pid(
+    l10nId: 'manifoldPressure',
     name: 'Intake Manifold Absolute Pressure',
     shortName: 'MAP',
     modeAndPid: '010B',
@@ -98,6 +105,7 @@ abstract final class PidLibrary {
   );
 
   static const mafRate = Pid(
+    l10nId: 'mafRate',
     name: 'MAF Air Flow Rate',
     shortName: 'MAF',
     modeAndPid: '0110',
@@ -109,6 +117,7 @@ abstract final class PidLibrary {
   );
 
   static const timingAdvance = Pid(
+    l10nId: 'timingAdvance',
     name: 'Timing Advance',
     shortName: 'Timing',
     modeAndPid: '010E',
@@ -122,6 +131,7 @@ abstract final class PidLibrary {
   // ------------------------------------------------------------ secondary ----
 
   static const fuelPressure = Pid(
+    l10nId: 'fuelPressure',
     name: 'Fuel Pressure',
     shortName: 'Fuel Press',
     modeAndPid: '010A',
@@ -133,6 +143,7 @@ abstract final class PidLibrary {
   );
 
   static const fuelLevel = Pid(
+    l10nId: 'fuelLevel',
     name: 'Fuel Tank Level',
     shortName: 'Fuel',
     modeAndPid: '012F',
@@ -144,6 +155,7 @@ abstract final class PidLibrary {
   );
 
   static const barometricPressure = Pid(
+    l10nId: 'barometricPressure',
     name: 'Barometric Pressure',
     shortName: 'Baro',
     modeAndPid: '0133',
@@ -155,6 +167,7 @@ abstract final class PidLibrary {
   );
 
   static const controlModuleVoltage = Pid(
+    l10nId: 'controlModuleVoltage',
     name: 'Control Module Voltage',
     shortName: 'Voltage',
     modeAndPid: '0142',
@@ -166,6 +179,7 @@ abstract final class PidLibrary {
   );
 
   static const ambientAirTemp = Pid(
+    l10nId: 'ambientAirTemp',
     name: 'Ambient Air Temperature',
     shortName: 'Ambient',
     modeAndPid: '0146',
@@ -177,6 +191,7 @@ abstract final class PidLibrary {
   );
 
   static const engineOilTemp = Pid(
+    l10nId: 'engineOilTemp',
     name: 'Engine Oil Temperature',
     shortName: 'Oil Temp',
     modeAndPid: '015C',
@@ -189,6 +204,7 @@ abstract final class PidLibrary {
   );
 
   static const engineFuelRate = Pid(
+    l10nId: 'engineFuelRate',
     name: 'Engine Fuel Rate',
     shortName: 'Fuel Rate',
     modeAndPid: '015E',
@@ -200,6 +216,7 @@ abstract final class PidLibrary {
   );
 
   static const shortFuelTrimB1 = Pid(
+    l10nId: 'shortFuelTrimB1',
     name: 'Short Term Fuel Trim — Bank 1',
     shortName: 'STFT B1',
     modeAndPid: '0106',
@@ -211,6 +228,7 @@ abstract final class PidLibrary {
   );
 
   static const longFuelTrimB1 = Pid(
+    l10nId: 'longFuelTrimB1',
     name: 'Long Term Fuel Trim — Bank 1',
     shortName: 'LTFT B1',
     modeAndPid: '0107',
@@ -222,6 +240,7 @@ abstract final class PidLibrary {
   );
 
   static const runTime = Pid(
+    l10nId: 'runTime',
     name: 'Run Time Since Engine Start',
     shortName: 'Run Time',
     modeAndPid: '011F',
@@ -233,6 +252,7 @@ abstract final class PidLibrary {
   );
 
   static const distanceWithMil = Pid(
+    l10nId: 'distanceWithMil',
     name: 'Distance Travelled With MIL On',
     shortName: 'MIL Dist',
     modeAndPid: '0121',
@@ -244,6 +264,7 @@ abstract final class PidLibrary {
   );
 
   static const absoluteLoad = Pid(
+    l10nId: 'absoluteLoad',
     name: 'Absolute Load Value',
     shortName: 'Abs Load',
     modeAndPid: '0143',
@@ -255,6 +276,7 @@ abstract final class PidLibrary {
   );
 
   static const commandedEgr = Pid(
+    l10nId: 'commandedEgr',
     name: 'Commanded EGR',
     shortName: 'EGR',
     modeAndPid: '012C',
@@ -266,6 +288,7 @@ abstract final class PidLibrary {
   );
 
   static const relativeThrottle = Pid(
+    l10nId: 'relativeThrottle',
     name: 'Relative Throttle Position',
     shortName: 'Rel Thr',
     modeAndPid: '0145',
@@ -283,6 +306,7 @@ abstract final class PidLibrary {
 
   /// Manifold pressure above ambient. Negative under vacuum, positive on boost.
   static const boostPressure = Pid(
+    l10nId: 'boostPressure',
     name: 'Turbo Boost (MAP − Baro)',
     shortName: 'Boost',
     modeAndPid: '010B',
@@ -299,6 +323,7 @@ abstract final class PidLibrary {
 
   /// Vehicle speed rendered in mph for users who prefer imperial.
   static const speedMph = Pid(
+    l10nId: 'speedMph',
     name: 'Vehicle Speed (mph)',
     shortName: 'Speed',
     modeAndPid: '010D',

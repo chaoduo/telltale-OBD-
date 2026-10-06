@@ -4057,6 +4057,4358 @@ class AppLocalizationsZh extends AppLocalizations {
   String settingsCaWillApplyOnly(String fields) {
     return '只會套用 $fields。電機 kW、油耗、續航、CO2、VE、Cd、迎風面積、Crr 與傳動效率維持未解。';
   }
+
+  @override
+  String get pidNameEngineRpm => '引擎轉速';
+
+  @override
+  String get pidShortEngineRpm => '轉速';
+
+  @override
+  String get pidNameVehicleSpeed => '車速';
+
+  @override
+  String get pidShortVehicleSpeed => '車速';
+
+  @override
+  String get pidNameCoolantTemp => '引擎冷卻液溫度';
+
+  @override
+  String get pidShortCoolantTemp => '水溫';
+
+  @override
+  String get pidNameIntakeAirTemp => '進氣溫度';
+
+  @override
+  String get pidShortIntakeAirTemp => '進氣';
+
+  @override
+  String get pidNameEngineLoad => '引擎負荷';
+
+  @override
+  String get pidShortEngineLoad => '負荷';
+
+  @override
+  String get pidNameThrottlePosition => '節氣門位置';
+
+  @override
+  String get pidShortThrottlePosition => '節氣門';
+
+  @override
+  String get pidNameManifoldPressure => '進氣歧管絕對壓力';
+
+  @override
+  String get pidShortManifoldPressure => 'MAP';
+
+  @override
+  String get pidNameMafRate => '空氣流量';
+
+  @override
+  String get pidShortMafRate => 'MAF';
+
+  @override
+  String get pidNameTimingAdvance => '點火提前角';
+
+  @override
+  String get pidShortTimingAdvance => '點火';
+
+  @override
+  String get pidNameFuelPressure => '燃油壓力';
+
+  @override
+  String get pidShortFuelPressure => '油壓';
+
+  @override
+  String get pidNameFuelLevel => '燃油液位';
+
+  @override
+  String get pidShortFuelLevel => '油量';
+
+  @override
+  String get pidNameBarometricPressure => '大氣壓力';
+
+  @override
+  String get pidShortBarometricPressure => '大氣壓';
+
+  @override
+  String get pidNameControlModuleVoltage => '控制模組電壓';
+
+  @override
+  String get pidShortControlModuleVoltage => '電壓';
+
+  @override
+  String get pidNameAmbientAirTemp => '環境溫度';
+
+  @override
+  String get pidShortAmbientAirTemp => '環境';
+
+  @override
+  String get pidNameEngineOilTemp => '引擎機油溫度';
+
+  @override
+  String get pidShortEngineOilTemp => '油溫';
+
+  @override
+  String get pidNameEngineFuelRate => '引擎燃油消耗率';
+
+  @override
+  String get pidShortEngineFuelRate => '油耗';
+
+  @override
+  String get pidNameShortFuelTrimB1 => '短期燃油修正（第 1 組）';
+
+  @override
+  String get pidShortShortFuelTrimB1 => '短油修 B1';
+
+  @override
+  String get pidNameLongFuelTrimB1 => '長期燃油修正（第 1 組）';
+
+  @override
+  String get pidShortLongFuelTrimB1 => '長油修 B1';
+
+  @override
+  String get pidNameRunTime => '引擎啟動後運轉時間';
+
+  @override
+  String get pidShortRunTime => '運轉時間';
+
+  @override
+  String get pidNameDistanceWithMil => '故障燈亮起後行駛距離';
+
+  @override
+  String get pidShortDistanceWithMil => '故障燈里程';
+
+  @override
+  String get pidNameAbsoluteLoad => '絕對負荷';
+
+  @override
+  String get pidShortAbsoluteLoad => '絕對負荷';
+
+  @override
+  String get pidNameCommandedEgr => 'EGR 指令';
+
+  @override
+  String get pidShortCommandedEgr => 'EGR';
+
+  @override
+  String get pidNameRelativeThrottle => '相對節氣門位置';
+
+  @override
+  String get pidShortRelativeThrottle => '相對節氣門';
+
+  @override
+  String get pidNameBoostPressure => '渦輪增壓壓力';
+
+  @override
+  String get pidShortBoostPressure => '增壓';
+
+  @override
+  String get pidNameSpeedMph => '車速（mph）';
+
+  @override
+  String get pidShortSpeedMph => '車速 mph';
+}
+
+/// The translations for Chinese, using the Han script (`zh_Hans`).
+class AppLocalizationsZhHans extends AppLocalizationsZh {
+  AppLocalizationsZhHans() : super('zh_Hans');
+
+  @override
+  String get adapterErrorActivityAlert => '总线活动警示';
+
+  @override
+  String get adapterErrorBufferFull => '适配器缓冲区溢出';
+
+  @override
+  String get adapterErrorBus => '总线错误，可能是接线问题';
+
+  @override
+  String get adapterErrorBusBusy => '总线忙碌';
+
+  @override
+  String get adapterErrorBusInit => '总线初始化失败';
+
+  @override
+  String get adapterErrorCan => 'CAN 总线错误';
+
+  @override
+  String get adapterErrorData => '收到的数据不正确';
+
+  @override
+  String get adapterErrorFeedback => '信号反馈错误';
+
+  @override
+  String get adapterErrorInternal => '适配器内部错误';
+
+  @override
+  String get adapterErrorLowPowerAlert => '适配器即将进入低功耗模式';
+
+  @override
+  String get adapterErrorLowVoltageReset => '电压过低导致适配器重置';
+
+  @override
+  String get adapterErrorNoData => '没有收到回应——可能是暂时无响应，或车辆不支持此功能。';
+
+  @override
+  String get adapterErrorStopped => '传输被中断';
+
+  @override
+  String get adapterErrorUnableToConnect => '无法与 ECU 通讯，请确认点火开关已开启。';
+
+  @override
+  String get adapterErrorUnknownCommand => '适配器不支持此指令';
+
+  @override
+  String get appTagline => '车辆实时遥测';
+
+  @override
+  String get appTitle => 'Telltale';
+
+  @override
+  String get appearanceSectionTitle => '外观';
+
+  @override
+  String get connectActivityAbortingPreviousConnection => '正在中止上一个连接，请稍候…';
+
+  @override
+  String get connectAnswerBleWithClassic =>
+      '选择 Bluetooth LE。不需要事先配对，直接在 App 里扫描——就算它出现在系统蓝牙配对列表里，也不要配对，那条路行不通。如果扫描不到，盒子上的 4.0 只是芯片规格，改用 Bluetooth Classic。';
+
+  @override
+  String get connectAnswerBleWithoutClassic =>
+      '选择 Bluetooth LE。不需要事先配对，直接在 App 里扫描——就算它出现在系统蓝牙配对列表里，也不要配对，那条路行不通。如果扫描不到，先确认适配器有电，或改试 Wi‑Fi；此主机不提供 Bluetooth Classic。';
+
+  @override
+  String get connectAnswerClassic =>
+      '选择 Bluetooth Classic。先在系统设置里配对完成，App 不能代替你配对。配对码通常是 1234 或 0000。';
+
+  @override
+  String get connectAnswerWifiDesktop => '选择 Wi-Fi。先把这台设备连接到那个网络，再回来输入地址。';
+
+  @override
+  String get connectAnswerWifiPhone => '选择 Wi-Fi。先把手机连接到那个网络，再回来输入地址。';
+
+  @override
+  String get connectBleBody =>
+      'BLE 适配器不需要事先配对。搜索后选择你的设备即可，常见名称为 OBDII、V-LINK、Vgate 或 IOS-Vlink。';
+
+  @override
+  String connectBleEmptyScan(String next) {
+    return '搜索结束，没有找到 BLE 适配器。按顺序检查：适配器的灯是否亮着——多数 OBD 插座要等点火开关转到 ON 才供电；然后是距离，先坐进车里再搜索；$next BLE 适配器不需要、也不应该在系统设置里配对，那条路行不通。';
+  }
+
+  @override
+  String get connectBleEmptyScanNextClassic =>
+      '最后看盒子上的规格，如果写的是 2.0 或 3.0，那是 Bluetooth Classic，不会出现在这个列表里，请改用上面的 Bluetooth Classic。';
+
+  @override
+  String get connectBleEmptyScanNextWifi =>
+      '最后看盒子上的规格：如果写的是 2.0/3.0 或只有 Wi‑Fi，请改试 Wi‑Fi（此主机不提供 Bluetooth Classic）。';
+
+  @override
+  String get connectBlePermissionDeniedForever =>
+      '蓝牙权限已被永久拒绝。系统不会再弹授权对话框，请到应用设置里开启。';
+
+  @override
+  String get connectBlePermissionNeeded => '搜索需要蓝牙权限。';
+
+  @override
+  String get connectBleScan => '搜索 BLE 设备';
+
+  @override
+  String get connectBleScanning => '搜索中…';
+
+  @override
+  String get connectBleUnavailableHost => '此主机尚不支持 Bluetooth LE';
+
+  @override
+  String get connectBluetoothOff => '蓝牙未开启。请先在系统设置中开启蓝牙。';
+
+  @override
+  String get connectBluetoothPermissionDeniedForever =>
+      '蓝牙权限已被永久拒绝。请到系统设置中开启，然后再试。';
+
+  @override
+  String get connectBluetoothPermissionNeededForPairedList => '列出已配对适配器需要蓝牙权限。';
+
+  @override
+  String get connectBody => '插上 ELM327 适配器并打开点火开关，或直接使用内置模拟器体验完整功能。';
+
+  @override
+  String get connectCancel => '取消';
+
+  @override
+  String get connectClassicEmptyLinuxPort =>
+      '找不到蓝牙串口（/dev/rfcomm*）。请先用 BlueZ 配对 ELM327，再用 rfcomm bind（或等效方式）建立 RFCOMM TTY，然后重试。';
+
+  @override
+  String get connectClassicEmptyPaired =>
+      '找不到已配对的适配器。请先到系统蓝牙设置完成配对（多数 ELM327 的配对码为 1234 或 0000）。';
+
+  @override
+  String get connectClassicEmptyWindowsPort =>
+      '找不到蓝牙串口（COMx）。请先在 Windows 蓝牙设置中配对 ELM327，并确认设备管理器出现“Standard Serial over Bluetooth link”。';
+
+  @override
+  String get connectClassicListLinuxPort =>
+      '这里列出 BlueZ 已绑定的蓝牙串口（/dev/rfcomm* 或等效）。空列表表示系统尚未建立 RFCOMM 节点，不是 App 坏了。';
+
+  @override
+  String get connectClassicListPaired =>
+      '这里列出系统上所有已配对的设备——耳机、音箱也会在内，看起来像适配器的排前面。选错了就按“取消”，不用等它自己失败，取消后可以马上改选别的。';
+
+  @override
+  String get connectClassicListWindowsPort =>
+      '这里列出与蓝牙关联的 COM 端口（“Standard Serial over Bluetooth link”）。空列表表示系统尚未建立虚拟串口，不是 App 坏了。';
+
+  @override
+  String get connectClassicUnavailableHost =>
+      'Bluetooth Classic（SPP）目前在 Android、macOS（IOBluetooth RFCOMM）、Windows（COM）与 Linux（/dev/rfcomm*）可用';
+
+  @override
+  String get connectClassicUnavailableIos => 'iOS 不向第三方 App 开放蓝牙 SPP';
+
+  @override
+  String get connectConnect => '连接';
+
+  @override
+  String get connectDemoBody =>
+      '模拟一台 2.0L 涡轮增压四缸发动机，包含怠速、加速、巡航和减速循环，信号彼此保持物理相关（换挡时转速下降但车速继续上升）。故障码、VIN 读取和 fastMode 批量查询都可完整操作。';
+
+  @override
+  String get connectDemoStart => '启动模拟器';
+
+  @override
+  String get connectHandshakeTitle => 'ELM327 初始化';
+
+  @override
+  String get connectHandshakeTitleLastAttempt => 'ELM327 初始化（上次尝试）';
+
+  @override
+  String get connectHeadline => '选择连接方式';
+
+  @override
+  String get connectIssueAdapterAcceptedThenSilent =>
+      '适配器接受了连接，但在时限内没有响应。通常是它还没通电——多数 OBD 插座要等点火开关 ON 才供电；也可能是它正被另一个 App 连着，先关掉那个再试。';
+
+  @override
+  String connectIssueAdapterSilentOnReset(String command) {
+    return '适配器没有响应重置指令（$command）。这个设备可能不是 ELM327 适配器，或者连接到了错误的设备。';
+  }
+
+  @override
+  String get connectIssueAdapterStoppedResponding => '适配器停止响应，连接已断开。';
+
+  @override
+  String get connectIssueConnectionSetupFailed =>
+      '连接在建立过程中失败。请确认适配器已通电、就在附近，然后再试。完整错误保留在下方日志里。';
+
+  @override
+  String get connectIssueHandshakeIncomplete => '初始化未通过，适配器可能不兼容。';
+
+  @override
+  String connectIssueHandshakeStepFailed(String command, String reason) {
+    return '初始化在 $command 失败（$reason）。请确认适配器已插好、车辆点火开关已开启。';
+  }
+
+  @override
+  String get connectIssuePreviousConnectionStillAborting =>
+      '上一个连接仍在终止中，适配器还没有释放。请等几秒再试。';
+
+  @override
+  String get connectLastAdapterConnect => '直接连接';
+
+  @override
+  String get connectLastAdapterForget => '忘记';
+
+  @override
+  String get connectLastAdapterTitle => '上次使用的适配器';
+
+  @override
+  String get connectOpenAppSettings => '打开应用设置';
+
+  @override
+  String get connectOpenSystemSettings => '打开系统设置';
+
+  @override
+  String get connectOpeningConnection => '正在建立连接…';
+
+  @override
+  String get connectPairedPill => '已配对';
+
+  @override
+  String get connectQuestionBle => '盒子、商品标题或设备名称上有 BLE、4.0、5.0 这些字？';
+
+  @override
+  String get connectQuestionClassic => '都不是——比较旧、盒子上写 2.0 或 3.0？';
+
+  @override
+  String get connectQuestionWifiDesktop =>
+      '系统 Wi-Fi 列表里多出一个网络（像 V-LINK、WiFi_OBDII）？';
+
+  @override
+  String get connectQuestionWifiPhone =>
+      '手机 Wi-Fi 列表里多出一个网络（像 V-LINK、WiFi_OBDII）？';
+
+  @override
+  String get connectSearchAgain => '重新搜索';
+
+  @override
+  String connectSignalStrength(int bars, int total) {
+    return '信号强度 $bars/$total';
+  }
+
+  @override
+  String get connectTranscriptKept => '这次尝试的完整往返记录保留着。带回来比一句消息有用。';
+
+  @override
+  String get connectTransportBleDescription => 'GATT UART——较新的低功耗适配器';
+
+  @override
+  String get connectTransportBleTitle => 'Bluetooth LE';
+
+  @override
+  String get connectTransportClassicDescription =>
+      'RFCOMM / SPP——最常见的平价 ELM327';
+
+  @override
+  String get connectTransportClassicTitle => 'Bluetooth Classic';
+
+  @override
+  String get connectTransportDemoDescription => '内置模拟 ECU，无需硬件即可完整体验';
+
+  @override
+  String get connectTransportDemoTitle => 'Demo 模拟器';
+
+  @override
+  String get connectTransportWifiDescription => 'TCP 端口，通常为 192.168.0.10:35000';
+
+  @override
+  String get connectTransportWifiTitle => 'Wi-Fi';
+
+  @override
+  String get connectWhichIntro => '不用管 SPP、GATT 这些名词。看你的适配器插上去之后怎么工作：';
+
+  @override
+  String get connectWhichNoteGuessing =>
+      '猜错没什么代价——连不上就退回来换另一个试。真的卡住，先用最下面的“Demo 模拟器”确认 App 本身正常。';
+
+  @override
+  String get connectWhichNoteIos =>
+      'iPhone 只能用 Wi-Fi 或 BLE——普通蓝牙 ELM327 在 iOS 上完全不能用，这是系统限制，换 App 也一样。';
+
+  @override
+  String get connectWhichTitle => '不确定选哪一个？';
+
+  @override
+  String get connectWifiHostLabel => 'IP 地址';
+
+  @override
+  String get connectWifiHostRequired => '请输入适配器的 IP 地址。';
+
+  @override
+  String get connectWifiInstructionsDesktop =>
+      '先把这台电脑连接到适配器发出的 Wi-Fi 热点，再输入其地址。系统若提示此网络无法连接互联网，请选择继续使用。桌面系统通常会把热点当作默认路由；不需要 Android 那套 Wi-Fi 路由绑定。';
+
+  @override
+  String get connectWifiInstructionsPhone =>
+      '先把手机连接到适配器发出的 Wi-Fi 热点，再输入其地址。系统若问“此 Wi-Fi 无法连接互联网，是否继续使用”，选继续使用。在 Android 上，App 连接时会尝试把流量固定在 Wi-Fi 路由，避免被移动数据抢走。';
+
+  @override
+  String connectWifiPortInvalid(String value, int min, int max) {
+    return '“$value”不是有效端口。范围是 $min–$max。';
+  }
+
+  @override
+  String get connectWifiPortLabel => '端口';
+
+  @override
+  String connectWifiPortRequired(int port) {
+    return '请输入端口（多数适配器为 $port）。';
+  }
+
+  @override
+  String get dashboardBatchedPolling => '批量读取';
+
+  @override
+  String get dashboardBatchingEnabled => '已启用批量';
+
+  @override
+  String get dashboardChoosePids => '选择 PID';
+
+  @override
+  String get dashboardEmptyBody => '到 PID 页面挑选想要监视的信号，它们会出现在这里。';
+
+  @override
+  String get dashboardEmptyTitle => '仪表板是空的';
+
+  @override
+  String get dashboardGenericObd => '通用 OBD';
+
+  @override
+  String get dashboardLocalRecordings => '本地记录';
+
+  @override
+  String get dashboardNotConnected => '未连接';
+
+  @override
+  String get dashboardPollingModeHelpAction => '关于读取模式';
+
+  @override
+  String get dashboardPollingModeHelpBatching =>
+      '“已启用批量”表示 Telltale 可以把多个 PID 请求合并成一次交换，以减少往返次数：这条总线允许尝试合并，而且合并没有被关闭。它仍然是授权而不是测量，因为某次交换到底有没有合并，还要看这辆车确认支持哪些 PID，以及当前排了多少条。';
+
+  @override
+  String get dashboardPollingModeHelpObserved =>
+      '“批量读取”表示这次连接里，有一条 Mode 01 指令在总线上一次带了超过一个 PID。那是对那次交换的记录，不是下一条也会合并的保证，也不是对吞吐量的主张。';
+
+  @override
+  String get dashboardPollingModeHelpRate =>
+      'PIDs/s 是过去一秒观测到的速率，不是对延迟、新鲜度或准确度的保证。它会随适配器、总线、ECU、你选的 PID、每次回复的大小以及错误而变化。';
+
+  @override
+  String get dashboardPollingModeHelpSingle =>
+      '“单条模式”表示每个 Mode 01 PID 各自读取。三种情况会用到它：总线根本不接受合并请求（所有非 CAN 车辆都是如此）；还没有任何支持块回应过，因为把车辆尚未确认的 PID 合并起来问，正是回复会过短的原因；以及合并的请求没有回来成一份能拆回各 PID 的答复（被截断、适配器报告缓冲区已满，或根本没有响应）。读数仍会持续更新，这本身不等于连接失败。';
+
+  @override
+  String get dashboardPollingModeHelpTitle => '读取模式';
+
+  @override
+  String get dashboardSingleRequestMode => '单条模式';
+
+  @override
+  String get dashboardVinRead => '已读 VIN';
+
+  @override
+  String get dashboardWorkspaceGauges => '仪表';
+
+  @override
+  String get dashboardWorkspaceTrends => '趋势';
+
+  @override
+  String get datumBadgeCommunityDecode => '社区解码';
+
+  @override
+  String get datumBadgeDemo => '模拟';
+
+  @override
+  String get datumBadgeEstimated => '估算';
+
+  @override
+  String get datumBadgeExperimental => '实验';
+
+  @override
+  String get datumBadgeFieldVerified => '已验证';
+
+  @override
+  String get datumBadgeInvalid => '无效';
+
+  @override
+  String get datumBadgeJustUpdated => '刚更新';
+
+  @override
+  String get datumBadgeOutOfReferenceRange => '异常';
+
+  @override
+  String get datumBadgePartial => '部分';
+
+  @override
+  String get datumBadgeStale => '过期';
+
+  @override
+  String get datumBadgeTentativeDecode => '暂定解码';
+
+  @override
+  String get datumBadgeUnverified => '未验证';
+
+  @override
+  String get datumBadgeUnverifiedOnThisVehicle => '本车未验证';
+
+  @override
+  String get datumBadgeUserSupplied => '用户提供';
+
+  @override
+  String get datumGapModelYearUnknown => '年款未知';
+
+  @override
+  String get datumGapNoCatalogMatch => '目录无匹配';
+
+  @override
+  String get datumGapVinNotRead => 'VIN 未读到';
+
+  @override
+  String get datumNextStepEstimateOnly => '只影响此估算，其他读数照用';
+
+  @override
+  String get datumNextStepGenericObd => '可继续通用 OBD，或手动选车、补参数';
+
+  @override
+  String get datumNextStepOtherReadings => '失败只影响此项，其他读数照用';
+
+  @override
+  String get datumNextStepRawOnly => '可查看 raw / error，不可当成正常数值';
+
+  @override
+  String get datumReasonAssumptionsUnconfirmed => '假设尚未确认，仍可估算';
+
+  @override
+  String get datumReasonBusError => '总线错误。';
+
+  @override
+  String get datumReasonFormulaError => '公式错误。';
+
+  @override
+  String get datumReasonFuelEstimateMissingInputs => '油耗缺少必要输入';
+
+  @override
+  String get datumReasonHeaderNotOnThisBus => '标头不符本车总线';
+
+  @override
+  String get datumReasonHorsepowerEstimateMissingInputs => '马力缺少必要输入';
+
+  @override
+  String get datumReasonMalformedPacket => '坏封包，只可查看原文';
+
+  @override
+  String get datumReasonNoAnswer => '无响应——App 约一分钟后重试。';
+
+  @override
+  String get datumReasonNoReadingYet => '尚无读值。';
+
+  @override
+  String get datumReasonNonFiniteValue => '非有限数值。';
+
+  @override
+  String get datumReasonOutOfReferenceRangeKept => '超出一般参考范围，已保留';
+
+  @override
+  String get datumReasonPidUnsupported => '此车辆不支持这个 PID。';
+
+  @override
+  String get datumReasonUnsafeService => '此服务不是只读查询。';
+
+  @override
+  String get datumReasonUnsafeServiceStopped => '此服务不是只读查询，已停止发送。';
+
+  @override
+  String get datumStatusAssumptions => '假设';
+
+  @override
+  String get datumStatusClose => '关闭';
+
+  @override
+  String get datumStatusFollowsData => '状态随数据';
+
+  @override
+  String get datumStatusFormula => '公式';
+
+  @override
+  String get derivedAirflow => '空气流量';
+
+  @override
+  String get derivedEcuFuelTitle => 'ECU 油耗数据';
+
+  @override
+  String get derivedEcuReported => 'ECU 回报';
+
+  @override
+  String get derivedEngineHorsepower => '引擎马力';
+
+  @override
+  String get derivedEstimatedFuelTitle => '估算油耗';
+
+  @override
+  String get derivedEstimatesDetailsTitle => '估算公式与假设';
+
+  @override
+  String get derivedEstimatesTitle => '推算数值';
+
+  @override
+  String get derivedFuelUse => '油耗';
+
+  @override
+  String get derivedTorque => '扭矩';
+
+  @override
+  String get derivedUnavailableMessage => '等车速和加速度数据到达后才能推算马力';
+
+  @override
+  String dtcBothSilentDetail(Object mode) {
+    return '车辆没有回应 Mode $mode 查询，而 Mode 03 同样没有回应——因此无法判断这是车辆不支持，还是这次连接没有读到。';
+  }
+
+  @override
+  String dtcCategoryFault(Object category) {
+    return '$category相关故障';
+  }
+
+  @override
+  String get dtcClear => '清除';
+
+  @override
+  String get dtcClearCancel => '取消';
+
+  @override
+  String get dtcClearConfirm => '确定清除';
+
+  @override
+  String get dtcClearDialogBody =>
+      '这会清掉已存储和待定的故障码并熄灭故障灯，同时重置排放就绪状态——车辆需要重新完成一轮自诊断才能通过年检。永久故障码（Mode 0A）无法清除。';
+
+  @override
+  String get dtcClearDialogFrameUnread =>
+      '这次没有读到冻结帧，但不代表车上没有。先重新扫描一次，再决定要不要清除。';
+
+  @override
+  String dtcClearDialogFrames(Object codes) {
+    return '连同 $codes 的冻结帧——故障发生时的转速、水温、负荷那一整份记录——也会一起消失，而且故障再次发生前读不回来。';
+  }
+
+  @override
+  String get dtcClearDialogTitle => '清除故障码？';
+
+  @override
+  String dtcClearDialogUnanswered(int count, Object categories) {
+    return '这次扫描有 $count 个类别没有得到完整回应（$categories），可能还有你没看到的故障码。清除后就再也读不到了。';
+  }
+
+  @override
+  String get dtcClearCancelledBeforeSend => '清除已取消，指令还没送到车上。可以重新扫描后再试一次。';
+
+  @override
+  String get dtcClearConfirmed => '已送出清除指令。';
+
+  @override
+  String get dtcClearFailureDoNotRepeat =>
+      '清除指令可能已经送到车上。不要再送一次——第二次全车清除会让可能已经清除的控制器再一次重置排放就绪状态。请重新扫描确认还剩下什么。';
+
+  @override
+  String get dtcClearFailureGeneric => '清除没有完成。请先重新扫描，看目前的故障码，再决定要不要再试。';
+
+  @override
+  String get dtcClearNotAccepted => '清除失败，没有控制器接受指令。可以再试一次。';
+
+  @override
+  String get dtcClearPartiallyConfirmed =>
+      '已有控制器回报清除完成，但其余控制器无法确认。不要再送一次清除——重复清除会让已完成的控制器再一次重置排放就绪状态。请重新扫描确认结果。';
+
+  @override
+  String get dtcClearPreviousConnectionUnconfirmed =>
+      '上一次连接送出过清除指令，结果没有确认。请先重新扫描，确认哪些故障码还在，再决定要不要清除。';
+
+  @override
+  String get dtcClearRescanSettled => '上一次清除的结果无法完全确认，以下是重新扫描后的实际状况。';
+
+  @override
+  String get dtcClearSentUnconfirmed =>
+      '清除指令已送出，但回应在传输过程中损坏，无法确认车辆是否已清除。请重新扫描确认结果，不要直接再清除一次——如果其实已经清除成功，再清一次会重置排放就绪状态。';
+
+  @override
+  String get dtcClearTimeout => '清除指令送出后没有响应，无法确认是否已清除。请重新扫描确认。不要直接再清除一次。';
+
+  @override
+  String get dtcClearUnexpected => '清除失败，无法确认车辆是否已清除，请重新扫描确认。不要直接再清除一次。';
+
+  @override
+  String get dtcClearing => '清除中…';
+
+  @override
+  String get dtcScanDisconnectedMidScan => '连接在扫描途中断开，这次扫描没有完成。';
+
+  @override
+  String get dtcScanInterrupted =>
+      '扫描在中途被中断（可能是切换到其他 App 或连接变更），没有得到完整结果。请重新扫描。';
+
+  @override
+  String get dtcCompleteCleanBody => '这代表每个回复的控制器都回报无故障码，不代表车上每个模块都已被问到。';
+
+  @override
+  String get dtcCompleteCleanTitle => '已回应的控制器都没有故障码。';
+
+  @override
+  String dtcControllerLabel(Object controller) {
+    return '控制器 $controller';
+  }
+
+  @override
+  String get dtcDismiss => '关闭';
+
+  @override
+  String dtcFreezeFrameBody(Object code) {
+    return '$code 被确认的那一刻，这个控制器记下的数值。清除故障码会一并销毁这份记录。';
+  }
+
+  @override
+  String get dtcFreezeFrameContentsUnknown =>
+      '这个控制器有冻结帧，但没有回应“里面有哪些项目”的查询，所以读不到内容。可以重新扫描再试一次。';
+
+  @override
+  String get dtcFreezeFrameNothingDecodable => '这个控制器有冻结帧，但其中没有本 App 能解读的项目。';
+
+  @override
+  String get dtcFreezeFrameTitle => '故障发生时的车况';
+
+  @override
+  String dtcFreezeFrameUndecodable(int count) {
+    return '另有 $count 个项目在这份冻结帧里，本 App 没有对应的换算公式，所以没有列出。';
+  }
+
+  @override
+  String dtcFreezeFrameUnreadItems(int count) {
+    return '有 $count 个项目这次没有读回来（可能是时间不够或控制器没响应）。重新扫描可能会读到。';
+  }
+
+  @override
+  String get dtcFreezeFrameUnreadPanel =>
+      '这次没有读到冻结帧——不代表车上没有。请先重新扫描再决定要不要清除故障码，因为清除会永久销毁故障发生时的记录。如果每次扫描都一样，可能是这辆车不提供。';
+
+  @override
+  String dtcGroupHeader(Object label, Object mode, int count) {
+    return '$label（Mode $mode）· $count';
+  }
+
+  @override
+  String get dtcHeadline => '故障码';
+
+  @override
+  String get dtcListSeparator => '、';
+
+  @override
+  String get dtcManufacturerSpecific => '原厂自定义码——需查阅该车系维修手册';
+
+  @override
+  String get dtcMilOff => '故障灯没有亮';
+
+  @override
+  String get dtcMilOn => '故障灯亮着';
+
+  @override
+  String get dtcMonitorBoostPressure => '增压压力';
+
+  @override
+  String get dtcMonitorCatalyst => '催化转换器';
+
+  @override
+  String get dtcMonitorComponents => '综合元件监控';
+
+  @override
+  String get dtcMonitorEgr => 'EGR / VVT 系统';
+
+  @override
+  String get dtcMonitorEvaporative => '蒸发排放系统';
+
+  @override
+  String get dtcMonitorExhaustSensor => '排气传感器';
+
+  @override
+  String get dtcMonitorFuelSystem => '燃油系统监控';
+
+  @override
+  String get dtcMonitorGasolineParticulateFilter => '汽油颗粒过滤器（GPF）';
+
+  @override
+  String get dtcMonitorHeatedCatalyst => '催化加热';
+
+  @override
+  String get dtcMonitorMisfire => '失火监控';
+
+  @override
+  String get dtcMonitorNmhcCatalyst => 'NMHC 催化';
+
+  @override
+  String get dtcMonitorNoxAftertreatment => 'NOx / SCR 后处理';
+
+  @override
+  String get dtcMonitorOxygenSensor => '氧传感器';
+
+  @override
+  String get dtcMonitorOxygenSensorHeater => '氧传感器加热';
+
+  @override
+  String get dtcMonitorParticulateFilter => '颗粒过滤器';
+
+  @override
+  String get dtcMonitorSecondaryAir => '二次空气喷射';
+
+  @override
+  String dtcNoDescriptionForSubsystem(Object subsystem) {
+    return '$subsystem——本 App 没有这一码的详细说明';
+  }
+
+  @override
+  String get dtcNotConnectedBody => '需要连接 ELM327 适配器或启动模拟器才能读取故障码。';
+
+  @override
+  String get dtcNotConnectedTitle => '尚未连接';
+
+  @override
+  String get dtcNotScanned => '尚未扫描';
+
+  @override
+  String dtcPartialCleanOptionalGaps(int count, Object controllers) {
+    return '三个类别都查询完成了。有 $count 个控制器（$controllers）没有实现待定或永久故障码——这在很多车上是正常的，但也因此不能宣告全车都没有故障码。';
+  }
+
+  @override
+  String get dtcPartialCleanTitle => '已回应的项目没有故障码。';
+
+  @override
+  String dtcPartialCleanUnanswered(Object categories) {
+    return '$categories 没有回应，状态无法确认——这不等同于车辆没有问题。';
+  }
+
+  @override
+  String dtcPartialCodesRead(int count) {
+    return '这个类别中止前已读到 $count 笔故障码，但覆盖范围不完整：';
+  }
+
+  @override
+  String dtcPartiallyAnsweredDetail(Object message) {
+    return '这个类别只有部分控制器回应，其余没有回复，因此不能当作全车的结果。$message';
+  }
+
+  @override
+  String get dtcReadFailed => '读取失败';
+
+  @override
+  String dtcReadFailureDetail(Object label, Object mode, Object message) {
+    return '$label（Mode $mode）：$message';
+  }
+
+  @override
+  String get dtcReadinessAllComplete => '这个控制器负责的监控项目都已完成。';
+
+  @override
+  String dtcReadinessIncomplete(int count) {
+    return '还有 $count 项没有完成，现在去验车可能不会通过。';
+  }
+
+  @override
+  String get dtcReadinessSaysNothing => '这个控制器没有回报任何监控项目——它可能不负责排放监控，这不代表已经就绪。';
+
+  @override
+  String get dtcReadinessTitle => '排放就绪状态';
+
+  @override
+  String get dtcRescanFirst => '请先重新扫描';
+
+  @override
+  String get dtcRetry => '重试';
+
+  @override
+  String get dtcScanBody => '读取 Mode 03 已存储、Mode 07 待定和 Mode 0A 永久故障码。';
+
+  @override
+  String get dtcScanTitle => '扫描车辆故障码';
+
+  @override
+  String get dtcScanning => '扫描中…';
+
+  @override
+  String dtcSelfReportedCodes(int count) {
+    return '这个控制器自报有 $count 个已确认的故障码。';
+  }
+
+  @override
+  String get dtcSelfReportedNoCodes => '这个控制器自报没有已确认的故障码。';
+
+  @override
+  String get dtcSilentCategoryHeadline => '这个类别没有回应';
+
+  @override
+  String get dtcSilentPendingDetail =>
+      '待定故障码（Mode 07）没有回应。可能是这个 ECU 未实现该服务，也可能是这次没有读到——没有回应无法分辨两者，也不能当作“没有待定故障”。已存储故障码的结果不受影响。';
+
+  @override
+  String get dtcSilentPermanentDetail =>
+      '永久故障码（Mode 0A）没有回应。这个类别在 2010 年前后才随新一代 OBD-II 引入，较旧的车辆不一定支持——但没有回应也可能只是这次没读到，两者无法分辨。已存储故障码的结果不受影响。';
+
+  @override
+  String get dtcStartScan => '开始扫描';
+
+  @override
+  String dtcStoredSilentDetail(Object mode) {
+    return '车辆没有回应 Mode $mode 查询，因此无法确认是否有已存储的故障码。这与“没有故障码”不是同一件事。';
+  }
+
+  @override
+  String dtcTotalCodes(int count) {
+    return '共 $count 笔';
+  }
+
+  @override
+  String get dtcUnconfirmed => '无法确认';
+
+  @override
+  String get dtcUnknownError => '未知错误';
+
+  @override
+  String get dtcUnknownMonitor => '未知监控项目';
+
+  @override
+  String get dtcVerdictCompleteClean => '已回应的控制器没有故障码';
+
+  @override
+  String get dtcVerdictPartialClean => '部分未确认';
+
+  @override
+  String get fieldEventBody =>
+      '只在车辆完全停稳时，由乘客或停车的操作人员按下。事件会与 OBD 原始数据使用同一条时间轴，并尝试立即保存。';
+
+  @override
+  String get fieldEventEngineStarted => '引擎发动';
+
+  @override
+  String get fieldEventHeading => '实车事件标记';
+
+  @override
+  String get fieldEventIgnitionOn => '点火开关 ON';
+
+  @override
+  String get fieldEventMemoryOnly => '已记在当前会话，但自动保存失败；请立刻导出记录。';
+
+  @override
+  String fieldEventRecorded(String marker) {
+    return '已记录并保存：$marker';
+  }
+
+  @override
+  String get fieldEventRoadTestStarted => '道路测试开始';
+
+  @override
+  String get fieldEventThrottleBlip => '轻踩油门';
+
+  @override
+  String get fieldEventUnavailable => '当前没有可记录的实车连接。';
+
+  @override
+  String get gaugeNoData => '无数据';
+
+  @override
+  String gaugeNoDataBecause(String reason) {
+    return '无数据——$reason';
+  }
+
+  @override
+  String gaugeReadingStale(String reading) {
+    return '$reading（数据已过期）';
+  }
+
+  @override
+  String get gaugeUnsupportedByVehicle => '此车辆不支持';
+
+  @override
+  String get handshakeNoteAborted => '已中止';
+
+  @override
+  String get handshakeNoteEcuRefusedSupportQuery =>
+      'ECU 拒绝了支持查询（negative response）';
+
+  @override
+  String get handshakeNoteEcuSilent => 'ECU 没有回应。';
+
+  @override
+  String get handshakeNoteNotAcknowledged => '适配器未确认此指令';
+
+  @override
+  String get handshakeNoteNotModeOnePositiveReply => '回应不是 Mode 01 的正向回复';
+
+  @override
+  String get handshakeNotePidEchoMismatch => '回应的 PID 与查询不符';
+
+  @override
+  String get handshakeNoteSupportMaskTooShort => '支持回复过短（需要 41 00 加四个字节）';
+
+  @override
+  String get handshakeNoteTimedOut => '超时。';
+
+  @override
+  String get handshakeStepAdapterVersion => '读取适配器版本';
+
+  @override
+  String get handshakeStepAdaptiveTiming => '启用自适应计时（datasheet 建议值）';
+
+  @override
+  String get handshakeStepBatteryVoltage => '读取电瓶电压';
+
+  @override
+  String get handshakeStepDeviceIdentity => '读取设备标识字符串';
+
+  @override
+  String get handshakeStepEchoOff => '关闭指令回显';
+
+  @override
+  String get handshakeStepLinefeedsOff => '关闭换行符';
+
+  @override
+  String get handshakeStepMemoryOff => '关闭内存写入';
+
+  @override
+  String get handshakeStepNoReason => '无响应';
+
+  @override
+  String get handshakeStepProtocolAuto => '自动检测总线协议';
+
+  @override
+  String get handshakeStepProtocolDescription => '读取协议描述';
+
+  @override
+  String get handshakeStepProtocolNumber => '读取协议编号';
+
+  @override
+  String get handshakeStepReset => '软件重置适配器';
+
+  @override
+  String get handshakeStepResponseTimeout => '设置响应超时约 408 ms';
+
+  @override
+  String get handshakeStepSpacesOff => '关闭空白字符，减少 33% 传输量';
+
+  @override
+  String get handshakeStepSupportProbe => '查询 ECU 支持的 PID（确认车辆已回应）';
+
+  @override
+  String get languageSaveFailed => '无法保存语言设置，请再试一次。';
+
+  @override
+  String get languageSectionTitle => 'Language / 语言';
+
+  @override
+  String get navDashboard => '仪表板';
+
+  @override
+  String get navDtc => '故障码';
+
+  @override
+  String get navPerformance => '性能';
+
+  @override
+  String get navPid => 'PID';
+
+  @override
+  String get navSettings => '设置';
+
+  @override
+  String get performanceArm => '准备计时';
+
+  @override
+  String get performanceDisclaimer =>
+      '成绩以 OBD 车速信号为准。多数车辆的车速表本身有 1–3 km/h 的正偏差，且信号更新率约每秒 10–20 次，因此结果仅供参考，不等同于专业测试设备。';
+
+  @override
+  String get performanceHeadline => '加速测试';
+
+  @override
+  String get performanceNoSpeedSignal => '当前没有有效的车速信号（PID 010D）。加速测试需要它才能计时。';
+
+  @override
+  String get performanceNotConnectedBody => '加速测试需要实时车速数据，请先连接或启动模拟器。';
+
+  @override
+  String get performanceNotConnectedTitle => '尚未连接';
+
+  @override
+  String get performancePeakSpeed => '最高车速';
+
+  @override
+  String get performanceReset => '重置';
+
+  @override
+  String get performanceSecondsUnit => '秒';
+
+  @override
+  String get performanceSpeedGaugeLabel => '车速';
+
+  @override
+  String get performanceSpeedTraceHeading => '速度轨迹';
+
+  @override
+  String get performanceSplitsHeading => '分段成绩';
+
+  @override
+  String get performanceStateAborted => '车速信号中断——这次计时未完成，以下为中断前的记录';
+
+  @override
+  String get performanceStateAwaitingSpeedSignal => '等待车速信号';
+
+  @override
+  String performanceStateAwaitingStandstill(String speed) {
+    return '请先完全停车——当前 $speed km/h';
+  }
+
+  @override
+  String performanceStateFinished(int target) {
+    return '完成 0 → $target km/h';
+  }
+
+  @override
+  String get performanceStateIdle => '选择目标车速后开始';
+
+  @override
+  String get performanceStateRunning => '计时中';
+
+  @override
+  String get performanceStateStaged => '已就绪——起步即开始计时';
+
+  @override
+  String get performanceSubhead => '由静止起步计时至目标车速';
+
+  @override
+  String get performanceTargetSpeedHeading => '目标车速';
+
+  @override
+  String get pidActionCancel => '取消';
+
+  @override
+  String get pidActionDelete => '删除';
+
+  @override
+  String get pidArrangeBody => '拖动调整顺序。仪表板从左到右、从上到下填满，排在前面的最先看到。';
+
+  @override
+  String get pidArrangeEmptyMessage => '先在列表中启用几项，再回来排列顺序。';
+
+  @override
+  String get pidArrangeEmptyTitle => '还没有启用任何 PID';
+
+  @override
+  String pidBulkActionAddConfirmed(int count) {
+    return '加入已确认的 $count 项';
+  }
+
+  @override
+  String get pidBulkActionAllActive => '已全部启用';
+
+  @override
+  String get pidBulkActionIncomplete => '扫描数据不完整';
+
+  @override
+  String get pidBulkActionLocked => '录制中无法更改';
+
+  @override
+  String get pidBulkActionPending => '等待扫描结果';
+
+  @override
+  String get pidBulkActionZero => '没有确认支持项目';
+
+  @override
+  String pidBulkAddCount(int count) {
+    return '加入 $count 项';
+  }
+
+  @override
+  String pidBulkAddDialogTitle(int count) {
+    return '加入 $count 项已确认支持 PID？';
+  }
+
+  @override
+  String pidBulkAdded(int count) {
+    return '已加入 $count 项已确认支持 PID。';
+  }
+
+  @override
+  String pidBulkUnconfirmedBlocks(int count) {
+    return '仍有 $count 个支持块未确认，这次只加入已有正面证据的项目。';
+  }
+
+  @override
+  String pidBulkWillAdd(int count) {
+    return '将加入 $count 项。启用越多 PID，单项数据的更新频率可能降低。';
+  }
+
+  @override
+  String pidCapabilityConfirmedCount(int confirmed) {
+    return '确认 $confirmed 项';
+  }
+
+  @override
+  String get pidCapabilityCoverageNone => '连续覆盖尚未建立';
+
+  @override
+  String pidCapabilityCoverageThroughEnd(String through) {
+    return '连续覆盖 01–$through（已到终点）';
+  }
+
+  @override
+  String pidCapabilityCoverageThroughUnknown(String through) {
+    return '连续覆盖 01–$through（后续未知）';
+  }
+
+  @override
+  String get pidCapabilityPhaseAttemptFinished => '本次支持扫描已完成';
+
+  @override
+  String get pidCapabilityPhaseInterrupted => '支持扫描已中断';
+
+  @override
+  String get pidCapabilityPhaseNotStarted => '尚未开始扫描';
+
+  @override
+  String get pidCapabilityPhaseRunning => '正在确认车辆支持项目';
+
+  @override
+  String pidCapabilitySemantics(String phase, int confirmed, int unknown) {
+    return '车辆支持 PID。$phase。确认 $confirmed 项。未知块 $unknown 个。';
+  }
+
+  @override
+  String get pidCapabilityTitle => '车辆支持 PID';
+
+  @override
+  String pidCapabilityUnknownBlocks(int unknown) {
+    return '未知块 $unknown';
+  }
+
+  @override
+  String pidEditorCollision(String name) {
+    return '已经有一个自定义 PID 使用这组设置（$name）。请改用不同的模式 + PID、标头或名称后缀。';
+  }
+
+  @override
+  String pidEditorDeleteBody(String name) {
+    return '“$name”的定义会被移除，仪表板上的这个表也会一起消失，而且无法恢复。';
+  }
+
+  @override
+  String get pidEditorDeleteTitle => '删除这个 PID？';
+
+  @override
+  String get pidEditorDiscard => '放弃';
+
+  @override
+  String get pidEditorDiscardBody => '这个 PID 的修改还没有保存，离开后会丢失。';
+
+  @override
+  String get pidEditorDiscardTitle => '放弃未保存的更改？';
+
+  @override
+  String pidEditorEquationHelper(String valSyntax) {
+    return 'A..N 对应回应字节；可用 SIGNED()、ABS()、LOG10()、$valSyntax、BARO';
+  }
+
+  @override
+  String get pidEditorFieldEquation => '表达式';
+
+  @override
+  String get pidEditorFieldHeader => 'CAN 标头';
+
+  @override
+  String get pidEditorFieldMax => '最大值';
+
+  @override
+  String get pidEditorFieldMin => '最小值';
+
+  @override
+  String get pidEditorFieldModeAndPid => '模式 + PID';
+
+  @override
+  String get pidEditorFieldName => '名称';
+
+  @override
+  String get pidEditorFieldSample => '测试用回应字节';
+
+  @override
+  String get pidEditorFieldShortName => '简称（显示在表盘上）';
+
+  @override
+  String get pidEditorFieldUnits => '单位';
+
+  @override
+  String get pidEditorHeaderHelper => '7E0 = 引擎';
+
+  @override
+  String get pidEditorKeepEditing => '继续编辑';
+
+  @override
+  String get pidEditorModeAndPidHelper => '例如 010C 或 221101';
+
+  @override
+  String get pidEditorSampleHelper => '输入十六进制，即时预览计算结果';
+
+  @override
+  String get pidEditorSave => '保存';
+
+  @override
+  String get pidEditorSectionFormula => '公式';
+
+  @override
+  String get pidEditorSectionIdentity => '标识';
+
+  @override
+  String get pidEditorSectionQuery => '查询';
+
+  @override
+  String get pidEditorSectionRangeAndPriority => '表盘范围和优先级';
+
+  @override
+  String get pidEditorTitleEdit => '编辑 PID';
+
+  @override
+  String get pidEditorTitleNew => '新增自定义 PID';
+
+  @override
+  String pidExportFailed(String error) {
+    return '导出失败：$error';
+  }
+
+  @override
+  String get pidExportNoCustomPids => '当前没有自定义 PID 可导出。';
+
+  @override
+  String get pidImportNothingToImport => '没有可导入的定义。';
+
+  @override
+  String pidImportLandedClean(int count) {
+    return '已导入 $count 项自定义 PID。';
+  }
+
+  @override
+  String pidImportLandedWithNotes(int count, String notes) {
+    return '导入 $count 项，$notes。';
+  }
+
+  @override
+  String pidImportNoteSkippedRows(int count) {
+    return '$count 行有问题已跳过';
+  }
+
+  @override
+  String pidImportNoteDefaultedRanges(int count) {
+    return '$count 行套用了默认量程';
+  }
+
+  @override
+  String pidImportNoteReplaced(int count) {
+    return '$count 项覆盖了现有定义';
+  }
+
+  @override
+  String pidImportNoteDuplicatesInFile(int count) {
+    return '$count 行与文件内其他行重复已跳过';
+  }
+
+  @override
+  String get pidImportPickerFailed => '无法打开文件选择器。';
+
+  @override
+  String get pidImportReadFailed => '读取文件失败。';
+
+  @override
+  String get pidListSeparator => '、';
+
+  @override
+  String get pidManagerActiveOnly => '只显示已启用';
+
+  @override
+  String get pidManagerAdd => '新增';
+
+  @override
+  String get pidManagerArrangeDashboard => '排列仪表板';
+
+  @override
+  String pidManagerCounts(int active, int total) {
+    return '已启用 $active 项 · 共 $total 项可用';
+  }
+
+  @override
+  String get pidManagerExportCsv => '导出自定义 PID';
+
+  @override
+  String get pidManagerExportTorqueCsv => '导出 Torque 兼容 CSV';
+
+  @override
+  String get pidManagerExportHumanReport => '导出人类可读 PID 报表';
+
+  @override
+  String get pidManagerHeadline => 'PID 管理';
+
+  @override
+  String get pidManagerImportCsv => '导入 CSV';
+
+  @override
+  String get pidManagerMoreActions => '更多';
+
+  @override
+  String get pidManagerNoMatchMessage => '换个关键字，或创建一个自定义 PID。';
+
+  @override
+  String get pidManagerNoMatchTitle => '没有匹配的 PID';
+
+  @override
+  String get pidManagerPowertrainBatteryCatalog => '大电池目录';
+
+  @override
+  String get pidManagerSearchHint => '搜索名称或 PID 代码…';
+
+  @override
+  String get pidPickCsvDialogTitle => '选择 PID 定义 CSV';
+
+  @override
+  String get pidPillCustom => '自定义';
+
+  @override
+  String get pidPillUnsupported => '不支持';
+
+  @override
+  String get pidPreviewCannotEvaluate => '无法计算';
+
+  @override
+  String get pidPreviewResultLabel => '计算结果';
+
+  @override
+  String pidPreviewSubstituted(double value, String dependencies) {
+    final intl.NumberFormat valueNumberFormat =
+        intl.NumberFormat.decimalPattern(localeName);
+    final String valueString = valueNumberFormat.format(value);
+
+    return '预览时以 $valueString 代入 $dependencies；实际数值会在连接后由该 PID 提供。';
+  }
+
+  @override
+  String get pidPreviewTitle => '实时预览';
+
+  @override
+  String get pidPriorityHigh => '高';
+
+  @override
+  String get pidPriorityLow => '低';
+
+  @override
+  String get pidPriorityMedium => '中';
+
+  @override
+  String get pidPriorityVeryLow => '极低';
+
+  @override
+  String get pidRowEdit => '编辑';
+
+  @override
+  String pidRowShowOnDashboard(String name) {
+    return '在仪表板显示 $name';
+  }
+
+  @override
+  String pidRowStaleUnits(String units) {
+    return '$units · 已过期';
+  }
+
+  @override
+  String powertrainAuthorizationGranted(String profile) {
+    return '已启用 $profile 的电池信号（本次连接）';
+  }
+
+  @override
+  String powertrainAuthorizationRefused(String reason) {
+    return '无法启用：$reason';
+  }
+
+  @override
+  String get powertrainCancel => '取消';
+
+  @override
+  String powertrainCatalogCounts(int profiles, int probeable) {
+    return '$profiles 个车型 · $probeable 个可单次读取';
+  }
+
+  @override
+  String get powertrainCatalogLoadFailedBody => '完整性验证没有通过，因此没有显示或安装任何车型数据。';
+
+  @override
+  String get powertrainCatalogLoadFailedTitle => '离线目录无法加载';
+
+  @override
+  String get powertrainCatalogNotVerified => '目录尚未通过验证，无法安装。';
+
+  @override
+  String get powertrainCatalogRevalidate => '重新验证';
+
+  @override
+  String get powertrainCatalogScopeNote =>
+      '目录很广，但“找到数据”不等于“已支持”。仅研究项目永远没有指令。Mode 22 实验项目可安装并轮询，但每个数值都标为未验证；Mode 21 实验项目每次确认后只读一次。';
+
+  @override
+  String get powertrainCatalogSearchHint => '搜索品牌、车型、版本或市场…';
+
+  @override
+  String get powertrainCatalogTitle => '大电池车型目录';
+
+  @override
+  String get powertrainChooseCommandNote => '每次只送一条，不扫描、不批量、不自动重试。';
+
+  @override
+  String get powertrainChooseCommandTitle => '选择一条固定只读查询';
+
+  @override
+  String get powertrainClose => '关闭';
+
+  @override
+  String get powertrainConfirmAccept => '就是这辆车';
+
+  @override
+  String get powertrainConfirmBody =>
+      '已安装的车型信号要先确认这辆车就是该车型，本次连接才会开始读取。确认只对这次连接有效。';
+
+  @override
+  String get powertrainConfirmButton => '确认车辆';
+
+  @override
+  String get powertrainConfirmDialogBody =>
+      '确认后，这个车型的只读电池查询会在本次连接内定期轮询。接错车型可能得到看似合理但错误的数字——不确定就取消。';
+
+  @override
+  String get powertrainConfirmDialogTitle => '确认连接中的车辆';
+
+  @override
+  String get powertrainConfirmTitle => '车辆电池信号待确认';
+
+  @override
+  String get powertrainConnectFirst => '请先连接；实验授权不会跨连接保留。';
+
+  @override
+  String get powertrainConnectionChanged => '连接已改变，请对新的连接重新确认车辆。';
+
+  @override
+  String get powertrainEnableLabInSettings => '请先到设置开启“大电池证据实验室”。';
+
+  @override
+  String get powertrainEvidencePhysicalVehicle => '项目实车';
+
+  @override
+  String get powertrainEvidenceSourceBacked => '来源数据';
+
+  @override
+  String get powertrainEvidenceSyntheticRig => '合成测试台';
+
+  @override
+  String get powertrainExperimentalDataDisclosure =>
+      '这是来源作者标示的候选读取，不是原厂或跨车型安全保证；ELM327 只负责转发命令。原始指令和回复会留在本地诊断记录，不会由此功能自动上传；解码值不会安装成 PID 或加入仪表。取消不影响一般 OBD 功能。';
+
+  @override
+  String get powertrainExperimentalDialogTitle => '单次实验只读确认';
+
+  @override
+  String get powertrainExperimentalIdentityAck => '我已核对来源已知的市场、车型与年款，并接受未证实字段';
+
+  @override
+  String get powertrainExperimentalParkedAck => '车辆已安全停稳；我知道这只能读一次，数字仍可能不适用';
+
+  @override
+  String powertrainExperimentalWireLine(String responder, int bytes) {
+    return '只接受 RX $responder，数据长度 $bytes bytes';
+  }
+
+  @override
+  String get powertrainFieldListSeparator => '、';
+
+  @override
+  String get powertrainFieldMarket => '市场';
+
+  @override
+  String get powertrainFieldModel => '车型';
+
+  @override
+  String get powertrainFieldModelYear => '年款';
+
+  @override
+  String get powertrainFieldVariant => '版本';
+
+  @override
+  String get powertrainFilterAll => '全部';
+
+  @override
+  String get powertrainIdentityEvidenceExact => '直接证据';
+
+  @override
+  String get powertrainIdentityEvidenceNone => '无';
+
+  @override
+  String get powertrainIdentityEvidenceSourcePartial => '部分证据';
+
+  @override
+  String powertrainIdentityEvidenceSummary(String fields, String unconfirmed) {
+    return '来源身份证据：$fields\n未证实字段：$unconfirmed';
+  }
+
+  @override
+  String get powertrainIdentityEvidenceUnknown => '未知';
+
+  @override
+  String get powertrainInstallButton => '安装电池信号';
+
+  @override
+  String get powertrainInstallConfirm => '安装';
+
+  @override
+  String get powertrainInstallDialogTitle => '安装车型电池信号';
+
+  @override
+  String get powertrainInstallDisclosureCommunity =>
+      '安装只是把只读电池 PID 加进 PID 管理。开始读取前，每次连接都要在仪表板确认“这辆车就是该车型”。数据来自社区来源并经过独立比对，仍非原厂保证。';
+
+  @override
+  String get powertrainInstallDisclosureExperimental =>
+      '安装只是把只读电池 PID 加进 PID 管理。开始读取前，每次连接都要在仪表板确认“这辆车就是该车型”。这是实验解码，没有独立佐证要求，本车未验证，仍非原厂保证。';
+
+  @override
+  String get powertrainInstallDisclosureReady =>
+      '安装只是把只读电池 PID 加进 PID 管理。开始读取前，每次连接都要在仪表板确认“这辆车就是该车型”。来源数据较完整，仍非原厂保证。';
+
+  @override
+  String get powertrainInstallDisclosureResearchOnly =>
+      '安装只是把只读电池 PID 加进 PID 管理。开始读取前，每次连接都要在仪表板确认“这辆车就是该车型”。此列仅供研究，不应安装。';
+
+  @override
+  String get powertrainInstallCatalogShaMissing =>
+      '无法安装：这份目录快照没有已验证的 SHA-256，因此其中任何内容都不能信任。';
+
+  @override
+  String get powertrainInstallPersistFailed =>
+      '无法安装：已安装配置列表无法写入。请再试一次；PID 管理没有新增任何项目。';
+
+  @override
+  String get powertrainInstallProfileNotInCatalog => '无法安装：这个配置不在已验证的目录中。';
+
+  @override
+  String get powertrainInstallProfileNotInstallable =>
+      '无法安装：这个配置目前不能变成实际的 PID。';
+
+  @override
+  String get powertrainInstallYearOutOfRange => '无法安装：该年款不在这个配置记载的年份范围内。';
+
+  @override
+  String get powertrainInstallIdentityAck => '我的车辆符合上述市场、车型与年款';
+
+  @override
+  String get powertrainInstalledRemoveButton => '已安装 · 移除信号';
+
+  @override
+  String powertrainInstalledSignalsSnack(int count) {
+    return '已安装 $count 个信号。到 PID 页面加入仪表板；每次连接需确认车辆。';
+  }
+
+  @override
+  String get powertrainNoMatchBody => '改用品牌、车型名称，或切换其他动力类型。';
+
+  @override
+  String get powertrainNoMatchTitle => '没有匹配的车型';
+
+  @override
+  String get powertrainNotInstallableInThisRelease => '此版本不可安装';
+
+  @override
+  String powertrainPrimarySource(String name, String license) {
+    return '主要来源：$name（$license）';
+  }
+
+  @override
+  String get powertrainProbeChecksPassed =>
+      '已通过 responder、echo、exact length、公式与范围检查。';
+
+  @override
+  String get powertrainProbeConnectForOneShot => '连接后单次只读';
+
+  @override
+  String get powertrainProbeConnectToTryOnce => '连接后可先单次试读';
+
+  @override
+  String get powertrainProbeDidNotFinish => '单次查询没有完成；没有发布或保留数值。';
+
+  @override
+  String get powertrainProbeEnableLabFirst => '先在设置中开启实验室';
+
+  @override
+  String get powertrainProbeInProgress => '单次查询中…';
+
+  @override
+  String get powertrainProbeNoValuePublished => '没有发布数值；结构或解码错误会隔离到重新连接。';
+
+  @override
+  String get powertrainProbeOnceButton => '只读这一次';
+
+  @override
+  String get powertrainProbePassedTitle => '单次查询通过';
+
+  @override
+  String get powertrainProbePickOneRead => '选一条，只读一次';
+
+  @override
+  String get powertrainProbeReconnectFirst => '重新连接后再试';
+
+  @override
+  String get powertrainProbeRefusedTitle => '单次查询已拒绝';
+
+  @override
+  String get powertrainProbeTryOnceFirst => '先试读一次';
+
+  @override
+  String get powertrainProfileNotVerified => '配置不在已验证目录中';
+
+  @override
+  String get powertrainQuarantinedPill => '本次连接已隔离';
+
+  @override
+  String get powertrainRefusedCatalogHashInvalid =>
+      '未授权：目录的完整性哈希无效，因此其中任何内容都不能读取。';
+
+  @override
+  String get powertrainRefusedCommandNotInProfile => '未授权：这个指令不属于这份已验证配置本身的指令。';
+
+  @override
+  String get powertrainRefusedLabClosed => '在这次读取取得授权之前，大电池证据实验室已被关闭。';
+
+  @override
+  String get powertrainRefusedProfileFailedValidation =>
+      '未授权：这个配置没有通过你所选车辆年份的目录验证。';
+
+  @override
+  String get powertrainRefusedProfileNotInCatalog => '未授权：这个配置不在已验证的目录中。';
+
+  @override
+  String get powertrainRefusedProfileNotProbeable => '未授权：这个配置不是可以单次实验读取的配置。';
+
+  @override
+  String get powertrainRefusedQuarantinedAfterRejectedRead =>
+      '本次连接已隔离：先前一次单次读取没有通过结构检查。请重新连接后再试。';
+
+  @override
+  String get powertrainRefusedNotConnectedOrNotInForeground =>
+      '这次单次读取没有开始：当前没有连接，或 App 不在前台。';
+
+  @override
+  String get powertrainRefusedNoLiveAuthorization =>
+      '这次单次读取没有开始：当前没有持有单次授权。授权不存在、已过期、冷却中或已被隔离。';
+
+  @override
+  String get powertrainRefusedDiscardedAtLifecycleBoundary =>
+      '单次读取进行中，连接或前台状态改变了，因此它的结果被丢弃而没有显示。没有任何失败，也没有保留任何结果。';
+
+  @override
+  String powertrainRefusedQuarantinedAtAttemptCap(int attemptCap) {
+    return '本次连接已隔离：同一个指令已经尝试 $attemptCap 次。请重新连接后再试。';
+  }
+
+  @override
+  String get powertrainResearchOnlyNeverQueries => '仅研究，不会查询';
+
+  @override
+  String get powertrainRestoreStorageErrorRetry => '还原先前安装时发生存储错误，已重新安排，请再试一次。';
+
+  @override
+  String powertrainSecondarySource(String name, String license) {
+    return '独立佐证：$name（$license）';
+  }
+
+  @override
+  String powertrainSignalCount(int count) {
+    return '$count 个信号';
+  }
+
+  @override
+  String powertrainSourceSha256(String hash) {
+    return '来源文件 SHA-256：$hash…';
+  }
+
+  @override
+  String get powertrainStatusCommunity => '社区数据 · 未验证';
+
+  @override
+  String get powertrainStatusExperimental => '实验 · 未验证';
+
+  @override
+  String get powertrainStatusExperimentalProbeOnly => '实验单次只读';
+
+  @override
+  String get powertrainStatusReady => '来源较完整';
+
+  @override
+  String get powertrainStatusResearchOnly => '仅研究';
+
+  @override
+  String powertrainUninstalledSignalsSnack(String name) {
+    return '已移除 $name 的已安装信号。';
+  }
+
+  @override
+  String powertrainVehicleYearFixed(int year) {
+    return '车辆年款：$year';
+  }
+
+  @override
+  String get powertrainVehicleYearLabel => '车辆年款';
+
+  @override
+  String get recommendedPurchaseDisclosure =>
+      '这是维护者的推广分润链接；符合条件的购买可能产生佣金。不是适配器认证或购买保证。商品内容与硬件版本可能变更，购买前请核对完整型号与 NCC 号码。你也可以自行搜索其他渠道。';
+
+  @override
+  String get recommendedPurchaseHeading => '推荐适配器';
+
+  @override
+  String recommendedPurchaseModelLine(String model, String approval) {
+    return '型号 $model · NCC $approval';
+  }
+
+  @override
+  String recommendedPurchaseNoAdapterYet(String store) {
+    return '还没有适配器？在$store看推荐款';
+  }
+
+  @override
+  String recommendedPurchaseOpenFailed(String store) {
+    return '无法打开$store链接';
+  }
+
+  @override
+  String get recommendedPurchaseShortDisclosureAction => '完整说明在设置';
+
+  @override
+  String get recommendedPurchaseShortDisclosureLead => '这是推广分润链接，不是适配器认证。';
+
+  @override
+  String get recommendedPurchaseStoreShopee => '虾皮';
+
+  @override
+  String recommendedPurchaseViewOnStore(String store) {
+    return '在$store查看';
+  }
+
+  @override
+  String get semanticsFieldSeparator => '，';
+
+  @override
+  String get settingsAdapterConcernsFooter =>
+      '这些是适配器对自己的描述对不起来，不是它读错了车。要确认数值，只能拿第二个独立测量去对（见速查表）。';
+
+  @override
+  String get settingsAdapterNoContradictions =>
+      '没有发现自述矛盾。这只表示它对自己的描述前后一致——既不代表它是原厂芯片，也不代表它回报的数值正确。版本号在仿制品上就是一段可以任意填的文字。';
+
+  @override
+  String get settingsAdapterNoVersion => '（未回报版本）';
+
+  @override
+  String get settingsAdapterSelfReportTitle => '适配器自述';
+
+  @override
+  String get settingsBatteryLabDialogBody =>
+      '这些是逆向工程来源的候选数据，不是原厂文件，也不是 Telltale 实车支持。即使是只读查询也可能唤醒控制器；解码后的数字可能看似合理但其实不适用。';
+
+  @override
+  String get settingsBatteryLabDialogTitle => '开启大电池证据实验室';
+
+  @override
+  String get settingsBatteryLabDisableNotSaved =>
+      '本次运行已关闭大电池实验功能，但无法保存设置；下次启动可能再显示实验入口，每条查询仍需重新确认。';
+
+  @override
+  String get settingsBatteryLabEnableNotSaved => '无法保存大电池实验功能设置，功能保持关闭。';
+
+  @override
+  String get settingsBatteryLabEvidenceAck => '我知道来源数据与合成测试不能证明我的实车适用';
+
+  @override
+  String get settingsBatteryLabSwitchSubtitle =>
+      '只显示来源完整、受哈希约束的单次只读查询。不会自动安装 PID、轮询、加入仪表或把研究数据当成支持。';
+
+  @override
+  String get settingsBatteryLabSwitchTitle => '大电池证据实验室（实验）';
+
+  @override
+  String get settingsBatteryLabUnlockReadOnly => '只解锁单次只读查询';
+
+  @override
+  String get settingsBatteryLabWireAck =>
+      '我知道只会解锁目录内固定 Mode 21/22 的单次查询；不会解锁扫描、诊断 session、安全访问、写入或控制';
+
+  @override
+  String get settingsCancel => '取消';
+
+  @override
+  String get settingsCatalogChoose => '从官方目录选择';
+
+  @override
+  String get settingsCatalogCorrupt => '官方离线目录损坏或无法加载，没有套用任何数据。';
+
+  @override
+  String get settingsCatalogNothingApplicable =>
+      '这条官方配置没有可安全套用到当前公式的字段，原设置保持不变。';
+
+  @override
+  String get settingsCatalogScope =>
+      '官方目录：美国 EPA、台湾经济部能源署、加拿大 NRCan。各快照只代表该市场，不是全球所有品牌或年款。';
+
+  @override
+  String get settingsCatalogVerifying => '验证离线目录中…';
+
+  @override
+  String get settingsCatalogChooseMarket => '选择要浏览的官方目录';
+
+  @override
+  String get settingsCatalogMarketTw => '台湾（经济部能源署）';
+
+  @override
+  String get settingsCatalogMarketUs => '美国（EPA）';
+
+  @override
+  String get settingsTwCertificationYear => '核发年份';
+
+  @override
+  String get settingsTwMake => '台湾品牌';
+
+  @override
+  String settingsTwPickerScope(int firstYear, int lastYear) {
+    return '仅含 $firstYear–$lastYear 的台湾核发列。这个年份是能源署核发公元年，不是美国 model year。名称相同也不等于 EPA 配置。';
+  }
+
+  @override
+  String get settingsTwPickerTitle => '台湾官方车辆目录';
+
+  @override
+  String get settingsTwReferenceMassNotCurb => '参考车重不是 curb mass，不会套用。';
+
+  @override
+  String settingsTwWillApplyOnly(String fields) {
+    return '只会套用：$fields。参考车重、VE、Cd、正面面积、Crr 与传动效率仍保持未解析。';
+  }
+
+  @override
+  String get settingsClose => '关闭';
+
+  @override
+  String get settingsConnectionSection => '连接';
+
+  @override
+  String get settingsDiagnosticsSection => '诊断记录';
+
+  @override
+  String get settingsDisconnect => '断开连接';
+
+  @override
+  String settingsDrivetrainEfficiency(int percent) {
+    return '传动效率 $percent %';
+  }
+
+  @override
+  String settingsEpaApplyFields(int count) {
+    return '套用 $count 个官方字段';
+  }
+
+  @override
+  String get settingsEpaChooseExact => '选择一个精确配置';
+
+  @override
+  String get settingsEpaCloseNoFields => '关闭（没有可套用字段）';
+
+  @override
+  String settingsEpaConfiguration(int epaId) {
+    return 'EPA 配置 $epaId';
+  }
+
+  @override
+  String settingsEpaCylinders(int count) {
+    return '$count 缸';
+  }
+
+  @override
+  String get settingsEpaDriveUnknown => '驱动未知';
+
+  @override
+  String get settingsEpaFuelUnknown => '燃料未知';
+
+  @override
+  String get settingsEpaMake => '品牌（EPA make）';
+
+  @override
+  String get settingsEpaModel => '车型';
+
+  @override
+  String get settingsEpaNoConfigurations => '这个车型没有可用配置';
+
+  @override
+  String get settingsEpaNoSafeFields => '此配置没有能安全套用到当前公式的字段；不会猜测。';
+
+  @override
+  String get settingsEpaPickInOrder => '按顺序选择年款、品牌与车型';
+
+  @override
+  String settingsEpaPickerScope(int firstYear, int lastYear) {
+    return '仅限美国市场 $firstYear–$lastYear 的快照配置。选到同名车系仍要以年款、变速箱、燃料与 EPA ID 消歧。';
+  }
+
+  @override
+  String get settingsEpaPickerTitle => '美国 EPA 官方车型目录';
+
+  @override
+  String settingsEpaWillApplyOnly(String fields) {
+    return '只会套用：$fields。车重、VE、Cd、正面面积、Crr 与传动效率仍保持未解析。';
+  }
+
+  @override
+  String get settingsEpaYear => '年款';
+
+  @override
+  String get settingsExperimentalSection => '实验功能';
+
+  @override
+  String get settingsFieldDisplacement => '排气量';
+
+  @override
+  String get settingsFieldDragCoefficient => '风阻系数 Cd';
+
+  @override
+  String get settingsFieldDrivetrain => '驱动方式';
+
+  @override
+  String get settingsFieldFrontalArea => '正面投影面积';
+
+  @override
+  String get settingsFieldFuel => '燃料';
+
+  @override
+  String get settingsFieldMass => '车重';
+
+  @override
+  String get settingsFieldMassWithDriver => '车重（含驾驶员）';
+
+  @override
+  String get settingsFieldRollingResistance => '滚动阻力系数 Crr';
+
+  @override
+  String get settingsFieldVolumetricEfficiency => '容积效率 VE';
+
+  @override
+  String settingsFuelAfrAndDensity(double afr, int density) {
+    return '空燃比 $afr · 密度 $density g/L';
+  }
+
+  @override
+  String get settingsFuelAndDrivetrainSection => '燃料与驱动';
+
+  @override
+  String get settingsFuelTypeLabel => '燃料类型';
+
+  @override
+  String get settingsGaugeSkinBody =>
+      '不只是换颜色——每一种的刻度盘形状、指针、动态都不一样。深色与浅色底下都可以用。';
+
+  @override
+  String get settingsGaugeSkinTitle => '仪表样式';
+
+  @override
+  String get settingsGoToConnect => '前往连接';
+
+  @override
+  String get settingsHeadline => '设置';
+
+  @override
+  String get settingsLicenseLegalese => '大电池数据的来源、转换方式与重用条款都随本 App 一并附上。';
+
+  @override
+  String get settingsListSeparator => '、';
+
+  @override
+  String get settingsManualCommandBody =>
+      '直接送一条指令给适配器，例如 ATI、ATDPN、0100。会排在一般轮询的同一条队列上，不会插队。';
+
+  @override
+  String get settingsManualCommandFieldLabel => '指令';
+
+  @override
+  String get settingsManualCommandNoContent => '（没有回应内容）';
+
+  @override
+  String get settingsManualCommandSend => '发送';
+
+  @override
+  String get settingsManualCommandTitle => '手动指令';
+
+  @override
+  String get settingsNotConnected => '未连接';
+
+  @override
+  String get settingsOpenSourceLicenses => '开源与数据许可';
+
+  @override
+  String get settingsProfileConfirmAfterConnect => '连接后确认此车数据';
+
+  @override
+  String get settingsProfileConfirmButton => '确认本次连接车辆数据';
+
+  @override
+  String get settingsProfileConfirmedButton => '本次连接数据已确认';
+
+  @override
+  String get settingsProfileConfirmedDetail => '已确认本次连接的配置。修改任一项或重新连接后都要再确认。';
+
+  @override
+  String get settingsProfileEstimatesIntro =>
+      '马力、扭矩与油耗都是由这些参数推算出来的，填得越接近实车，推算值才越有意义。';
+
+  @override
+  String get settingsProfileNameProvesNothing =>
+      '品牌名称或 VIN 本身都不能证明重量、风阻、VE 与传动效率。';
+
+  @override
+  String get settingsProfileUnconfirmedConnectedDetail =>
+      '本次连接尚未确认。仍可读取 OBD 实测数据，但不显示依车重、VE 与风阻推算的数值。';
+
+  @override
+  String get settingsProfileUnconfirmedDisconnectedDetail =>
+      '先连上当前这辆车再确认。每次重新连接都会自动失效，避免把上一辆车的配置套到下一辆。';
+
+  @override
+  String get settingsProvenanceNoneExact =>
+      '当前没有字段已精确解析到这次车辆；通用值、手动值或旧来源值仍须确认。';
+
+  @override
+  String settingsProvenanceOnlyExact(String fields) {
+    return '当前只有$fields有官方精确来源；其他字段仍须逐项确认。';
+  }
+
+  @override
+  String settingsProvenanceOrigins(
+    int official,
+    int user,
+    int generic,
+    int scientific,
+    int total,
+  ) {
+    return '来源：官方／原厂 $official / $total 栏 · 手动 $user / $total 栏 · 通用 $generic / $total 栏 · 科学模型 $scientific / $total 栏';
+  }
+
+  @override
+  String settingsProvenancePublishers(String publishers) {
+    return '来源：$publishers';
+  }
+
+  @override
+  String settingsProvenanceResolution(
+    int exact,
+    int sessionConfirmed,
+    int unresolved,
+    int ambiguous,
+    int conflict,
+    int total,
+  ) {
+    return '解析：官方精确 $exact / $total 栏 · 本次确认 $sessionConfirmed / $total 栏 · 未解析 $unresolved / $total 栏 · 歧义 $ambiguous / $total 栏 · 冲突 $conflict / $total 栏';
+  }
+
+  @override
+  String get settingsStandardsFooter =>
+      '本 App 的 OBD2 实现依据 SAE J1979 与 ELM327 datasheet 等公开标准；每一条影响硬件行为的公式与 AT 指令都经过交叉验证，结果记录于 docs/protocol-deviations.zh-TW.md。本 App 与 Torque / Torque Pro 无关联。';
+
+  @override
+  String get settingsThemeDark => '深色';
+
+  @override
+  String get settingsThemeLight => '浅色';
+
+  @override
+  String get settingsThemeSystem => '跟随系统';
+
+  @override
+  String get settingsVehicleProfileSection => '车辆配置';
+
+  @override
+  String get settingsVinConflict => 'VIN 冲突';
+
+  @override
+  String get settingsVinConflictDetail => '不同控制器回报不同 VIN，无法确认车辆身份；所有候选都已丢弃。';
+
+  @override
+  String get settingsVinNotRead => 'VIN 尚未读取';
+
+  @override
+  String get settingsVinNotReadConnectedDetail =>
+      '可向当前车辆读取 Mode 09 VIN；身份状态只保留在这次连接中。原始诊断记录仍可能包含 VIN。';
+
+  @override
+  String get settingsVinNotReadDisconnectedDetail =>
+      '连接后可读取当前车辆自报的 VIN；身份状态不会带到下一次连接。原始诊断记录仍可能包含 VIN。';
+
+  @override
+  String get settingsVinRead => '读取 VIN';
+
+  @override
+  String get settingsVinReading => '读取中…';
+
+  @override
+  String get settingsVinReportedDetail =>
+      'VIN 是车辆自报身份，不代表车型规格已验证。身份状态不跨连接；诊断记录仍可能包含 VIN。';
+
+  @override
+  String get settingsVinSimulatorReported => '模拟器回报 VIN';
+
+  @override
+  String get settingsVinUnavailable => 'VIN 无法取得';
+
+  @override
+  String get settingsVinUnavailableDetail => '可能是车辆未提供、回复不完整或这次连接没有读到；不会猜测或补字。';
+
+  @override
+  String get settingsVinVehicleReported => '车辆回报 VIN';
+
+  @override
+  String get startupCannotComplete => '当前无法完成启动检查';
+
+  @override
+  String get startupChecking => '正在检查本地分享缓存与遥测记录';
+
+  @override
+  String get startupRestartHint =>
+      '本地分享缓存或遥测记录的状态无法确认。为避免覆盖、删除或分享错误文件，请完全关闭后重新打开 Telltale。';
+
+  @override
+  String get startupRestartRequired => '需要重新启动才能安全继续';
+
+  @override
+  String get startupRetry => '重试';
+
+  @override
+  String get startupRetryHint =>
+      '请让 Telltale 保持在前台，并在其他文件操作完成后重试。启动完成前不会开放记录、回放、导出或删除。';
+
+  @override
+  String get telemetryArtifactRestartRequired =>
+      '本地文件操作状态无法确认；请完全关闭并重新启动 App 后再操作';
+
+  @override
+  String get telemetryBlockedByRecorder => '请先停止并保存';
+
+  @override
+  String get telemetryCancel => '取消';
+
+  @override
+  String get telemetryDamagedCollision => '同一识别码同时存在完成与未完成文件，未选择任何一份';
+
+  @override
+  String get telemetryDamagedCorrupt => '记录损坏，无法安全读取';
+
+  @override
+  String telemetryDamagedFileTime(String time) {
+    return '文件时间 $time';
+  }
+
+  @override
+  String get telemetryDelete => '删除';
+
+  @override
+  String telemetryDeleteDamagedBody(String id, String time) {
+    return '将删除 $id（文件时间 $time）。删除后无法恢复。';
+  }
+
+  @override
+  String get telemetryDeleteDamagedTitle => '删除损坏记录？';
+
+  @override
+  String get telemetryDeleteDamagedTooltip => '删除损坏记录';
+
+  @override
+  String telemetryDeleteFailed(String reason) {
+    return '删除未完成：$reason';
+  }
+
+  @override
+  String get telemetryDeleteNeedsConfirmation => '请先确认这个删除操作';
+
+  @override
+  String telemetryDeleteSessionBody(String time) {
+    return '将删除 $time 的记录。此操作无法恢复。';
+  }
+
+  @override
+  String get telemetryDeleteSessionTitle => '删除本地记录？';
+
+  @override
+  String get telemetryDemoData => '内置模拟数据';
+
+  @override
+  String get telemetryDismissNotice => '关闭提示';
+
+  @override
+  String get telemetryEndedByBackground => 'App 进入后台后已停止';
+
+  @override
+  String get telemetryEndedByConfigurationChanged => 'PID 设置已更改';
+
+  @override
+  String get telemetryEndedByDisconnect => '连接断开后已停止';
+
+  @override
+  String telemetryEndedByDurationLimit(int minutes) {
+    return '已达 $minutes 分钟上限';
+  }
+
+  @override
+  String get telemetryEndedByLibrarySizeLimit => '本地记录空间已满';
+
+  @override
+  String get telemetryEndedByRecoveredAfterInterruption => '上次中断后已恢复';
+
+  @override
+  String get telemetryEndedBySessionReplacement => '连接会话已更换';
+
+  @override
+  String get telemetryEndedBySessionSizeLimit => '已达单笔记录容量上限';
+
+  @override
+  String get telemetryEndedByStorageBackpressure => '存储速度不足';
+
+  @override
+  String get telemetryEndedByStorageFailure => '保存失败';
+
+  @override
+  String get telemetryEndedByUser => '已手动停止';
+
+  @override
+  String get telemetryExport => '导出';
+
+  @override
+  String get telemetryExportCsv => '导出 CSV';
+
+  @override
+  String telemetryExportFailed(String reason) {
+    return '导出未完成：$reason';
+  }
+
+  @override
+  String get telemetryExportJson => '导出 JSON';
+
+  @override
+  String get telemetryExportSheetTitle => '导出本地记录';
+
+  @override
+  String telemetryGapCount(int count) {
+    return '$count 个缺口';
+  }
+
+  @override
+  String telemetryHistoryEntrySubtitle(int count) {
+    return '已保存 $count 组，可离线回放与导出';
+  }
+
+  @override
+  String telemetryLibraryBytes(String used, int limit) {
+    return '$used/$limit MiB';
+  }
+
+  @override
+  String telemetryLibraryGroupCount(int groups, int limit) {
+    return '$groups/$limit 组';
+  }
+
+  @override
+  String telemetryLibraryOmitted(int count) {
+    return '另有 $count 组未显示';
+  }
+
+  @override
+  String telemetryLibraryQuotaSemantics(
+    int groups,
+    int groupLimit,
+    String used,
+    int byteLimit,
+  ) {
+    return '本地存储 $groups / $groupLimit 组，$used / $byteLimit MiB';
+  }
+
+  @override
+  String get telemetryNotConnected => '当前未连接';
+
+  @override
+  String get telemetryOfflineSampledReplay => '离线抽样回放';
+
+  @override
+  String get telemetryOpenHistory => '查看本地记录';
+
+  @override
+  String get telemetryPause => '暂停';
+
+  @override
+  String get telemetryPendingOwnerRecovery =>
+      '操作仍由当前进程持有；若持续停在此状态，请完全关闭并重新启动 App';
+
+  @override
+  String telemetryPhraseJoin(String first, String second) {
+    return '$first，$second';
+  }
+
+  @override
+  String get telemetryPlay => '播放';
+
+  @override
+  String telemetryRecorderDisclosure(int laneLimit, int activeCount) {
+    return '只记录已启用的 OBD 信号，不含位置、VIN 或账号数据。趋势图最多显示 $laneLimit 项，录制会保留全部 $activeCount 项已启用信号，并自动加上估算马力与估算油耗（含车辆假设）。';
+  }
+
+  @override
+  String get telemetryRecorderPhaseAwaitingValues => '准备录制';
+
+  @override
+  String get telemetryRecorderPhaseCompleted => '记录已保存';
+
+  @override
+  String get telemetryRecorderPhaseFailed => '记录保存失败';
+
+  @override
+  String get telemetryRecorderPhaseFinalizing => '正在保存记录';
+
+  @override
+  String get telemetryRecorderPhaseIdle => '前台本地记录';
+
+  @override
+  String get telemetryRecorderPhasePreparing => '正在准备录制';
+
+  @override
+  String get telemetryRecorderPhaseRecording => '记录中';
+
+  @override
+  String telemetryRecorderStripRecording(String duration) {
+    return '录制中 $duration';
+  }
+
+  @override
+  String telemetryRecoveryCleaned(int count) {
+    return '$count 组没有有效值的未完成文件已清理';
+  }
+
+  @override
+  String telemetryRecoveryDamaged(int count) {
+    return '$count 组损坏或冲突文件未自动修改';
+  }
+
+  @override
+  String get telemetryRecoveryDamagedNote => '损坏内容不会用于回放或导出，只能在安全状态下手动删除。';
+
+  @override
+  String telemetryRecoveryInstalled(int count) {
+    return '$count 组中断记录已完成安全封存';
+  }
+
+  @override
+  String get telemetryRecoveryTitle => '启动记录检查已完成';
+
+  @override
+  String get telemetryReload => '重新加载';
+
+  @override
+  String telemetryReplayBreakCount(int count) {
+    return '$count 个中断';
+  }
+
+  @override
+  String get telemetryReplayLoadFailed => '无法加载记录';
+
+  @override
+  String telemetryReplayPositionSemantics(int percent) {
+    return '回放位置 $percent%';
+  }
+
+  @override
+  String telemetryReplaySampleCount(int count) {
+    return '$count 个抽样节点';
+  }
+
+  @override
+  String get telemetryReplayTitle => '记录回放';
+
+  @override
+  String get telemetryReplayUnreadable => '记录损坏或无法读取';
+
+  @override
+  String get telemetryRestartToRepairSave => '保存操作未完成；请重新启动 App 以修复记录';
+
+  @override
+  String get telemetryRestartToRepairStartup => '启动清理未完成；请重新启动 App 以修复记录';
+
+  @override
+  String get telemetryReturnToTrends => '返回趋势';
+
+  @override
+  String get telemetryRigData => '测试台架数据';
+
+  @override
+  String telemetrySentenceJoin(String first, String second) {
+    return '$first。$second';
+  }
+
+  @override
+  String get telemetrySessionsDamaged => '损坏的记录文件';
+
+  @override
+  String get telemetrySessionsEmpty => '还没有本地记录\n连接后开始录制';
+
+  @override
+  String get telemetrySessionsLoadFailed => '无法加载，请重试';
+
+  @override
+  String get telemetrySessionsReplayable => '可回放的记录';
+
+  @override
+  String get telemetrySessionsTitle => '本地记录';
+
+  @override
+  String telemetrySignalCount(int count) {
+    return '$count 项信号';
+  }
+
+  @override
+  String get telemetryStartBusy => '另一个记录或文件操作尚未完成';
+
+  @override
+  String get telemetryStartCannotCreateFile => '无法创建记录文件';
+
+  @override
+  String get telemetryStartInvalidConfiguration => 'PID 设置无法安全记录，请检查定义';
+
+  @override
+  String get telemetryStartInvalidatedBackground => 'App 已进入后台，未开始记录';
+
+  @override
+  String get telemetryStartInvalidatedDisconnect => '连接已断开，未开始记录';
+
+  @override
+  String get telemetryStartInvalidatedSessionReplacement => '连接会话已更换，未开始记录';
+
+  @override
+  String get telemetryStartLibraryByteLimit => '本地记录空间不足，请先导出或删除';
+
+  @override
+  String telemetryStartLibraryGroupLimit(int limit) {
+    return '本地记录已达 $limit 组上限，请先导出或删除';
+  }
+
+  @override
+  String get telemetryStartMoving => '请停车后操作';
+
+  @override
+  String get telemetryStartNeedsActivePid => '请先启用至少一项 PID';
+
+  @override
+  String get telemetryStartNeedsConnection => '请先连接再开始记录';
+
+  @override
+  String get telemetryStartNeedsForeground => '请回到 App 前台再开始记录';
+
+  @override
+  String get telemetryStartRecording => '已开始记录';
+
+  @override
+  String get telemetryStartRecordingButton => '开始记录';
+
+  @override
+  String get telemetryStartSpeedUnknown => '无法确认车辆已停止；请先断开连接';
+
+  @override
+  String get telemetryStartTooManyPids => '录制需保留估算马力与估算油耗字段，请先停用 PID';
+
+  @override
+  String get telemetryStarting => '正在开始';
+
+  @override
+  String get telemetryStatusBusError => '总线错误';
+
+  @override
+  String telemetryStatusCount(int count) {
+    return '$count 个状态';
+  }
+
+  @override
+  String get telemetryStatusFormulaError => '公式错误';
+
+  @override
+  String get telemetryStatusHeaderMismatch => '标头不符当前总线';
+
+  @override
+  String get telemetryStatusNoAnswer => '无响应，稍后重试';
+
+  @override
+  String get telemetryStatusStale => '数据已过期';
+
+  @override
+  String get telemetryStatusUnsafeServiceRefusal => '此服务不是只读查询，已停止发送';
+
+  @override
+  String get telemetryStatusUnsupported => '当前引擎控制器已确认不支持';
+
+  @override
+  String get telemetryStopAndSave => '停止并保存';
+
+  @override
+  String telemetryValueCount(int count) {
+    return '$count 笔有效值';
+  }
+
+  @override
+  String get transcriptDelete => '删除';
+
+  @override
+  String get transcriptDeleteBusy => '另一个文件操作尚未完成。';
+
+  @override
+  String get transcriptDeleteFailed => '无法删除上一次连接的记录。';
+
+  @override
+  String get transcriptDeleteRefusedBySafety => '当前车速或连接状态不允许删除记录。';
+
+  @override
+  String get transcriptExport => '导出';
+
+  @override
+  String get transcriptExportButton => '导出记录';
+
+  @override
+  String get transcriptExportExplanation =>
+      '这次连接会保留开头握手与最新的原始往返数据；长时间连接若省略中段，文件会明确标出。在车上遇到读不到、判断不出来的情况时，把记录导出带回来，比画面上的一句消息有用得多。';
+
+  @override
+  String transcriptExportFailed(String error) {
+    return '导出失败：$error';
+  }
+
+  @override
+  String get transcriptExportWithHex => '含十六进制';
+
+  @override
+  String get transcriptNothingToExport => '没有可导出的记录。';
+
+  @override
+  String transcriptRecoveredBody(String timestamp, String size) {
+    return '$timestamp 留下的，$size。App 被系统关闭或手机没电时，记录还是留下来了。';
+  }
+
+  @override
+  String get transcriptRecoveredChanged => '上一次连接的记录已更新，请再确认。';
+
+  @override
+  String get transcriptRecoveredTitle => '上一次连接的记录';
+
+  @override
+  String transcriptSizeBytes(int bytes) {
+    return '$bytes 字节';
+  }
+
+  @override
+  String get trendAxisNow => '现在';
+
+  @override
+  String get trendChooseSignals => '选择信号';
+
+  @override
+  String get trendLiveData => '实时数据';
+
+  @override
+  String get trendNoSignalsBody => '先到 PID 页面启用想要监视的信号。';
+
+  @override
+  String get trendNoSignalsTitle => '没有可用的趋势信号';
+
+  @override
+  String get trendNoUnits => '无单位';
+
+  @override
+  String trendPickSignalsBody(int limit) {
+    return '最多可以比较 $limit 项信号，不会改变已启用的 PID 轮询。';
+  }
+
+  @override
+  String get trendPickSignalsTitle => '选择趋势信号';
+
+  @override
+  String trendRemoveSignal(String name) {
+    return '移除 $name';
+  }
+
+  @override
+  String get trendSelectionSaveFailed => '无法保存趋势显示选择';
+
+  @override
+  String trendSheetBody(int limit) {
+    return '最多选择 $limit 项。这只会改变图表，不会改变 PID 轮询或正在进行的记录。';
+  }
+
+  @override
+  String trendSheetDone(int selected, int limit) {
+    return '完成 · $selected/$limit';
+  }
+
+  @override
+  String get trendSignalNoLongerActive => '其中一项信号已不在 PID 监视列表';
+
+  @override
+  String get trendSignalsHeading => '趋势信号';
+
+  @override
+  String trendTooManySelected(int limit) {
+    return '最多选择 $limit 项';
+  }
+
+  @override
+  String trendWindowSemantics(int seconds) {
+    return '显示最近 $seconds 秒趋势';
+  }
+
+  @override
+  String get wearBack => '返回';
+
+  @override
+  String get wearBatteryVoltageLabel => '电瓶';
+
+  @override
+  String get wearBleAdapters => 'BLE 适配器';
+
+  @override
+  String get wearCancel => '取消';
+
+  @override
+  String get wearConfirmVehicle => '确认车辆';
+
+  @override
+  String get wearConfirmVehicleAccept => '就是这辆车';
+
+  @override
+  String get wearConfirmVehicleBody =>
+      '确认后，这个车型的只读电池查询会在本次连接内定期轮询。接错车型可能得到看似合理但错误的数字——不确定就取消。';
+
+  @override
+  String wearConnectFailed(String adapter) {
+    return '连接失败：$adapter';
+  }
+
+  @override
+  String get wearConnecting => '连接中…';
+
+  @override
+  String get wearDemoSimulator => 'Demo 模拟器';
+
+  @override
+  String get wearDisconnect => '断开';
+
+  @override
+  String get wearDisconnectQuestion => '断开连接？';
+
+  @override
+  String get wearNoDevicesFound => '没有找到设备';
+
+  @override
+  String get wearPermissionBluetooth => '蓝牙';
+
+  @override
+  String get wearPermissionLocation => '位置';
+
+  @override
+  String get wearScanAgain => '重新扫描';
+
+  @override
+  String get wearScanFailed => '扫描失败，请再试一次';
+
+  @override
+  String wearScanPermissionNeeded(String permission) {
+    return '需要$permission权限才能扫描';
+  }
+
+  @override
+  String wearScanPermissionPermanentlyDenied(String permission) {
+    return '$permission权限已被永久拒绝，请到系统设置开启后再试';
+  }
+
+  @override
+  String get wearScanning => '扫描中…';
+
+  @override
+  String get telemetryRecorderNotRecording => '未录制';
+
+  @override
+  String get dtcKindStored => '已存储';
+
+  @override
+  String get dtcKindPending => '待定';
+
+  @override
+  String get dtcKindPermanent => '永久';
+
+  @override
+  String get dtcKindStoredExplanation => '已确认的故障，仪表板故障灯通常亮起';
+
+  @override
+  String get dtcKindPendingExplanation => '检测到一次，尚未达到确认阈值';
+
+  @override
+  String get dtcKindPermanentExplanation => '无法用诊断仪清除，需修复后由 ECU 自行确认';
+
+  @override
+  String get dtcSystemPowertrain => '动力系统';
+
+  @override
+  String get dtcSystemChassis => '底盘';
+
+  @override
+  String get dtcSystemBody => '车身';
+
+  @override
+  String get dtcSystemNetwork => '网络';
+
+  @override
+  String get dtcSubsystemFuelAirMeteringAndAuxiliaryEmissions =>
+      '燃油与空气计量、辅助排放控制';
+
+  @override
+  String get dtcSubsystemFuelAirMetering => '燃油与空气计量';
+
+  @override
+  String get dtcSubsystemFuelAirMeteringInjectorCircuit => '燃油与空气计量（喷油器电路）';
+
+  @override
+  String get dtcSubsystemIgnitionOrMisfire => '点火系统或失火';
+
+  @override
+  String get dtcSubsystemAuxiliaryEmissionControls => '辅助排放控制';
+
+  @override
+  String get dtcSubsystemSpeedAndIdleControl => '车速控制与怠速系统';
+
+  @override
+  String get dtcSubsystemComputerOutputCircuit => '计算机输出电路';
+
+  @override
+  String get dtcSubsystemTransmission => '变速箱';
+
+  @override
+  String get dtcSubsystemControlModuleSignals => '控制模块输入／输出信号';
+
+  @override
+  String get dtcDescriptionB0001 => '驾驶员安全气囊装置故障';
+
+  @override
+  String get dtcDescriptionP0011 => '“A”凸轮轴正时过前或系统性能异常（Bank 1）';
+
+  @override
+  String get dtcDescriptionP0014 => '“B”凸轮轴正时过前或系统性能异常（Bank 1）';
+
+  @override
+  String get dtcDescriptionP0016 => '曲轴与凸轮轴位置信号不同步（Bank 1 传感器 A）';
+
+  @override
+  String get dtcDescriptionP0087 => '燃油轨／系统压力过低';
+
+  @override
+  String get dtcDescriptionP0088 => '燃油轨／系统压力过高';
+
+  @override
+  String get dtcDescriptionP0100 => '空气流量传感器 (MAF) 电路故障';
+
+  @override
+  String get dtcDescriptionP0101 => '空气流量传感器范围/性能异常';
+
+  @override
+  String get dtcDescriptionP0102 => '空气流量传感器电路输入过低';
+
+  @override
+  String get dtcDescriptionP0103 => '空气流量传感器电路输入过高';
+
+  @override
+  String get dtcDescriptionP0105 => '进气歧管绝对压力／大气压力传感器电路故障';
+
+  @override
+  String get dtcDescriptionP0106 => '进气歧管绝对压力传感器范围/性能异常';
+
+  @override
+  String get dtcDescriptionP0107 => '进气歧管绝对压力传感器电路输入过低';
+
+  @override
+  String get dtcDescriptionP0108 => '进气歧管绝对压力传感器电路输入过高';
+
+  @override
+  String get dtcDescriptionP0110 => '进气温度传感器电路故障';
+
+  @override
+  String get dtcDescriptionP0111 => '进气温度传感器范围/性能异常';
+
+  @override
+  String get dtcDescriptionP0112 => '进气温度传感器电路输入过低';
+
+  @override
+  String get dtcDescriptionP0113 => '进气温度传感器电路输入过高';
+
+  @override
+  String get dtcDescriptionP0115 => '冷却液温度传感器电路故障';
+
+  @override
+  String get dtcDescriptionP0116 => '冷却液温度传感器范围/性能异常';
+
+  @override
+  String get dtcDescriptionP0117 => '冷却液温度传感器电路输入过低';
+
+  @override
+  String get dtcDescriptionP0118 => '冷却液温度传感器电路输入过高';
+
+  @override
+  String get dtcDescriptionP0120 => '节气门位置传感器电路故障';
+
+  @override
+  String get dtcDescriptionP0121 => '节气门位置传感器范围/性能异常';
+
+  @override
+  String get dtcDescriptionP0122 => '节气门位置传感器电路输入过低';
+
+  @override
+  String get dtcDescriptionP0123 => '节气门位置传感器电路输入过高';
+
+  @override
+  String get dtcDescriptionP0125 => '冷却液温度不足以进入闭环燃油控制';
+
+  @override
+  String get dtcDescriptionP0128 => '冷却液温度低于节温器调节温度';
+
+  @override
+  String get dtcDescriptionP0130 => '氧传感器电路故障 (Bank 1 Sensor 1)';
+
+  @override
+  String get dtcDescriptionP0131 => '氧传感器电路电压过低 (Bank 1 Sensor 1)';
+
+  @override
+  String get dtcDescriptionP0132 => '氧传感器电路电压过高 (Bank 1 Sensor 1)';
+
+  @override
+  String get dtcDescriptionP0133 => '氧传感器反应过慢 (Bank 1 Sensor 1)';
+
+  @override
+  String get dtcDescriptionP0134 => '氧传感器无活性信号 (Bank 1 Sensor 1)';
+
+  @override
+  String get dtcDescriptionP0135 => '氧传感器加热器电路故障 (Bank 1 Sensor 1)';
+
+  @override
+  String get dtcDescriptionP0136 => '氧传感器电路故障 (Bank 1 Sensor 2)';
+
+  @override
+  String get dtcDescriptionP0137 => '氧传感器电路电压过低 (Bank 1 Sensor 2)';
+
+  @override
+  String get dtcDescriptionP0138 => '氧传感器电路电压过高 (Bank 1 Sensor 2)';
+
+  @override
+  String get dtcDescriptionP0140 => '氧传感器无活性信号 (Bank 1 Sensor 2)';
+
+  @override
+  String get dtcDescriptionP0141 => '氧传感器加热器电路故障 (Bank 1 Sensor 2)';
+
+  @override
+  String get dtcDescriptionP0150 => '氧传感器电路故障 (Bank 2 Sensor 1)';
+
+  @override
+  String get dtcDescriptionP0155 => '氧传感器加热器电路故障 (Bank 2 Sensor 1)';
+
+  @override
+  String get dtcDescriptionP0156 => '氧传感器电路故障 (Bank 2 Sensor 2)';
+
+  @override
+  String get dtcDescriptionP0161 => '氧传感器加热器电路故障 (Bank 2 Sensor 2)';
+
+  @override
+  String get dtcDescriptionP0170 => '燃油修正异常 (Bank 1)';
+
+  @override
+  String get dtcDescriptionP0171 => '混合比过稀 (Bank 1)';
+
+  @override
+  String get dtcDescriptionP0172 => '混合比过浓 (Bank 1)';
+
+  @override
+  String get dtcDescriptionP0173 => '燃油修正异常 (Bank 2)';
+
+  @override
+  String get dtcDescriptionP0174 => '混合比过稀 (Bank 2)';
+
+  @override
+  String get dtcDescriptionP0175 => '混合比过浓 (Bank 2)';
+
+  @override
+  String get dtcDescriptionP0190 => '燃油轨压力传感器电路故障';
+
+  @override
+  String get dtcDescriptionP0201 => '喷油器电路故障／开路——第 1 缸';
+
+  @override
+  String get dtcDescriptionP0202 => '喷油器电路故障／开路——第 2 缸';
+
+  @override
+  String get dtcDescriptionP0203 => '喷油器电路故障／开路——第 3 缸';
+
+  @override
+  String get dtcDescriptionP0204 => '喷油器电路故障／开路——第 4 缸';
+
+  @override
+  String get dtcDescriptionP0217 => '引擎过热';
+
+  @override
+  String get dtcDescriptionP0221 => '节气门／油门踏板位置传感器 B 范围或性能异常';
+
+  @override
+  String get dtcDescriptionP0222 => '节气门／油门踏板位置传感器 B 电路输入过低';
+
+  @override
+  String get dtcDescriptionP0223 => '节气门／油门踏板位置传感器 B 电路输入过高';
+
+  @override
+  String get dtcDescriptionP0234 => '涡轮／机械增压过压';
+
+  @override
+  String get dtcDescriptionP0299 => '涡轮／机械增压“A”增压不足';
+
+  @override
+  String get dtcDescriptionP0300 => '检测到随机/多缸失火';
+
+  @override
+  String get dtcDescriptionP0301 => '第 1 缸失火';
+
+  @override
+  String get dtcDescriptionP0302 => '第 2 缸失火';
+
+  @override
+  String get dtcDescriptionP0303 => '第 3 缸失火';
+
+  @override
+  String get dtcDescriptionP0304 => '第 4 缸失火';
+
+  @override
+  String get dtcDescriptionP0305 => '第 5 缸失火';
+
+  @override
+  String get dtcDescriptionP0306 => '第 6 缸失火';
+
+  @override
+  String get dtcDescriptionP0307 => '第 7 缸失火';
+
+  @override
+  String get dtcDescriptionP0308 => '第 8 缸失火';
+
+  @override
+  String get dtcDescriptionP0316 => '启动后随即检测到失火';
+
+  @override
+  String get dtcDescriptionP0325 => '爆震传感器电路故障 (Bank 1)';
+
+  @override
+  String get dtcDescriptionP0326 => '爆震传感器范围/性能异常 (Bank 1)';
+
+  @override
+  String get dtcDescriptionP0327 => '爆震传感器电路输入过低 (Bank 1)';
+
+  @override
+  String get dtcDescriptionP0328 => '爆震传感器电路输入过高 (Bank 1)';
+
+  @override
+  String get dtcDescriptionP0330 => '爆震传感器电路故障 (Bank 2)';
+
+  @override
+  String get dtcDescriptionP0335 => '曲轴位置传感器电路故障';
+
+  @override
+  String get dtcDescriptionP0336 => '曲轴位置传感器范围/性能异常';
+
+  @override
+  String get dtcDescriptionP0340 => '凸轮轴位置传感器电路故障';
+
+  @override
+  String get dtcDescriptionP0341 => '凸轮轴位置传感器范围/性能异常';
+
+  @override
+  String get dtcDescriptionP0351 => '点火线圈 A 一次/二次电路故障';
+
+  @override
+  String get dtcDescriptionP0352 => '点火线圈 B 一次/二次电路故障';
+
+  @override
+  String get dtcDescriptionP0353 => '点火线圈 C 一次/二次电路故障';
+
+  @override
+  String get dtcDescriptionP0354 => '点火线圈 D 一次/二次电路故障';
+
+  @override
+  String get dtcDescriptionP0355 => '点火线圈 E 一次/二次电路故障';
+
+  @override
+  String get dtcDescriptionP0356 => '点火线圈 F 一次/二次电路故障';
+
+  @override
+  String get dtcDescriptionP0400 => '废气再循环 (EGR) 流量故障';
+
+  @override
+  String get dtcDescriptionP0401 => '废气再循环 (EGR) 流量不足';
+
+  @override
+  String get dtcDescriptionP0402 => '废气再循环 (EGR) 流量过大';
+
+  @override
+  String get dtcDescriptionP0403 => '废气再循环 (EGR) 控制电路故障';
+
+  @override
+  String get dtcDescriptionP0404 => '废气再循环 (EGR) 控制电路范围/性能异常';
+
+  @override
+  String get dtcDescriptionP0410 => '二次空气喷射系统故障';
+
+  @override
+  String get dtcDescriptionP0411 => '二次空气喷射系统流量不正确';
+
+  @override
+  String get dtcDescriptionP0412 => '二次空气喷射切换阀 A 电路故障';
+
+  @override
+  String get dtcDescriptionP0420 => '催化转换器效率低于阈值 (Bank 1)';
+
+  @override
+  String get dtcDescriptionP0430 => '催化转换器效率低于阈值 (Bank 2)';
+
+  @override
+  String get dtcDescriptionP0440 => '蒸发排放控制系统故障';
+
+  @override
+  String get dtcDescriptionP0441 => '蒸发排放系统清除流量不正确';
+
+  @override
+  String get dtcDescriptionP0442 => '蒸发排放系统检测到小泄漏';
+
+  @override
+  String get dtcDescriptionP0443 => '蒸发排放清除阀控制电路故障';
+
+  @override
+  String get dtcDescriptionP0446 => '蒸发排放通风控制电路故障';
+
+  @override
+  String get dtcDescriptionP0447 => '蒸发排放通风控制电路开路';
+
+  @override
+  String get dtcDescriptionP0449 => '蒸发排放通风阀/电磁阀电路故障';
+
+  @override
+  String get dtcDescriptionP0451 => '蒸发排放压力传感器范围/性能异常';
+
+  @override
+  String get dtcDescriptionP0452 => '蒸发排放压力传感器电路输入过低';
+
+  @override
+  String get dtcDescriptionP0453 => '蒸发排放压力传感器电路输入过高';
+
+  @override
+  String get dtcDescriptionP0455 => '蒸发排放系统检测到大泄漏';
+
+  @override
+  String get dtcDescriptionP0456 => '蒸发排放系统检测到极小泄漏';
+
+  @override
+  String get dtcDescriptionP0480 => '冷却风扇 1 控制电路故障';
+
+  @override
+  String get dtcDescriptionP0500 => '车速传感器故障';
+
+  @override
+  String get dtcDescriptionP0505 => '怠速控制系统故障';
+
+  @override
+  String get dtcDescriptionP0506 => '怠速转速低于预期';
+
+  @override
+  String get dtcDescriptionP0507 => '怠速转速高于预期';
+
+  @override
+  String get dtcDescriptionP0508 => '怠速控制电路输入过低';
+
+  @override
+  String get dtcDescriptionP0509 => '怠速控制电路输入过高';
+
+  @override
+  String get dtcDescriptionP0560 => '系统电压故障';
+
+  @override
+  String get dtcDescriptionP0562 => '系统电压过低';
+
+  @override
+  String get dtcDescriptionP0563 => '系统电压过高';
+
+  @override
+  String get dtcDescriptionP0603 => '控制模块内部存储器（KAM）错误';
+
+  @override
+  String get dtcDescriptionP0605 => '控制模块内部只读存储器（ROM）错误';
+
+  @override
+  String get dtcDescriptionP0606 => 'ECM/PCM 处理器故障';
+
+  @override
+  String get dtcDescriptionP0700 => '变速箱控制模块要求点亮故障灯——故障码在变速箱模块里，请另外读取';
+
+  @override
+  String get dtcDescriptionP0701 => '变速箱控制系统范围/性能异常';
+
+  @override
+  String get dtcDescriptionP0702 => '变速箱控制系统电气故障';
+
+  @override
+  String get dtcDescriptionP0705 => '档位位置传感器电路故障';
+
+  @override
+  String get dtcDescriptionP0715 => '输入轴／涡轮转速传感器电路故障';
+
+  @override
+  String get dtcDescriptionP0720 => '输出轴转速传感器电路故障';
+
+  @override
+  String get dtcDescriptionP0730 => '档位比不正确';
+
+  @override
+  String get dtcDescriptionP0740 => '扭矩转换器离合器电路故障';
+
+  @override
+  String get dtcDescriptionP0741 => '扭矩转换器离合器卡在未锁定状态';
+
+  @override
+  String get dtcDescriptionP0750 => '换档电磁阀 A 故障';
+
+  @override
+  String get dtcDescriptionP0755 => '换档电磁阀 B 故障';
+
+  @override
+  String get dtcDescriptionP2135 => '节气门位置传感器 A/B 电压不一致';
+
+  @override
+  String get dtcDescriptionU0100 => '与 ECM/PCM 失去通讯';
+
+  @override
+  String get dtcDescriptionU0101 => '与变速箱控制模块失去通讯';
+
+  @override
+  String get dtcDescriptionU0121 => '与 ABS 控制模块失去通讯';
+
+  @override
+  String get dtcDescriptionU0140 => '与车身控制模块失去通讯';
+
+  @override
+  String get dtcDescriptionU0155 => '与仪表板控制模块失去通讯';
+
+  @override
+  String get gaugeSkinCluster => '仪表舱';
+
+  @override
+  String get gaugeSkinClusterDescription => '车厂仪表板的样子。指针、270 度刻度盘、凹陷的面盘。';
+
+  @override
+  String get gaugeSkinMinimal => '极简';
+
+  @override
+  String get gaugeSkinMinimalDescription => '半圆弧、没有指针、没有刻度。要看的是数字，不是动作。';
+
+  @override
+  String get gaugeSkinTrack => '赛道';
+
+  @override
+  String get gaugeSkinTrackDescription => '分段灯条、无平滑动画。数值到哪就是哪，不做过渡。';
+
+  @override
+  String get gaugeSkinClassic => '经典';
+
+  @override
+  String get gaugeSkinClassicDescription => '印刷式面盘、整圈数字、指针像机械表一样慢慢定位。';
+
+  @override
+  String get gaugeSkinNight => '夜视';
+
+  @override
+  String get gaugeSkinNightDescription => '夜间驾驶用。低亮度、浅弧、不做动画，尽量不抢走注意力。';
+
+  @override
+  String get derivedAirflowSourceMaf => 'MAF 传感器';
+
+  @override
+  String get derivedAirflowSourceSpeedDensity => 'Speed-Density 推算';
+
+  @override
+  String get derivedAirflowSourceUnavailable => '进气量无法取得';
+
+  @override
+  String get derivedFuelSourceStoichiometric => '化学计量比推算';
+
+  @override
+  String get derivedFuelSourceUnavailable => '油耗无法取得';
+
+  @override
+  String get telemetrySourceDemo => '内置模拟';
+
+  @override
+  String get telemetrySourceRig => '测试台架';
+
+  @override
+  String get telemetrySourceFieldApp => '一般 field App 连接';
+
+  @override
+  String get fuelTypeGasoline => '汽油';
+
+  @override
+  String get fuelTypeDiesel => '柴油';
+
+  @override
+  String get fuelTypeLpg => '液化石油气 (LPG)';
+
+  @override
+  String get fuelTypeEthanolE85 => 'E85 酒精汽油';
+
+  @override
+  String get drivetrainFwd => '前轮驱动';
+
+  @override
+  String get drivetrainRwd => '后轮驱动';
+
+  @override
+  String get drivetrainAwd => '四轮驱动';
+
+  @override
+  String get assumptionFieldMass => '车重';
+
+  @override
+  String get assumptionFieldDragCoefficient => 'Cd';
+
+  @override
+  String get assumptionFieldFrontalArea => '迎风面积';
+
+  @override
+  String get assumptionFieldRollingResistance => '滚动阻力';
+
+  @override
+  String get assumptionFieldDrivetrainEfficiency => '传动效率';
+
+  @override
+  String get assumptionFieldFuelType => '燃料';
+
+  @override
+  String get assumptionFieldStoichAfr => 'AFR';
+
+  @override
+  String get assumptionFieldFuelDensity => '密度';
+
+  @override
+  String get assumptionFieldDisplacement => '排气量';
+
+  @override
+  String get assumptionFieldVolumetricEfficiency => 'VE';
+
+  @override
+  String get vehicleFieldOriginGenericDefault => '通用预设';
+
+  @override
+  String get vehicleFieldOriginUserEntered => '手动输入';
+
+  @override
+  String get vehicleFieldOriginOfficialRegistry => '官方型录';
+
+  @override
+  String get vehicleFieldOriginManufacturerPublication => '原厂资料';
+
+  @override
+  String get vehicleFieldOriginScientificModel => '模型系数';
+
+  @override
+  String assumptionWithOrigin(String field, String value, String origin) {
+    return '$field $value（$origin）';
+  }
+
+  @override
+  String assumptionWithoutOrigin(String field, String value) {
+    return '$field $value';
+  }
+
+  @override
+  String get assumptionSeparator => '；';
+
+  @override
+  String get datumFormulaHorsepower =>
+      'wheelWatts = (m·a + ½ρ·Cd·A·v² + Crr·m·g)·v; engineHp = wheelHp / drivetrainEfficiency';
+
+  @override
+  String get datumFormulaFuelRate =>
+      'L/h = (MAF g/s) / (AFR × fuel density g/L) × 3600; MAF 可为 PID 0110 或 speed-density（RPM×MAP×排气量×VE / T_K）; L/100km = (L/h) / speed_kmh × 100';
+
+  @override
+  String get datumAssumptionsFromRecording => '估算使用记录当下的车辆设置';
+
+  @override
+  String adapterConcernFirmwareNeverReleasedSummary(String version) {
+    return '回报的固件版本 v$version 官方从未发行';
+  }
+
+  @override
+  String get adapterConcernFirmwareNeverReleasedDetail =>
+      'ELM327 的原厂 Elm Electronics 没有出过这个版本——这台适配器上的固件不是它自称的那一份。很多这种适配器仍然可用，但它对自己的描述已经不可靠，遇到读不到的情况时值得先怀疑它。';
+
+  @override
+  String adapterConcernPpsRefusedSummary(String version) {
+    return '自称 v$version，却不认得 v1.1 就有的 ATPPS 指令';
+  }
+
+  @override
+  String get adapterConcernPpsRefusedDetail =>
+      '可编程参数摘要（ATPPS）从 ELM327 v1.1 起就存在，连 OBDLink 这类高端适配器也支持。自称的版本与实际实现的指令对不起来。';
+
+  @override
+  String get adapterConcernNoIdentitySummary => '不回应 AT@1（第一版就有的设备识别指令）';
+
+  @override
+  String get adapterConcernNoIdentityDetail =>
+      '这条指令从 ELM327 v1.0 就存在。不回应代表这颗芯片的指令集比任何一版官方固件都少。';
+
+  @override
+  String get telemetryReplaySampled => '预览已抽样；导出保留完整已记录事件';
+
+  @override
+  String get telemetryExportDisclosure =>
+      '导出内容包含信号名称、数值、观测与来源时间、传输类型、通讯协议、冻结的 PID 标签／单位／公式，以及估算假设（车重、空气阻力、排气量、燃料等参数）。JSON 可能包含用户自定义标签、单位、公式与完整冻结定义。导出内容不含 VIN、GPS、账号、适配器地址、完整车辆配置或原始诊断流量。';
+
+  @override
+  String get connectTransportCancelled => '连接尝试在完成前被停止了。';
+
+  @override
+  String get connectTransportWifiRouteNoNetwork =>
+      '手机没有连接任何 Wi-Fi 网络，没有通往适配器的路由。请先连接适配器的 Wi-Fi 热点再试一次。';
+
+  @override
+  String get connectTransportWifiRouteAmbiguous =>
+      '手机同时连接多个 Wi-Fi，无法判断哪一个通往适配器，所以没有选任何一个。请先关闭不是适配器的那些连接再试一次。';
+
+  @override
+  String get connectTransportWifiRouteRefused =>
+      '系统拒绝让这个连接走 Wi-Fi。手机是连着 Wi-Fi 的，只是不被允许用于这个连接。';
+
+  @override
+  String get connectTransportWifiRouteTimeout =>
+      '系统没有回应“让这个连接走 Wi-Fi”的请求。请等几秒再试一次。';
+
+  @override
+  String get connectTransportWifiRouteUnclassified =>
+      '这个连接无法走 Wi-Fi，而系统没有说明原因。完整的错误留在下方的记录里。';
+
+  @override
+  String get connectTransportWifiHostUnreachable =>
+      '那个地址没有响应。请确认手机已连接适配器的 Wi-Fi 热点——若系统问过“无法连接互联网，是否继续使用”，要选继续使用。关闭移动数据也可能有帮助。';
+
+  @override
+  String get connectTransportWifiConnectTimeout => '那个地址在时限内没有任何响应。';
+
+  @override
+  String get connectTransportWifiRouteRestoreFailed =>
+      '连接本身成功了，但手机的网络路由无法恢复，所以连接被断开，而不是把它改过的状态留着。请重新打开 App 再试一次。';
+
+  @override
+  String get connectTransportBleLinkFailed => '无法连接到适配器。请确认它已通电且在范围内。';
+
+  @override
+  String get connectTransportBleNoSerialCharacteristic =>
+      '设备连上了，但在它身上没有找到串口，可能不是 ELM327 适配器。';
+
+  @override
+  String get connectTransportClassicAllTiersRefused =>
+      '无法连接到适配器。请先在系统蓝牙设置完成配对，并确认它已插上 OBD 端口且点火开关已开启。';
+
+  @override
+  String get connectTransportClassicConnectTimeout =>
+      '连接到适配器超时。它可能仍在响应中——请等几秒再试，不要立刻重试。';
+
+  @override
+  String get connectTransportSerialPortOpenFailed =>
+      '无法打开串口。请确认系统已为这个适配器建立串口（Windows COMx / Linux /dev/rfcomm*），且点火开关已开启。';
+
+  @override
+  String get connectTransportSerialDroppedOnOpen => '串口打开后立刻又关闭了。';
+
+  @override
+  String get settingsManualCommandNotConnected => '当前没有连接，这条指令没有送出。';
+
+  @override
+  String get settingsManualCommandLinkDropped =>
+      '这条指令还在等待响应时，与适配器的连接断开了，所以没有任何响应。适配器是否收到这条指令并不确定。';
+
+  @override
+  String get settingsManualCommandDisconnectedByApp =>
+      '这条指令还在等待响应时，App 主动关闭了连接，所以没有任何响应。适配器与车辆都没有问题。';
+
+  @override
+  String get settingsManualCommandAdapterSilentOnResync =>
+      '适配器的回应已经和送出的指令对不上，而它也没有回应用来重新对齐的检查，所以连接已断开。请重新连接后再试一次。';
+
+  @override
+  String get settingsManualCommandLinkStoppedResponding =>
+      '适配器安静得够久，连接已被断开。它可能仍有电；能确定的只有这段沉默。';
+
+  @override
+  String get settingsManualCommandWriteFailed =>
+      '这条指令无法交给适配器的连接。有多少内容送达适配器并不确定。';
+
+  @override
+  String get settingsManualCommandTimedOut =>
+      '在时限内没有收到响应。请确认适配器已连接，且车辆点火开关已开启。';
+
+  @override
+  String get settingsManualCommandOperationRetired => '这个会话已经结束或退到后台，指令没有送出。';
+
+  @override
+  String get settingsManualCommandRequestUnaddressable =>
+      '这条请求在这辆车使用的总线上无法寻址，因此没有送出。再试一次也不会改变。';
+
+  @override
+  String get commandFailureBusJ1939 =>
+      '这条总线是 SAE J1939（重型商用车与机械），不是本 App 读取的 OBD2 诊断协议，因此无法读取这次查询。';
+
+  @override
+  String commandFailureUserCanFramingUnknown(
+    String protocol,
+    String parameter,
+  ) {
+    return '适配器设成自定义 CAN 协议 $protocol，其帧格式由 $parameter 决定。适配器没有回报该设置，因此无法确认总线格式，也不能安全解码这次查询。';
+  }
+
+  @override
+  String get commandFailureBusUndetermined => '车辆总线协议尚未确定，因此无法安全解码这次查询。请重新连接。';
+
+  @override
+  String get settingsManualCommandCustomFlowControlRejected =>
+      '适配器拒绝了自定义 Flow Control 指令，因此未套用所要求的模式，也没有产生任何测量值。';
+
+  @override
+  String get settingsManualCommandFlowControlRestoreFailed =>
+      '适配器拒绝还原默认 Flow Control（ATFCSM0），因此已停止轮询，请重新连接后再试。';
+
+  @override
+  String get settingsManualCommandExtendedAddressingUnavailable =>
+      '此 ELM327 路径不提供扩展寻址。';
+
+  @override
+  String get settingsManualCommandRawIsoTpModeUnavailable =>
+      '此 ELM327 路径不提供主机可见的 ISO-TP 重组。';
+
+  @override
+  String get settingsManualCommandCanPriorityUnavailable =>
+      '此 ELM327 路径不提供 CAN 优先级编程。';
+
+  @override
+  String get settingsManualCommandCanReceiveFilterUnavailable =>
+      '此 ELM327 路径不提供 CAN 接收过滤。';
+
+  @override
+  String get manualCommandRefusedEmpty => '没有输入指令。';
+
+  @override
+  String get manualCommandRefusedMoreThanOneCommand =>
+      '指令里有换行或控制字符，这样会一次送出多个指令。适配器以换行分隔指令，所以第二个指令不会经过这里的任何检查——包括禁止清除故障码的那一项。请一次只输入一个指令。';
+
+  @override
+  String manualCommandRefusedAdapterStateWouldChange(
+    Object command,
+    Object allowed,
+  ) {
+    return '手动指令只接受查询，不接受会改变适配器设置的指令。“$command”会改动适配器状态，而 App 对适配器的认知不会跟着更新——接下来的读数可能来自另一个控制器，而画面上看不出来。\n可用的查询：$allowed。';
+  }
+
+  @override
+  String get manualCommandRefusedClearHasItsOwnButton =>
+      '清除故障码请用故障码画面的“清除”按钮。从这里送出会跳过确认、覆盖率检查与响应验证，而且只会清到当前选中的那一个控制器。';
+
+  @override
+  String manualCommandRefusedCharactersNoObdCommandHas(Object command) {
+    return '指令“$command”含有 OBD 指令不会出现的字符。这里只接受十六进制的服务码与参数（例如 0100、03、2211A6），或 AT 开头的适配器查询。';
+  }
+
+  @override
+  String manualCommandRefusedNotAReadOnlyQuery(Object command, Object allowed) {
+    return '不认得的指令“$command”。这里只接受只读查询（Mode $allowed）与适配器查询指令。';
+  }
+
+  @override
+  String commandFailureQueryHeaderRefused(Object header) {
+    return '适配器拒绝将这条请求对准到控制器 $header，因此它没有送出。如果留在适配器实际持有的地址上，响应会来自没有人询问的控制器。';
+  }
+
+  @override
+  String commandFailureWholeVehicleHeaderRefused(Object address) {
+    return '适配器拒绝切换到 $address 这个地址，而向全车提出的问题必须从它送出。没有它，响应就无法对应到送出它们的控制器，因此这个请求没有送出。';
+  }
+
+  @override
+  String commandFailureLegacyScanWouldBePartial(Object installed) {
+    return '这辆车使用的旧式总线没有能触及每个控制器的标准地址，而适配器目前指定在控制器 $installed。扫描只会涵盖那一个控制器，却会被当成全车结果呈现，因此没有送出。请重新连接后再扫描一次。';
+  }
+
+  @override
+  String get pidFormulaEmpty => '公式是空的。';
+
+  @override
+  String get pidFormulaEmptySubExpression => '公式有一段是空的——运算符后面没有东西，或括号里没有内容。';
+
+  @override
+  String get pidFormulaUnbalancedParentheses => '括号没有配对：每一个 ( 都需要一个对应的 )。';
+
+  @override
+  String pidFormulaUnparsableTerm(String term) {
+    return '“$term”不是数值、运算符，也不是这个编辑器认得的名词。';
+  }
+
+  @override
+  String get pidFormulaFunctionNestingTooDeep =>
+      'ABS()、LOG10()、LOG() 与 SQRT() 嵌套太深，无法求值。请简化公式。';
+
+  @override
+  String get pidFormulaParenthesisNestingTooDeep => '括号嵌套太深，无法求值。请简化公式。';
+
+  @override
+  String get pidFormulaDivisionByZero => '公式除以零。';
+
+  @override
+  String get pidFormulaModuloByZero => '公式对零取余数。';
+
+  @override
+  String pidFormulaLog10NonPositiveArgument(double argument) {
+    return 'LOG10 的参数必须大于 0，这里算出来的是 $argument。';
+  }
+
+  @override
+  String pidFormulaLogNonPositiveArgument(double argument) {
+    return 'LOG 的参数必须大于 0，这里算出来的是 $argument。';
+  }
+
+  @override
+  String pidFormulaSqrtNegativeArgument(double argument) {
+    return 'SQRT 的参数必须大于或等于 0，这里算出来的是 $argument。';
+  }
+
+  @override
+  String get pidFormulaResultNotFinite => '这串运算没有得出可用的数值，因此没有读数可显示。';
+
+  @override
+  String pidFormulaByteBeyondResponse(String letter, int count) {
+    return '公式参照字节 $letter，但回应只有 $count 个字节。';
+  }
+
+  @override
+  String get pidFormulaBaroControllerUnknown =>
+      '这里无法使用 BARO，因为无法判断指的是哪一个控制器的大气压力。';
+
+  @override
+  String get pidFormulaBaroTwoDefinitions =>
+      '有两个定义同时提供大气压力，数值可能是其中任何一个，因此无法采用。请移除其中一个测量大气压力的表。';
+
+  @override
+  String get pidFormulaBaroNotYetMeasured => '尚未取得大气压力测量值，无法计算。';
+
+  @override
+  String get pidFormulaBaroMeasurementStale => '大气压力测量值已过期，无法计算。';
+
+  @override
+  String get pidFormulaBaroParenFormUnsupported =>
+      'BARO() 是 Android 气压计／ECU 大气压（psi），这个方言没有实现。要用缓存的大气压力请写不带括号的 BARO。';
+
+  @override
+  String get pidFormulaInt16Unclaimed =>
+      'INT16 尚未被这个方言认领：wiki 写可代替 (A*255)+B，那不是 (A*256)+B。请把其中一个等式直接写进公式。';
+
+  @override
+  String pidFormulaTimeWindowUnsupported(String term) {
+    return '$term 是这个方言尚未实现的延迟、平均或 totalizer Torque 函数，因此无法在这里求值。它不是 0，也不是 MIN 或 MAX。';
+  }
+
+  @override
+  String pidFormulaDependencyControllerUnknown(String reference) {
+    return '这里无法解析 $reference，因为无法判断那个 PID 属于哪一个控制器。';
+  }
+
+  @override
+  String pidFormulaDependencyTwoDefinitions(String key) {
+    return '有两个定义同时解读 $key，数值可能是其中任何一个，因此无法采用。请让其中一个改用不同的模式+PID。注意：推算数值需要的 PID（010B、010C、010D）本 App 一定会读取，把面板上的表移掉不会停止读取它们。';
+  }
+
+  @override
+  String pidFormulaDependencyNotYetMeasured(String key) {
+    return '尚未取得相依 PID $key 的有效数值。';
+  }
+
+  @override
+  String get pidFormulaUnidentified => '这个公式无法求值，而编辑器没有更具体的原因可显示。';
+
+  @override
+  String get pidRejectionMalformedModeAndPid =>
+      '不是有效的模式+PID（只接受十六进制字符，且字节须成对）。';
+
+  @override
+  String pidRejectionServiceNotReadOnly(String service, String services) {
+    return '服务 $service 不是只读查询，不能周期性发送到车上。只允许 $services（当前值、冻结帧、车辆信息、ReadDataByIdentifier）。';
+  }
+
+  @override
+  String get pidRejectionFreezeFrameNeedsFrame =>
+      '冻结帧查询需要 PID 与帧编号两个字节，例如 020500（PID 05、第 0 帧）。';
+
+  @override
+  String get pidRejectionIdentifierNeedsTwoBytes =>
+      'ReadDataByIdentifier 需要两个字节的标识符，例如 221101。';
+
+  @override
+  String pidRejectionIdentifierWrongLength(String service, int bytes) {
+    return '服务 $service 的查询需要 $bytes 个字节的标识符。';
+  }
+
+  @override
+  String get pidRejectionNameRequired => '请输入名称。';
+
+  @override
+  String pidRejectionInvalidHeader(String text) {
+    return '“$text”不是有效的标头（11-bit CAN 为 3 码、旧协议为 6 码、29-bit CAN 为 8 码）。';
+  }
+
+  @override
+  String get pidRejectionBoundsRequired => '请填写量程的上下限。';
+
+  @override
+  String pidRejectionMinNotANumber(String text) {
+    return '量程下限“$text”不是有效的数值。';
+  }
+
+  @override
+  String pidRejectionMaxNotANumber(String text) {
+    return '量程上限“$text”不是有效的数值。';
+  }
+
+  @override
+  String get pidRejectionMinNotFinite => '量程下限必须是有限的数值。';
+
+  @override
+  String get pidRejectionMaxNotFinite => '量程上限必须是有限的数值。';
+
+  @override
+  String pidRejectionRedlineNotANumber(String text) {
+    return '红线起点“$text”不是有效的数值。';
+  }
+
+  @override
+  String get pidRejectionRedlineNotFinite => '红线起点必须是有限的数值。';
+
+  @override
+  String get pidRejectionMaxNotAboveMin => '量程上限必须大于下限。';
+
+  @override
+  String pidImportMalformedCsv(String detail) {
+    return '这个文件无法以 CSV 读取：$detail';
+  }
+
+  @override
+  String get pidImportNoRows => '文件没有任何数据行。';
+
+  @override
+  String pidImportDuplicateHeaderColumns(String columns) {
+    return '标题行有重复的字段名：$columns。无法判断该用哪一栏，请先修正文件。';
+  }
+
+  @override
+  String pidImportMissingRequiredColumns(String columns, String required) {
+    return '标题行缺少必要字段：$columns。$required 都是必要的。';
+  }
+
+  @override
+  String pidImportRowTooFewColumns(int line) {
+    return '第 $line 行：字段不足，至少需要名称、简称、PID、公式。';
+  }
+
+  @override
+  String pidImportRowInvalidModeAndPid(int line, String text) {
+    return '第 $line 行：“$text”不是有效的模式+PID（只接受十六进制字符，且字节须成对）。';
+  }
+
+  @override
+  String pidImportRowEmptyEquation(int line) {
+    return '第 $line 行：公式为空。';
+  }
+
+  @override
+  String pidImportRowRejected(int line, String reason) {
+    return '第 $line 行：$reason';
+  }
+
+  @override
+  String pidImportRowRangeDefaulted(int line, double min, double max) {
+    return '第 $line 行：量程留空，已套用默认 $min–$max。请确认这个刻度适合这个传感器。';
+  }
+
+  @override
+  String get pidImportNothingImportable => '文件里有数据行，但没有任何一列是 PID 定义。';
+
+  @override
+  String get dtcCategoryNoAnswer => '这个类别没有回应。请重新扫描。';
+
+  @override
+  String get dtcCategoryError => '这个类别读取失败。完整错误保留在记录里。';
+
+  @override
+  String get dtcCategoryDisconnected => '读取这个类别时连接断开。';
+
+  @override
+  String get dtcCategoryPending => '控制器已收到请求、仍在处理中。请稍候再扫描一次——这不是拒绝。';
+
+  @override
+  String get dtcCategoryUnattributed =>
+      '有读到故障码，但回应标头是关闭的，因此不知道是哪些控制器回答。这是部分结果，不是车辆正常。';
+
+  @override
+  String dtcCategorySilentControllers(int count, String controllers) {
+    return '有 $count 个控制器没有回应这次查询（$controllers）。已回应的部分仍然有效，但不能当作全车结果。';
+  }
+
+  @override
+  String dtcCategoryUnresolvedSources(int count, String addresses) {
+    return '有 $count 笔回应无法判断是哪个控制器送出的（$addresses）。已读到的结果仍然有效，但不能当作全车结果。请重新扫描。';
+  }
+
+  @override
+  String dtcCategoryPendingControllers(int count, int answered) {
+    return '有 $count 个控制器还在处理这次查询，$answered 个已回应。结果尚不完整，请稍候再扫描一次。';
+  }
+
+  @override
+  String dtcCategoryRefusedControllers(int refused, int answered) {
+    return '有 $refused 个控制器拒绝回答（$answered 个已回应）。这次扫描无法涵盖全车，结果并不完整。';
+  }
+
+  @override
+  String dtcCategoryUnrecognisedResponses(int count, int answered) {
+    return '有 $count 笔回应无法识别（$answered 个已回应）。其余结果仍然有效，但这次扫描并不完整。';
+  }
+
+  @override
+  String dtcCategoryMilCountMismatch(
+    String controller,
+    int claimed,
+    int observed,
+  ) {
+    return '$controller 回报有 $claimed 笔已确认故障码，但这次扫描只读到 $observed 笔。请以车辆仪表为准，并洽维修厂。';
+  }
+
+  @override
+  String dtcCategoryMilLitNoCodes(String controller) {
+    return '$controller 回报故障灯亮着，但没有读到它所属的故障码。请以车辆仪表为准，并洽维修厂。';
+  }
+
+  @override
+  String dtcCategoryMilDisagreement(String controllers) {
+    return '车辆自身状态与读到的故障码不符（$controllers）。请以车辆仪表为准，并洽维修厂。';
+  }
+
+  @override
+  String get connectPairedListFailed => '无法读取已配对的蓝牙列表。请确认蓝牙已开启后再试。';
+
+  @override
+  String get connectBleScanUnavailable => '蓝牙目前无法使用。请稍后再搜索。';
+
+  @override
+  String get connectBleScanBluez =>
+      '找不到可用的 BlueZ／D-Bus 蓝牙服务。请确认系统已安装并启动 bluetooth 服务后再试。';
+
+  @override
+  String get connectBleScanUnclassified => 'BLE 搜索失败。';
+
+  @override
+  String dtcClearNrcConditions(String controller) {
+    return '$controller 拒绝清除，因为当前的车辆状态不允许。多数控制器在引擎运转时不会清除故障记忆。请将点火开关转到 ON 但不要发动引擎，然后再试一次。';
+  }
+
+  @override
+  String dtcClearNrcUnsupported(String controller) {
+    return '$controller 不支持清除服务（Mode 04）。这辆车的故障码可能要用原厂或专用诊断设备才能清除。';
+  }
+
+  @override
+  String dtcClearNrcBusy(String controller) {
+    return '$controller 目前忙碌中。请稍候再试一次。';
+  }
+
+  @override
+  String dtcClearNrcSecurity(String controller) {
+    return '$controller 要求先通过安全认证才允许清除，这需要原厂或专用诊断设备。';
+  }
+
+  @override
+  String dtcClearNrcOther(String controller, String code) {
+    return '$controller 拒绝清除（原因码 $code）。请稍候再试一次。';
+  }
+
+  @override
+  String dtcClearSilentControllers(int count, String controllers) {
+    return '有 $count 个控制器没有回应清除指令（$controllers）。已回应的控制器已清除，其余可能仍有故障码。请重新扫描，不要再送一次清除。';
+  }
+
+  @override
+  String dtcClearUnresolvedSources(int count, String addresses) {
+    return '扫描时有 $count 笔回应无法判断是哪个控制器送出的（$addresses），因此无法确认清除指令会送到哪些控制器。请重新扫描；若该地址一直没有再出现，请重新连接后再试。';
+  }
+
+  @override
+  String dtcClearUnresolvedSourcesDoNotRepeat(int count, String addresses) {
+    return '清除指令的回应中有 $count 笔无法判断来源的数据（$addresses）。不要再送一次清除。请重新扫描确认哪些故障码还在。';
+  }
+
+  @override
+  String dtcClearNrcConditionsDoNotRepeat(String controller) {
+    return '$controller 拒绝清除，因为当前的车辆状态不允许。多数控制器在引擎运转时不会清除故障记忆。请将点火开关转到 ON 但不要发动引擎，再重新扫描确认哪些故障码还在。不要再送一次全车清除——重复清除会让可能已经清除的控制器再一次重置排放就绪状态。';
+  }
+
+  @override
+  String dtcClearNrcUnsupportedDoNotRepeat(String controller) {
+    return '$controller 不支持清除服务（Mode 04）。这辆车的故障码可能要用原厂或专用诊断设备才能清除。不要再送一次全车清除——重复清除会让可能已经清除的控制器再一次重置排放就绪状态。请重新扫描确认哪些故障码还在。';
+  }
+
+  @override
+  String dtcClearNrcBusyDoNotRepeat(String controller) {
+    return '$controller 目前忙碌中。不要再送一次全车清除——重复清除会让可能已经清除的控制器再一次重置排放就绪状态。请重新扫描确认哪些故障码还在。';
+  }
+
+  @override
+  String dtcClearNrcSecurityDoNotRepeat(String controller) {
+    return '$controller 要求先通过安全认证才允许清除，这需要原厂或专用诊断设备。不要再送一次全车清除——重复清除会让可能已经清除的控制器再一次重置排放就绪状态。';
+  }
+
+  @override
+  String dtcClearNrcOtherDoNotRepeat(String controller, String code) {
+    return '$controller 拒绝清除（原因码 $code）。不要再送一次全车清除——重复清除会让可能已经清除的控制器再一次重置排放就绪状态。请重新扫描确认哪些故障码还在。';
+  }
+
+  @override
+  String get sharePolicyDenied => '当前的连接或行车状态不允许导出。';
+
+  @override
+  String get shareSafetyChanged => '准备导出期间状态已改变，未开启分享。';
+
+  @override
+  String get shareSizeLimit => '导出文件超过 32 MiB 上限。';
+
+  @override
+  String get shareStagingBusy => '先前的分享文件仍在保留期内，请稍后再试。';
+
+  @override
+  String get shareCleanupRequired => '分享暂存区需要在重新启动后检查。';
+
+  @override
+  String get shareSpaceUnknown => '无法确认分享文件所需的可用空间。';
+
+  @override
+  String get shareNoSpace => '存储空间不足，无法准备分享文件。';
+
+  @override
+  String get shareHandoffFailed => '文件已准备完成，但系统分享界面无法打开。';
+
+  @override
+  String get shareStorageFailure => '准备或记录分享结果时发生存储错误。';
+
+  @override
+  String shareTelemetrySubject(String sessionId) {
+    return '本地 OBD 记录 $sessionId';
+  }
+
+  @override
+  String shareRawTranscriptSubject(String stamp) {
+    return 'Telltale 传输记录 $stamp';
+  }
+
+  @override
+  String get shareRecoveredTranscriptSubject => 'Telltale 传输记录（上一次连接）';
+
+  @override
+  String get sharePidCsvSubject => 'Telltale 自定义 PID 定义';
+
+  @override
+  String get shareTorqueSubsetCsvSubject => 'Torque 兼容 PID 定义';
+
+  @override
+  String get shareHumanReportCsvSubject => 'Telltale 人类可读 PID 报表';
+
+  @override
+  String get transcriptExportUnidentified => '导出失败。';
+
+  @override
+  String get handshakeNoteUnexpected => '此步骤发生未预期的错误。完整错误保留在记录里。';
+
+  @override
+  String pidFormulaUnsupportedConstruct(String term) {
+    return '$term 是这个方言尚未实现的 Torque 函数，因此无法在这里求值。';
+  }
+
+  @override
+  String pidImportRowFormulaRejected(int line, String reason) {
+    return '第 $line 行：$reason';
+  }
+
+  @override
+  String get telemetryHistoryNeedsForeground => '请回到 App 后再操作';
+
+  @override
+  String get telemetrySessionPolicyChanged => '操作期间行车或连接状态已改变';
+
+  @override
+  String get telemetrySessionInvalidId => '记录识别码无效';
+
+  @override
+  String get telemetrySessionNotFound => '找不到这笔本地记录';
+
+  @override
+  String get telemetrySessionStorageFailed => '本地存储操作失败';
+
+  @override
+  String get telemetrySessionShareFailed => '无法准备或打开分享';
+
+  @override
+  String get pidMutationPersistFailed => '自定义 PID 列表无法写入。没有任何更改。';
+
+  @override
+  String get powertrainAuthorizeYearOutOfRange => '该年款不在这个配置记载的年份范围内。';
+
+  @override
+  String get connectionLayerTransport => '连接方式';
+
+  @override
+  String get connectionLayerProtocol => '协议';
+
+  @override
+  String get connectionLayerEcu => '控制器回应';
+
+  @override
+  String get connectionLayerEvidence => '证据';
+
+  @override
+  String get connectionLayerUnknown => '未知';
+
+  @override
+  String get connectionLayerNotObserved => '未观察到';
+
+  @override
+  String get connectionLayerObserved => '已观察';
+
+  @override
+  String get connectionLayerAnswered => '有回应';
+
+  @override
+  String get connectionLayerSoftware => '软件';
+
+  @override
+  String get connectionLayerDemo => '内置模拟器';
+
+  @override
+  String get connectionLayerBle => '蓝牙 LE';
+
+  @override
+  String get connectionLayerClassic => '蓝牙 Classic';
+
+  @override
+  String get connectionLayerWifi => '无线网络';
+
+  @override
+  String connectionLayerRequestedObserved(String requested, String observed) {
+    return '要求 $requested，实际 $observed';
+  }
+
+  @override
+  String get connectionLayerKwpSubtypeUnknown => 'KWP，5-baud 与 fast 无法分辨';
+
+  @override
+  String get connectionFailureOpenSettings => '打开系统设置。';
+
+  @override
+  String get connectionFailureTurnRadioOn => '请开启蓝牙。';
+
+  @override
+  String get connectionFailureCheckDistanceOrPower =>
+      '适配器可能太远或没有供电。那是可能的原因，不是已确认的发现。';
+
+  @override
+  String get connectionFailureCheckIgnitionProtocolAdapter =>
+      '请检查点火开关、协议或适配器能力。没有回应不能当成这辆车没有 OBD。';
+
+  @override
+  String get connectionFailureRetryOrAuto => '请重试，或把协议设成 Auto。';
+
+  @override
+  String get connectionFailureKeepInvalidAndExport =>
+      '这笔回应无效。维持无效并导出有限诊断；它不是读数。';
+
+  @override
+  String get settingsCatalogMarketCa => '加拿大（NRCan）';
+
+  @override
+  String get settingsCaPickerTitle => '加拿大官方车辆目录';
+
+  @override
+  String settingsCaPickerScope(int firstYear, int lastYear) {
+    return '仅 $firstYear–$lastYear 的加拿大油耗标示列。内燃机、电池电动与插电混合动力维持分开的资源类。相同品牌／车名不是 EPA 或台湾认证列。';
+  }
+
+  @override
+  String get settingsCaMotorNotPower => '电机功率（kW）不是轮马力，不会套用。';
+
+  @override
+  String get settingsCaClassIce => '内燃机';
+
+  @override
+  String get settingsCaClassBev => '电池电动';
+
+  @override
+  String get settingsCaClassPhev => '插电混合动力';
+
+  @override
+  String settingsCaWillApplyOnly(String fields) {
+    return '只会套用 $fields。电机 kW、油耗、续航、CO2、VE、Cd、迎风面积、Crr 与传动效率维持未解。';
+  }
+
+  @override
+  String get pidNameEngineRpm => '引擎转速';
+
+  @override
+  String get pidShortEngineRpm => 'RPM';
+
+  @override
+  String get pidNameVehicleSpeed => '车速';
+
+  @override
+  String get pidShortVehicleSpeed => '车速';
+
+  @override
+  String get pidNameCoolantTemp => '引擎冷却液温度';
+
+  @override
+  String get pidShortCoolantTemp => '冷却液';
+
+  @override
+  String get pidNameIntakeAirTemp => '进气温度';
+
+  @override
+  String get pidShortIntakeAirTemp => 'IAT';
+
+  @override
+  String get pidNameEngineLoad => '计算引擎负荷';
+
+  @override
+  String get pidShortEngineLoad => '负荷';
+
+  @override
+  String get pidNameThrottlePosition => '节气门位置';
+
+  @override
+  String get pidShortThrottlePosition => '节气门';
+
+  @override
+  String get pidNameManifoldPressure => '进气歧管绝对压力';
+
+  @override
+  String get pidShortManifoldPressure => 'MAP';
+
+  @override
+  String get pidNameMafRate => 'MAF 空气流量';
+
+  @override
+  String get pidShortMafRate => 'MAF';
+
+  @override
+  String get pidNameTimingAdvance => '点火提前角';
+
+  @override
+  String get pidShortTimingAdvance => '提前角';
+
+  @override
+  String get pidNameFuelPressure => '燃油压力';
+
+  @override
+  String get pidShortFuelPressure => '油压';
+
+  @override
+  String get pidNameFuelLevel => '油箱油位';
+
+  @override
+  String get pidShortFuelLevel => '燃油';
+
+  @override
+  String get pidNameBarometricPressure => '大气压力';
+
+  @override
+  String get pidShortBarometricPressure => '大气压';
+
+  @override
+  String get pidNameControlModuleVoltage => '控制模块电压';
+
+  @override
+  String get pidShortControlModuleVoltage => '电压';
+
+  @override
+  String get pidNameAmbientAirTemp => '环境空气温度';
+
+  @override
+  String get pidShortAmbientAirTemp => '环境';
+
+  @override
+  String get pidNameEngineOilTemp => '引擎机油温度';
+
+  @override
+  String get pidShortEngineOilTemp => '油温';
+
+  @override
+  String get pidNameEngineFuelRate => '引擎燃油率';
+
+  @override
+  String get pidShortEngineFuelRate => '燃油率';
+
+  @override
+  String get pidNameShortFuelTrimB1 => '短期燃油修正——第 1 组';
+
+  @override
+  String get pidShortShortFuelTrimB1 => 'STFT B1';
+
+  @override
+  String get pidNameLongFuelTrimB1 => '长期燃油修正——第 1 组';
+
+  @override
+  String get pidShortLongFuelTrimB1 => 'LTFT B1';
+
+  @override
+  String get pidNameRunTime => '引擎启动后运行时间';
+
+  @override
+  String get pidShortRunTime => '运行时间';
+
+  @override
+  String get pidNameDistanceWithMil => '故障灯亮起后行驶距离';
+
+  @override
+  String get pidShortDistanceWithMil => 'MIL 里程';
+
+  @override
+  String get pidNameAbsoluteLoad => '绝对负荷值';
+
+  @override
+  String get pidShortAbsoluteLoad => '绝对负荷';
+
+  @override
+  String get pidNameCommandedEgr => '指令 EGR';
+
+  @override
+  String get pidShortCommandedEgr => 'EGR';
+
+  @override
+  String get pidNameRelativeThrottle => '相对节气门位置';
+
+  @override
+  String get pidShortRelativeThrottle => '相对节气门';
+
+  @override
+  String get pidNameBoostPressure => '涡轮增压（MAP − Baro）';
+
+  @override
+  String get pidShortBoostPressure => '增压';
+
+  @override
+  String get pidNameSpeedMph => '车速（mph）';
+
+  @override
+  String get pidShortSpeedMph => '车速';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -8111,4 +12463,154 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String settingsCaWillApplyOnly(String fields) {
     return '只會套用 $fields。電機 kW、油耗、續航、CO2、VE、Cd、迎風面積、Crr 與傳動效率維持未解。';
   }
+
+  @override
+  String get pidNameEngineRpm => '引擎轉速';
+
+  @override
+  String get pidShortEngineRpm => '轉速';
+
+  @override
+  String get pidNameVehicleSpeed => '車速';
+
+  @override
+  String get pidShortVehicleSpeed => '車速';
+
+  @override
+  String get pidNameCoolantTemp => '引擎冷卻液溫度';
+
+  @override
+  String get pidShortCoolantTemp => '水溫';
+
+  @override
+  String get pidNameIntakeAirTemp => '進氣溫度';
+
+  @override
+  String get pidShortIntakeAirTemp => '進氣';
+
+  @override
+  String get pidNameEngineLoad => '引擎負荷';
+
+  @override
+  String get pidShortEngineLoad => '負荷';
+
+  @override
+  String get pidNameThrottlePosition => '節氣門位置';
+
+  @override
+  String get pidShortThrottlePosition => '節氣門';
+
+  @override
+  String get pidNameManifoldPressure => '進氣歧管絕對壓力';
+
+  @override
+  String get pidShortManifoldPressure => 'MAP';
+
+  @override
+  String get pidNameMafRate => '空氣流量';
+
+  @override
+  String get pidShortMafRate => 'MAF';
+
+  @override
+  String get pidNameTimingAdvance => '點火提前角';
+
+  @override
+  String get pidShortTimingAdvance => '點火';
+
+  @override
+  String get pidNameFuelPressure => '燃油壓力';
+
+  @override
+  String get pidShortFuelPressure => '油壓';
+
+  @override
+  String get pidNameFuelLevel => '燃油液位';
+
+  @override
+  String get pidShortFuelLevel => '油量';
+
+  @override
+  String get pidNameBarometricPressure => '大氣壓力';
+
+  @override
+  String get pidShortBarometricPressure => '大氣壓';
+
+  @override
+  String get pidNameControlModuleVoltage => '控制模組電壓';
+
+  @override
+  String get pidShortControlModuleVoltage => '電壓';
+
+  @override
+  String get pidNameAmbientAirTemp => '環境溫度';
+
+  @override
+  String get pidShortAmbientAirTemp => '環境';
+
+  @override
+  String get pidNameEngineOilTemp => '引擎機油溫度';
+
+  @override
+  String get pidShortEngineOilTemp => '油溫';
+
+  @override
+  String get pidNameEngineFuelRate => '引擎燃油消耗率';
+
+  @override
+  String get pidShortEngineFuelRate => '油耗';
+
+  @override
+  String get pidNameShortFuelTrimB1 => '短期燃油修正（第 1 組）';
+
+  @override
+  String get pidShortShortFuelTrimB1 => '短油修 B1';
+
+  @override
+  String get pidNameLongFuelTrimB1 => '長期燃油修正（第 1 組）';
+
+  @override
+  String get pidShortLongFuelTrimB1 => '長油修 B1';
+
+  @override
+  String get pidNameRunTime => '引擎啟動後運轉時間';
+
+  @override
+  String get pidShortRunTime => '運轉時間';
+
+  @override
+  String get pidNameDistanceWithMil => '故障燈亮起後行駛距離';
+
+  @override
+  String get pidShortDistanceWithMil => '故障燈里程';
+
+  @override
+  String get pidNameAbsoluteLoad => '絕對負荷';
+
+  @override
+  String get pidShortAbsoluteLoad => '絕對負荷';
+
+  @override
+  String get pidNameCommandedEgr => 'EGR 指令';
+
+  @override
+  String get pidShortCommandedEgr => 'EGR';
+
+  @override
+  String get pidNameRelativeThrottle => '相對節氣門位置';
+
+  @override
+  String get pidShortRelativeThrottle => '相對節氣門';
+
+  @override
+  String get pidNameBoostPressure => '渦輪增壓壓力';
+
+  @override
+  String get pidShortBoostPressure => '增壓';
+
+  @override
+  String get pidNameSpeedMph => '車速（mph）';
+
+  @override
+  String get pidShortSpeedMph => '車速 mph';
 }

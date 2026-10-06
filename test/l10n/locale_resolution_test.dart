@@ -29,12 +29,15 @@ void main() {
     expect(localePreferenceFromStored(null), LocalePreference.system);
     expect(localePreferenceFromStored(1), LocalePreference.system);
     expect(localePreferenceFromStored(''), LocalePreference.system);
-    expect(localePreferenceFromStored('zh_Hans'), LocalePreference.system);
     expect(localePreferenceFromStored('system'), LocalePreference.system);
     expect(localePreferenceFromStored('en'), LocalePreference.english);
     expect(
       localePreferenceFromStored('zh_Hant'),
       LocalePreference.traditionalChinese,
+    );
+    expect(
+      localePreferenceFromStored('zh_Hans'),
+      LocalePreference.simplifiedChinese,
     );
     expect(localePreferenceFromStored('de'), LocalePreference.german);
   });
@@ -146,12 +149,12 @@ void main() {
     expect(mapDeviceLocale(const Locale('zh', 'MO')), traditionalChineseLocale);
   });
 
-  test('explicit zh-Hans is not dressed up as Traditional Chinese', () {
+  test('explicit zh-Hans is Simplified Chinese, not Traditional', () {
     expect(
       mapDeviceLocale(
         const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'),
       ),
-      isNull,
+      simplifiedChineseLocale,
     );
     expect(
       mapDeviceLocale(
@@ -161,7 +164,7 @@ void main() {
           countryCode: 'CN',
         ),
       ),
-      isNull,
+      simplifiedChineseLocale,
     );
     expect(
       resolveAppLocale(
@@ -174,7 +177,7 @@ void main() {
           ),
         ],
       ),
-      englishLocale,
+      simplifiedChineseLocale,
     );
   });
 
@@ -187,7 +190,7 @@ void main() {
           countryCode: 'TW',
         ),
       ),
-      isNull,
+      simplifiedChineseLocale,
     );
   });
 

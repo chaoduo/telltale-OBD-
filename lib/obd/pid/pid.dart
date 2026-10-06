@@ -69,6 +69,7 @@ class Pid {
     this.redlineFrom,
     this.isCustom = false,
     this.variant,
+    this.l10nId,
     this.ownerProfileId,
     this.sourceSignalId,
     this.sourceRevision,
@@ -82,6 +83,14 @@ class Pid {
   /// Distinguishes two definitions of the same signal that are not the same
   /// entry — e.g. a derived variant, or a user's own take on a built-in.
   final String? variant;
+
+  /// Which shipped ARB entry names this definition, when one does.
+  ///
+  /// Only the built-ins carry it: [name] and [shortName] stay the author's own
+  /// text, which is what a custom or catalog PID must show verbatim. A
+  /// definition with no [l10nId] is rendered from those fields, so the two
+  /// paths cannot disagree about what is on screen.
+  final String? l10nId;
 
   /// Stable identity.
   ///

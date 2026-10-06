@@ -49,6 +49,7 @@ Set<String> _placeholders(Map<String, dynamic> arb, String key) {
 void main() {
   final en = _readArb('app_en.arb');
   final zhHant = _readArb('app_zh_Hant.arb');
+  final zhHans = _readArb('app_zh_Hans.arb');
   final zh = _readArb('app_zh.arb');
   final de = _readArb('app_de.arb');
 
@@ -57,6 +58,7 @@ void main() {
   /// copy still ships as English on a plain `zh` device.
   final shipped = <String, Map<String, dynamic>>{
     'app_zh_Hant.arb': zhHant,
+    'app_zh_Hans.arb': zhHans,
     'app_zh.arb': zh,
     'app_de.arb': de,
   };
@@ -192,6 +194,13 @@ void main() {
       // end, with no connecting prose to render — unlike datumFormulaFuelRate,
       // which has a sentence in the middle and is therefore not listed here.
       'datumFormulaHorsepower',
+      // Gauge-face labels for three signals whose names ARE their acronyms:
+      // MAF, MAP and EGR are on docs/i18n/do-not-translate.md, and a gauge
+      // face is the one place with no room to expand them anyway. The full
+      // titles beside them translate normally.
+      'pidShortMafRate',
+      'pidShortManifoldPressure',
+      'pidShortCommandedEgr',
     };
     // Some entries land on the English word in one language and not in another,
     // and that is a fact about the language rather than a lapse: German writes
@@ -200,6 +209,19 @@ void main() {
     // locale so each one is a decision made about that language.
     const coincidental = <String, Set<String>>{
       'app_zh_Hant.arb': <String>{},
+      'app_zh_Hans.arb': <String>{
+        // Gauge-face labels that ARE their acronyms, and stay them in
+        // Simplified Chinese: RPM, IAT, MAP, MAF and the two fuel-trim
+        // abbreviations are what a reader compares against a datasheet.
+        // The full titles beside them translate normally.
+        'pidShortEngineRpm',
+        'pidShortIntakeAirTemp',
+        'pidShortManifoldPressure',
+        'pidShortMafRate',
+        'pidShortShortFuelTrimB1',
+        'pidShortLongFuelTrimB1',
+        'pidShortCommandedEgr',
+      },
       'app_de.arb': <String>{
         // German uses the English word.
         'connectWifiPortLabel',

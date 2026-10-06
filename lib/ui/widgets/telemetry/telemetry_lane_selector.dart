@@ -8,6 +8,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../l10n/generated/app_localizations.dart';
+import '../../../l10n/pid_labels.dart';
 import '../../../obd/pid/pid.dart';
 import '../../../state/telemetry_trends.dart';
 
@@ -60,7 +61,7 @@ class TelemetryLaneSelector extends ConsumerWidget {
                 ConstrainedBox(
                   constraints: const BoxConstraints(minHeight: 48),
                   child: InputChip(
-                    label: Text(_name(pid)),
+                    label: Text(pidGaugeLabel(l10n, pid)),
                     avatar: Icon(
                       Icons.show_chart,
                       size: 18,
@@ -72,7 +73,7 @@ class TelemetryLaneSelector extends ConsumerWidget {
                         ? () => unawaited(_remove(context, ref, id))
                         : null,
                     deleteButtonTooltipMessage: l10n.trendRemoveSignal(
-                      _name(pid),
+                      pidGaugeLabel(l10n, pid),
                     ),
                   ),
                 ),
@@ -143,8 +144,6 @@ class TelemetryLaneSelector extends ConsumerWidget {
     }
   }
 
-  static String _name(Pid pid) =>
-      pid.shortName.isEmpty ? pid.name : pid.shortName;
 }
 
 class _TelemetryLaneSheet extends StatefulWidget {
@@ -207,7 +206,7 @@ class _TelemetryLaneSheetState extends State<_TelemetryLaneSheet> {
                     value: selected,
                     controlAffinity: ListTileControlAffinity.leading,
                     title: Text(
-                      pid.shortName.isEmpty ? pid.name : pid.shortName,
+                      pidGaugeLabel(l10n, pid),
                     ),
                     subtitle: Text(
                       pid.units.isEmpty

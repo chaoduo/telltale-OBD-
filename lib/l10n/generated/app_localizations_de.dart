@@ -4633,4 +4633,154 @@ class AppLocalizationsDe extends AppLocalizations {
   String settingsCaWillApplyOnly(String fields) {
     return 'Nur $fields werden übernommen. Motor-kW, Verbrauch, Reichweite, CO2, VE, Cd, Stirnfläche, Crr und Getriebewirkungsgrad bleiben unbestimmt.';
   }
+
+  @override
+  String get pidNameEngineRpm => 'Motordrehzahl';
+
+  @override
+  String get pidShortEngineRpm => 'Drehzahl';
+
+  @override
+  String get pidNameVehicleSpeed => 'Fahrzeuggeschwindigkeit';
+
+  @override
+  String get pidShortVehicleSpeed => 'Geschwindigkeit';
+
+  @override
+  String get pidNameCoolantTemp => 'Kühlmitteltemperatur';
+
+  @override
+  String get pidShortCoolantTemp => 'Kühlmittel';
+
+  @override
+  String get pidNameIntakeAirTemp => 'Ansauglufttemperatur';
+
+  @override
+  String get pidShortIntakeAirTemp => 'Ansaugluft';
+
+  @override
+  String get pidNameEngineLoad => 'Berechnete Motorlast';
+
+  @override
+  String get pidShortEngineLoad => 'Last';
+
+  @override
+  String get pidNameThrottlePosition => 'Drosselklappenstellung';
+
+  @override
+  String get pidShortThrottlePosition => 'Drosselklappe';
+
+  @override
+  String get pidNameManifoldPressure => 'Absoluter Saugrohrdruck';
+
+  @override
+  String get pidShortManifoldPressure => 'Saugrohrdruck';
+
+  @override
+  String get pidNameMafRate => 'Luftmassenstrom';
+
+  @override
+  String get pidShortMafRate => 'Luftmasse';
+
+  @override
+  String get pidNameTimingAdvance => 'Zündzeitpunktverstellung';
+
+  @override
+  String get pidShortTimingAdvance => 'Zündung';
+
+  @override
+  String get pidNameFuelPressure => 'Kraftstoffdruck';
+
+  @override
+  String get pidShortFuelPressure => 'Kraftstoffdruck';
+
+  @override
+  String get pidNameFuelLevel => 'Tankfüllstand';
+
+  @override
+  String get pidShortFuelLevel => 'Tank';
+
+  @override
+  String get pidNameBarometricPressure => 'Luftdruck';
+
+  @override
+  String get pidShortBarometricPressure => 'Luftdruck';
+
+  @override
+  String get pidNameControlModuleVoltage => 'Steuergerätespannung';
+
+  @override
+  String get pidShortControlModuleVoltage => 'Spannung';
+
+  @override
+  String get pidNameAmbientAirTemp => 'Umgebungstemperatur';
+
+  @override
+  String get pidShortAmbientAirTemp => 'Umgebung';
+
+  @override
+  String get pidNameEngineOilTemp => 'Motoröltemperatur';
+
+  @override
+  String get pidShortEngineOilTemp => 'Öltemperatur';
+
+  @override
+  String get pidNameEngineFuelRate => 'Kraftstoffverbrauch';
+
+  @override
+  String get pidShortEngineFuelRate => 'Verbrauch';
+
+  @override
+  String get pidNameShortFuelTrimB1 => 'Kurzzeit-Lambdakorrektur, Bank 1';
+
+  @override
+  String get pidShortShortFuelTrimB1 => 'KZLK B1';
+
+  @override
+  String get pidNameLongFuelTrimB1 => 'Langzeit-Lambdakorrektur, Bank 1';
+
+  @override
+  String get pidShortLongFuelTrimB1 => 'LZLK B1';
+
+  @override
+  String get pidNameRunTime => 'Laufzeit seit Motorstart';
+
+  @override
+  String get pidShortRunTime => 'Laufzeit';
+
+  @override
+  String get pidNameDistanceWithMil => 'Fahrstrecke mit MIL';
+
+  @override
+  String get pidShortDistanceWithMil => 'MIL-Strecke';
+
+  @override
+  String get pidNameAbsoluteLoad => 'Absoluter Lastwert';
+
+  @override
+  String get pidShortAbsoluteLoad => 'Abs. Last';
+
+  @override
+  String get pidNameCommandedEgr => 'AGR-Vorgabe';
+
+  @override
+  String get pidShortCommandedEgr => 'AGR';
+
+  @override
+  String get pidNameRelativeThrottle => 'Relative Drosselklappenstellung';
+
+  @override
+  String get pidShortRelativeThrottle => 'Rel. Drossel';
+
+  @override
+  String get pidNameBoostPressure => 'Ladedruck';
+
+  @override
+  String get pidShortBoostPressure => 'Ladedruck';
+
+  @override
+  String get pidNameSpeedMph => 'Geschwindigkeit (mph)';
+
+  @override
+  String get pidShortSpeedMph => 'mph';
 }

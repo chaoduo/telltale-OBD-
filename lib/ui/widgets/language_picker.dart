@@ -14,7 +14,7 @@ import '../../state/locale_settings.dart';
 /// These deliberately do NOT go through [AppLocalizations], and this is the one
 /// place in the app where a hard-coded language name is correct. Somebody
 /// reaching this screen is usually here because the app is in a language they
-/// cannot read; a picker that renders "英文 / 繁體中文" to them, or
+/// cannot read; a picker that renders "英文 / 繁体中文" to them, or
 /// "English / Traditional Chinese" to a reader of Chinese, hides the very row
 /// they came to find. A self-name is legible to the person who needs it no
 /// matter which language is currently on screen, which is why the system
@@ -26,6 +26,7 @@ String localePreferenceLabel(LocalePreference preference) {
   return switch (preference) {
     LocalePreference.english => 'English',
     LocalePreference.traditionalChinese => '繁體中文',
+    LocalePreference.simplifiedChinese => '简体中文',
     LocalePreference.german => 'Deutsch',
     LocalePreference.system => 'System default / 跟隨系統',
   };

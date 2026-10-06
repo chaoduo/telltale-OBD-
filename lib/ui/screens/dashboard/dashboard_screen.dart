@@ -16,6 +16,7 @@ import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../diagnostics/availability.dart';
 import '../../../l10n/generated/app_localizations.dart';
+import '../../../l10n/pid_labels.dart';
 import '../../../obd/physics/physics_engine.dart';
 import '../../../obd/pid/pid.dart';
 import '../../../obd/pid/pid_library.dart';
@@ -372,6 +373,7 @@ class _GaugeTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final hue = GaugeHue.forKey(pid.id);
     final accent = context.gaugeColors(hue).bright;
     final isUnsupported = fault == PidFault.unsupported;
@@ -387,7 +389,7 @@ class _GaugeTile extends StatelessWidget {
                 value: reading?.value,
                 minValue: pid.minValue,
                 maxValue: pid.maxValue,
-                label: pid.shortName.isEmpty ? pid.name : pid.shortName,
+                label: pidGaugeLabel(l10n, pid),
                 units: pid.units,
                 hue: hue,
                 redlineFrom: pid.redlineFrom,
@@ -426,7 +428,7 @@ class _UnsupportedTile extends StatelessWidget {
             Icon(Icons.block, size: 22, color: palette.textTertiary),
             const SizedBox(height: Spacing.sm),
             Text(
-              pid.shortName.isEmpty ? pid.name : pid.shortName,
+              pidGaugeLabel(l10n, pid),
               textAlign: TextAlign.center,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,

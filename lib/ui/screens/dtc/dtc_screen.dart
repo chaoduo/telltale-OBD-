@@ -10,6 +10,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../l10n/generated/app_localizations.dart';
+import '../../../l10n/pid_labels.dart';
 import '../../../obd/dtc/dtc.dart';
 import '../../../obd/freeze_frame.dart';
 import '../../../obd/polling_engine.dart';
@@ -1022,7 +1023,7 @@ class _FreezeFrameCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Expanded(
-                          child: Text(reading.pid.name,
+                          child: Text(pidDisplayName(l10n, reading.pid),
                               style: context.texts.bodySmall),
                         ),
                         const SizedBox(width: Spacing.sm),

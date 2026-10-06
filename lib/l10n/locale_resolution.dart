@@ -1,9 +1,10 @@
 /// App locale preference and resolution. Pure functions — no Flutter widgets,
 /// no OBD, no SharedPreferences.
 ///
-/// Supported UI languages are English, Traditional Chinese and German.
-/// Simplified Chinese is not a shipped translation; `zh-Hans` must not be
-/// dressed up as 繁體中文.
+/// Supported UI languages are English, Traditional Chinese, Simplified
+/// Chinese and German. `app_zh.arb` is a copy of the Traditional bundle for a
+/// plain `zh` device, not a second translation, so the two Chinese scripts
+/// each name themselves and neither stands in for the other.
 ///
 /// German is a machine translation of the English template, corrected by hand
 /// and reviewed against docs/i18n/do-not-translate.md, but not by a native
@@ -14,7 +15,13 @@ library;
 
 import 'package:flutter/widgets.dart';
 
-enum LocalePreference { system, english, traditionalChinese, german }
+enum LocalePreference {
+  system,
+  english,
+  traditionalChinese,
+  simplifiedChinese,
+  german,
+}
 
 const kLocalePreferenceKey = 'locale_preference_v1';
 
@@ -23,11 +30,16 @@ const traditionalChineseLocale = Locale.fromSubtags(
   languageCode: 'zh',
   scriptCode: 'Hant',
 );
+const simplifiedChineseLocale = Locale.fromSubtags(
+  languageCode: 'zh',
+  scriptCode: 'Hans',
+);
 const germanLocale = Locale('de');
 
 const supportedAppLocales = <Locale>[
   englishLocale,
   traditionalChineseLocale,
+  simplifiedChineseLocale,
   germanLocale,
 ];
 
@@ -41,6 +53,7 @@ LocalePreference localePreferenceFromStored(Object? raw) {
   return switch (raw) {
     'en' => LocalePreference.english,
     'zh_Hant' => LocalePreference.traditionalChinese,
+    'zh_Hans' => LocalePreference.simplifiedChinese,
     'de' => LocalePreference.german,
     'system' => LocalePreference.system,
     _ => LocalePreference.system,
@@ -52,6 +65,7 @@ String localePreferenceToStored(LocalePreference preference) {
     LocalePreference.system => 'system',
     LocalePreference.english => 'en',
     LocalePreference.traditionalChinese => 'zh_Hant',
+    LocalePreference.simplifiedChinese => 'zh_Hans',
     LocalePreference.german => 'de',
   };
 }
@@ -65,6 +79,7 @@ Locale resolveAppLocale({
   return switch (preference) {
     LocalePreference.english => englishLocale,
     LocalePreference.traditionalChinese => traditionalChineseLocale,
+    LocalePreference.simplifiedChinese => simplifiedChineseLocale,
     LocalePreference.german => germanLocale,
     LocalePreference.system => resolveSystemLocale(deviceLocales),
   };
@@ -91,10 +106,11 @@ Locale? mapDeviceLocale(Locale locale) {
   if (language != 'zh') return null;
 
   final script = locale.scriptCode?.toLowerCase();
-  if (script == 'hans') return null;
+  if (script == 'hans') return simplifiedChineseLocale;
   if (script == 'hant') return traditionalChineseLocale;
 
   final country = locale.countryCode?.toUpperCase();
+  if (country == 'CN' || country == 'SG') return simplifiedChineseLocale;
   if (country == 'TW' || country == 'HK' || country == 'MO') {
     return traditionalChineseLocale;
   }
@@ -102,6 +118,7 @@ Locale? mapDeviceLocale(Locale locale) {
     // Generic `zh` with no script/region. This release maps it to 繁中.
     return traditionalChineseLocale;
   }
-  // zh-CN / zh-SG / other regions without Hans/Hant: not a Traditional match.
+  // Any other zh region without a script subtag stays unclaimed, rather than
+  // being guessed from a country code the app has no evidence about.
   return null;
 }

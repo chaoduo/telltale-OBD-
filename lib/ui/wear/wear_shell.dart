@@ -27,6 +27,7 @@ import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_theme.dart';
 import '../../diagnostics/availability.dart';
 import '../../l10n/generated/app_localizations.dart';
+import '../../l10n/pid_labels.dart';
 import '../../obd/pid/pid.dart';
 import '../../obd/pid/pid_library.dart';
 import '../../obd/powertrain_battery/powertrain_battery_catalog.dart';
@@ -444,7 +445,7 @@ class _WearDialPageState extends ConsumerState<_WearDialPage> {
               value: snapshot.valueOf(pid),
               minValue: pid.minValue,
               maxValue: pid.maxValue,
-              label: pid.shortName,
+              label: pidDisplayShortName(AppLocalizations.of(context), pid),
               units: pid.units,
               hue: hue,
               redlineFrom: pid.redlineFrom,

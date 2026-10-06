@@ -1852,8 +1852,12 @@
   "@settingsTwPickerScope": {
     "description": "Stops TW/US namesake join and model-year confusion.",
     "placeholders": {
-      "firstYear": { "type": "int" },
-      "lastYear": { "type": "int" }
+      "firstYear": {
+        "type": "int"
+      },
+      "lastYear": {
+        "type": "int"
+      }
     }
   },
   "settingsTwPickerTitle": "Official Taiwan vehicle catalog",
@@ -1861,7 +1865,9 @@
   "settingsTwWillApplyOnly": "Only {fields} will be applied. Reference mass, VE, Cd, frontal area, Crr and transmission efficiency stay unresolved.",
   "@settingsTwWillApplyOnly": {
     "placeholders": {
-      "fields": { "type": "String" }
+      "fields": {
+        "type": "String"
+      }
     }
   },
   "settingsClose": "Close",
@@ -3198,8 +3204,12 @@
   "@commandFailureUserCanFramingUnknown": {
     "description": "TransportIssue.busNotObd2 with issueDetail B or C. {protocol} is B or C. {parameter} is PP 2C or PP 2E.",
     "placeholders": {
-      "protocol": { "type": "String" },
-      "parameter": { "type": "String" }
+      "protocol": {
+        "type": "String"
+      },
+      "parameter": {
+        "type": "String"
+      }
     }
   },
   "commandFailureBusUndetermined": "The vehicle bus protocol is not yet determined, so this query cannot be decoded safely. Reconnect.",
@@ -3234,11 +3244,11 @@
   "@manualCommandRefusedEmpty": {
     "description": "ManualCommandRefusalReason.emptyCommand. The box refuses before the adapter is involved at all, so it must not read as a failure of anything."
   },
-  "manualCommandRefusedMoreThanOneCommand": "This text carries a line break or another control character, which sends more than one command at once. The adapter separates commands by line break, so the second one would skip every check made here \u2014 including the one that refuses to clear fault codes. Send one command at a time.",
+  "manualCommandRefusedMoreThanOneCommand": "This text carries a line break or another control character, which sends more than one command at once. The adapter separates commands by line break, so the second one would skip every check made here — including the one that refuses to clear fault codes. Send one command at a time.",
   "@manualCommandRefusedMoreThanOneCommand": {
     "description": "ManualCommandRefusalReason.moreThanOneCommand. The mechanism is the message: 03\\r04 is two requests and the second one erases the vehicle's fault memory. Saying only 'refused' would leave somebody retrying the same paste."
   },
-  "manualCommandRefusedAdapterStateWouldChange": "This box accepts questions, not commands that change what the adapter is. \u201c{command}\u201d would change the adapter's state while the app's model of it stayed as it was \u2014 the readings after it could come from a different controller, with nothing on screen to say so.\nQueries you can send: {allowed}.",
+  "manualCommandRefusedAdapterStateWouldChange": "This box accepts questions, not commands that change what the adapter is. “{command}” would change the adapter's state while the app's model of it stayed as it was — the readings after it could come from a different controller, with nothing on screen to say so.\nQueries you can send: {allowed}.",
   "@manualCommandRefusedAdapterStateWouldChange": {
     "description": "ManualCommandRefusalReason.adapterStateWouldChange. {command} is the text as typed and {allowed} is manualCommandAdvertisedAtQueries joined with settingsListSeparator, never a list spelled into the sentence: copy that named seven queries while the set accepted more was a false statement about what this box takes, read by the one person whose command was just refused. No count here: it is what drifted.",
     "placeholders": {
@@ -3250,14 +3260,14 @@
   "@manualCommandRefusedClearHasItsOwnButton": {
     "description": "ManualCommandRefusalReason.clearHasItsOwnButton. Mode 04. It names where to go rather than only refusing, because the thing the person wanted is available and safeguarded a screen away."
   },
-  "manualCommandRefusedCharactersNoObdCommandHas": "The command \u201c{command}\u201d contains characters an OBD command never has. This box takes hexadecimal service codes and parameters \u2014 0100, 03, 2211A6 \u2014 or an adapter query beginning with AT.",
+  "manualCommandRefusedCharactersNoObdCommandHas": "The command “{command}” contains characters an OBD command never has. This box takes hexadecimal service codes and parameters — 0100, 03, 2211A6 — or an adapter query beginning with AT.",
   "@manualCommandRefusedCharactersNoObdCommandHas": {
     "description": "ManualCommandRefusalReason.charactersNoObdCommandHas. A whitelist rather than a list of separators to keep complete: the cost of an incomplete blacklist here is a fault-code clear nobody asked for.",
     "placeholders": {
       "command": {}
     }
   },
-  "manualCommandRefusedNotAReadOnlyQuery": "\u201c{command}\u201d is not a command this box knows. It takes read-only queries (Mode {allowed}) and adapter queries.",
+  "manualCommandRefusedNotAReadOnlyQuery": "“{command}” is not a command this box knows. It takes read-only queries (Mode {allowed}) and adapter queries.",
   "@manualCommandRefusedNotAReadOnlyQuery": {
     "description": "ManualCommandRefusalReason.notAReadOnlyQuery. {allowed} is manualCommandAdvertisedServices joined with settingsListSeparator. The list was once written out beside the set and the two had already drifted: Mode 05 was admitted and the sentence still omitted it.",
     "placeholders": {
@@ -3394,7 +3404,9 @@
   "@pidFormulaTimeWindowUnsupported": {
     "description": "FormulaIssue.timeWindowUnsupported. {term} is EWMAF, TAVG, RAVG, AVG, TDLY, RDLY or TOT. TOT is a totalizer, not a delay or average. AVG is not MIN/MAX. TDLY is not 0. Not evaluated.",
     "placeholders": {
-      "term": { "type": "String" }
+      "term": {
+        "type": "String"
+      }
     }
   },
   "pidFormulaDependencyControllerUnknown": "{reference} cannot be resolved here, because which controller that PID belongs to is not known.",
@@ -3637,63 +3649,93 @@
   "@dtcCategorySilentControllers": {
     "description": "DtcReadException.silentSources on a category panel. Message stays transcript-only.",
     "placeholders": {
-      "count": { "type": "int" },
-      "controllers": { "type": "String" }
+      "count": {
+        "type": "int"
+      },
+      "controllers": {
+        "type": "String"
+      }
     }
   },
   "dtcCategoryUnresolvedSources": "{count} response(s) could not be attributed to a controller ({addresses}). Codes that were read are still valid, but this cannot stand as a whole-vehicle result. Scan again.",
   "@dtcCategoryUnresolvedSources": {
     "description": "DtcReadException.unresolvedSources on a category panel.",
     "placeholders": {
-      "count": { "type": "int" },
-      "addresses": { "type": "String" }
+      "count": {
+        "type": "int"
+      },
+      "addresses": {
+        "type": "String"
+      }
     }
   },
   "dtcCategoryPendingControllers": "{count} controller(s) are still working on this request ({answered} already answered). The result is incomplete. Wait, then scan again.",
   "@dtcCategoryPendingControllers": {
     "description": "DtcReadException.pendingSources with an answered count. Not a refusal.",
     "placeholders": {
-      "count": { "type": "int" },
-      "answered": { "type": "int" }
+      "count": {
+        "type": "int"
+      },
+      "answered": {
+        "type": "int"
+      }
     }
   },
   "dtcCategoryRefusedControllers": "{refused} controller(s) refused ({answered} answered). This scan cannot cover the whole vehicle.",
   "@dtcCategoryRefusedControllers": {
     "description": "DtcReadException.refusedCount on a category panel.",
     "placeholders": {
-      "refused": { "type": "int" },
-      "answered": { "type": "int" }
+      "refused": {
+        "type": "int"
+      },
+      "answered": {
+        "type": "int"
+      }
     }
   },
   "dtcCategoryUnrecognisedResponses": "{count} response(s) could not be read ({answered} answered). The rest is still valid, but this scan is incomplete.",
   "@dtcCategoryUnrecognisedResponses": {
     "description": "DtcReadException.unrecognisedCount on a category panel. Does not interpolate the decoder sentence.",
     "placeholders": {
-      "count": { "type": "int" },
-      "answered": { "type": "int" }
+      "count": {
+        "type": "int"
+      },
+      "answered": {
+        "type": "int"
+      }
     }
   },
   "dtcCategoryMilCountMismatch": "{controller} reported {claimed} confirmed fault codes, but this scan only read {observed}. Trust the dashboard lamp, and see a workshop.",
   "@dtcCategoryMilCountMismatch": {
     "description": "Sole-controller PID 01 confirmed-count disagreed with Mode 03. Transcript stays English; screen maps these three values.",
     "placeholders": {
-      "controller": { "type": "String" },
-      "claimed": { "type": "int" },
-      "observed": { "type": "int" }
+      "controller": {
+        "type": "String"
+      },
+      "claimed": {
+        "type": "int"
+      },
+      "observed": {
+        "type": "int"
+      }
     }
   },
   "dtcCategoryMilLitNoCodes": "{controller} reported that the malfunction indicator is lit, but none of its fault codes were read. Trust the dashboard lamp, and see a workshop.",
   "@dtcCategoryMilLitNoCodes": {
     "description": "Sole-controller MIL on with zero Mode 03 codes for that module. Distinct from a confirmed-count mismatch.",
     "placeholders": {
-      "controller": { "type": "String" }
+      "controller": {
+        "type": "String"
+      }
     }
   },
   "dtcCategoryMilDisagreement": "The vehicle's own status does not match the fault codes that were read ({controllers}). Trust the dashboard lamp, and see a workshop.",
   "@dtcCategoryMilDisagreement": {
     "description": "Two or more controllers disagreed with Mode 03; counts cannot share one pair.",
     "placeholders": {
-      "controllers": { "type": "String" }
+      "controllers": {
+        "type": "String"
+      }
     }
   },
   "connectPairedListFailed": "The paired Bluetooth list could not be read. Check that Bluetooth is on, then try again.",
@@ -3704,87 +3746,123 @@
   "@dtcClearNrcConditions": {
     "description": "ISO 14229 NRC 0x22 on Mode 04 when repeatWouldHarm is false. Controller id is the raw sourceId.",
     "placeholders": {
-      "controller": { "type": "String" }
+      "controller": {
+        "type": "String"
+      }
     }
   },
   "dtcClearNrcUnsupported": "{controller} does not support Mode 04 clear. Manufacturer or dealer equipment may be required.",
   "@dtcClearNrcUnsupported": {
     "placeholders": {
-      "controller": { "type": "String" }
+      "controller": {
+        "type": "String"
+      }
     }
   },
   "dtcClearNrcBusy": "{controller} is busy. Wait, then try again.",
   "@dtcClearNrcBusy": {
     "placeholders": {
-      "controller": { "type": "String" }
+      "controller": {
+        "type": "String"
+      }
     }
   },
   "dtcClearNrcSecurity": "{controller} requires security access before it will clear. Manufacturer or dealer equipment is required.",
   "@dtcClearNrcSecurity": {
     "placeholders": {
-      "controller": { "type": "String" }
+      "controller": {
+        "type": "String"
+      }
     }
   },
   "dtcClearNrcOther": "{controller} refused the clear (reason code {code}). Wait, then try again.",
   "@dtcClearNrcOther": {
     "placeholders": {
-      "controller": { "type": "String" },
-      "code": { "type": "String" }
+      "controller": {
+        "type": "String"
+      },
+      "code": {
+        "type": "String"
+      }
     }
   },
   "dtcClearSilentControllers": "{count} controller(s) did not answer the clear ({controllers}). Controllers that answered have cleared; others may still hold codes. Rescan. Do not send another clear.",
   "@dtcClearSilentControllers": {
     "placeholders": {
-      "count": { "type": "int" },
-      "controllers": { "type": "String" }
+      "count": {
+        "type": "int"
+      },
+      "controllers": {
+        "type": "String"
+      }
     }
   },
   "dtcClearUnresolvedSources": "{count} response(s) from this scan could not be attributed ({addresses}), so it is not known which controllers a clear would reach. Rescan; if that address does not appear again, reconnect before trying.",
   "@dtcClearUnresolvedSources": {
     "description": "Clear refused before send because identities from the scan are still unresolved.",
     "placeholders": {
-      "count": { "type": "int" },
-      "addresses": { "type": "String" }
+      "count": {
+        "type": "int"
+      },
+      "addresses": {
+        "type": "String"
+      }
     }
   },
   "dtcClearUnresolvedSourcesDoNotRepeat": "{count} response(s) in the clear reply could not be attributed ({addresses}). Do not send another clear. Rescan to see which codes remain.",
   "@dtcClearUnresolvedSourcesDoNotRepeat": {
     "description": "Clear reply carried unresolved identities after something may already have erased.",
     "placeholders": {
-      "count": { "type": "int" },
-      "addresses": { "type": "String" }
+      "count": {
+        "type": "int"
+      },
+      "addresses": {
+        "type": "String"
+      }
     }
   },
   "dtcClearNrcConditionsDoNotRepeat": "{controller} refused the clear because the vehicle state does not allow it. Most controllers will not clear with the engine running. Turn the ignition ON with the engine stopped, then rescan to see which codes remain. Do not send another global clear — a second one can reset emissions readiness on a controller that may already have cleared.",
   "@dtcClearNrcConditionsDoNotRepeat": {
     "description": "ISO 14229 NRC 0x22 on Mode 04 when another controller may already have cleared.",
     "placeholders": {
-      "controller": { "type": "String" }
+      "controller": {
+        "type": "String"
+      }
     }
   },
   "dtcClearNrcUnsupportedDoNotRepeat": "{controller} does not support Mode 04 clear. Manufacturer or dealer equipment may be required. Do not send another global clear — a second one can reset emissions readiness on a controller that may already have cleared. Rescan to see which codes remain.",
   "@dtcClearNrcUnsupportedDoNotRepeat": {
     "placeholders": {
-      "controller": { "type": "String" }
+      "controller": {
+        "type": "String"
+      }
     }
   },
   "dtcClearNrcBusyDoNotRepeat": "{controller} is busy. Do not send another global clear — a second one can reset emissions readiness on a controller that may already have cleared. Rescan to see which codes remain.",
   "@dtcClearNrcBusyDoNotRepeat": {
     "placeholders": {
-      "controller": { "type": "String" }
+      "controller": {
+        "type": "String"
+      }
     }
   },
   "dtcClearNrcSecurityDoNotRepeat": "{controller} requires security access before it will clear. Manufacturer or dealer equipment is required. Do not send another global clear — a second one can reset emissions readiness on a controller that may already have cleared.",
   "@dtcClearNrcSecurityDoNotRepeat": {
     "placeholders": {
-      "controller": { "type": "String" }
+      "controller": {
+        "type": "String"
+      }
     }
   },
   "dtcClearNrcOtherDoNotRepeat": "{controller} refused the clear (reason code {code}). Do not send another global clear — a second one can reset emissions readiness on a controller that may already have cleared. Rescan to see which codes remain.",
   "@dtcClearNrcOtherDoNotRepeat": {
     "placeholders": {
-      "controller": { "type": "String" },
-      "code": { "type": "String" }
+      "controller": {
+        "type": "String"
+      },
+      "code": {
+        "type": "String"
+      }
     }
   },
   "sharePolicyDenied": "The current connection or driving state does not allow export.",
@@ -3800,14 +3878,18 @@
   "@shareTelemetrySubject": {
     "description": "Share-sheet subject for a telemetry CSV/JSON export. {sessionId} is the opaque session id.",
     "placeholders": {
-      "sessionId": { "type": "String" }
+      "sessionId": {
+        "type": "String"
+      }
     }
   },
   "shareRawTranscriptSubject": "Telltale transport log {stamp}",
   "@shareRawTranscriptSubject": {
     "description": "Share-sheet subject for a live adapter transcript. {stamp} is local YYYYMMDD-HHMMSS.",
     "placeholders": {
-      "stamp": { "type": "String" }
+      "stamp": {
+        "type": "String"
+      }
     }
   },
   "shareRecoveredTranscriptSubject": "Telltale transport log (last connection)",
@@ -3829,15 +3911,21 @@
   "@pidFormulaUnsupportedConstruct": {
     "description": "FormulaIssue.unsupportedConstruct. {term} is the wiki function name (INT16, EWMAF, …). Distinct from an unparsable typo. BARO() has its own issue.",
     "placeholders": {
-      "term": { "type": "String" }
+      "term": {
+        "type": "String"
+      }
     }
   },
   "pidImportRowFormulaRejected": "Row {line}: {reason}",
   "@pidImportRowFormulaRejected": {
     "description": "PidCsvIssue.rowFormulaRejected. {line} is the 1-based spreadsheet line. {reason} is already-rendered formulaIssueText.",
     "placeholders": {
-      "line": { "type": "int" },
-      "reason": { "type": "String" }
+      "line": {
+        "type": "int"
+      },
+      "reason": {
+        "type": "String"
+      }
     }
   },
   "telemetryHistoryNeedsForeground": "Return to Telltale before continuing.",
@@ -3886,8 +3974,12 @@
   "@connectionLayerRequestedObserved": {
     "description": "Connect protocol row when ATSP (asked) and ATDPN (settled) differ. Keep both numbers.",
     "placeholders": {
-      "requested": {"type": "String"},
-      "observed": {"type": "String"}
+      "requested": {
+        "type": "String"
+      },
+      "observed": {
+        "type": "String"
+      }
     }
   },
   "connectionLayerKwpSubtypeUnknown": "KWP, 5-baud vs fast not distinguished",
@@ -3924,8 +4016,12 @@
   "@settingsCaPickerScope": {
     "description": "Stops CA/US/TW namesake join. ICE/BEV/PHEV are not collapsed.",
     "placeholders": {
-      "firstYear": { "type": "int" },
-      "lastYear": { "type": "int" }
+      "firstYear": {
+        "type": "int"
+      },
+      "lastYear": {
+        "type": "int"
+      }
     }
   },
   "settingsCaMotorNotPower": "Motor power in kilowatts is not wheel horsepower and is not applied.",
@@ -3935,8 +4031,59 @@
   "settingsCaWillApplyOnly": "Only {fields} will be applied. Motor kW, fuel consumption, range, CO2, VE, Cd, frontal area, Crr and transmission efficiency stay unresolved.",
   "@settingsCaWillApplyOnly": {
     "placeholders": {
-      "fields": { "type": "String" }
+      "fields": {
+        "type": "String"
+      }
     }
-  }
-
+  },
+  "pidNameEngineRpm": "Engine RPM",
+  "pidShortEngineRpm": "RPM",
+  "pidNameVehicleSpeed": "Vehicle Speed",
+  "pidShortVehicleSpeed": "Speed",
+  "pidNameCoolantTemp": "Engine Coolant Temperature",
+  "pidShortCoolantTemp": "Coolant",
+  "pidNameIntakeAirTemp": "Intake Air Temperature",
+  "pidShortIntakeAirTemp": "IAT",
+  "pidNameEngineLoad": "Calculated Engine Load",
+  "pidShortEngineLoad": "Load",
+  "pidNameThrottlePosition": "Throttle Position",
+  "pidShortThrottlePosition": "Throttle",
+  "pidNameManifoldPressure": "Intake Manifold Absolute Pressure",
+  "pidShortManifoldPressure": "MAP",
+  "pidNameMafRate": "MAF Air Flow Rate",
+  "pidShortMafRate": "MAF",
+  "pidNameTimingAdvance": "Timing Advance",
+  "pidShortTimingAdvance": "Timing",
+  "pidNameFuelPressure": "Fuel Pressure",
+  "pidShortFuelPressure": "Fuel Press",
+  "pidNameFuelLevel": "Fuel Tank Level",
+  "pidShortFuelLevel": "Fuel",
+  "pidNameBarometricPressure": "Barometric Pressure",
+  "pidShortBarometricPressure": "Baro",
+  "pidNameControlModuleVoltage": "Control Module Voltage",
+  "pidShortControlModuleVoltage": "Voltage",
+  "pidNameAmbientAirTemp": "Ambient Air Temperature",
+  "pidShortAmbientAirTemp": "Ambient",
+  "pidNameEngineOilTemp": "Engine Oil Temperature",
+  "pidShortEngineOilTemp": "Oil Temp",
+  "pidNameEngineFuelRate": "Engine Fuel Rate",
+  "pidShortEngineFuelRate": "Fuel Rate",
+  "pidNameShortFuelTrimB1": "Short Term Fuel Trim — Bank 1",
+  "pidShortShortFuelTrimB1": "STFT B1",
+  "pidNameLongFuelTrimB1": "Long Term Fuel Trim — Bank 1",
+  "pidShortLongFuelTrimB1": "LTFT B1",
+  "pidNameRunTime": "Run Time Since Engine Start",
+  "pidShortRunTime": "Run Time",
+  "pidNameDistanceWithMil": "Distance Travelled With MIL On",
+  "pidShortDistanceWithMil": "MIL Dist",
+  "pidNameAbsoluteLoad": "Absolute Load Value",
+  "pidShortAbsoluteLoad": "Abs Load",
+  "pidNameCommandedEgr": "Commanded EGR",
+  "pidShortCommandedEgr": "EGR",
+  "pidNameRelativeThrottle": "Relative Throttle Position",
+  "pidShortRelativeThrottle": "Rel Thr",
+  "pidNameBoostPressure": "Turbo Boost (MAP − Baro)",
+  "pidShortBoostPressure": "Boost",
+  "pidNameSpeedMph": "Vehicle Speed (mph)",
+  "pidShortSpeedMph": "Speed"
 }

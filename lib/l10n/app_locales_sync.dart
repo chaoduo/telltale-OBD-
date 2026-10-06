@@ -39,6 +39,7 @@ List<String> tagsForStoredId(String storedId) {
   return switch (storedId) {
     'en' => const ['en'],
     'zh_Hant' => const ['zh-Hant'],
+    'zh_Hans' => const ['zh-Hans'],
     'de' => const ['de'],
     _ => const [],
   };
@@ -52,6 +53,7 @@ String storedIdFromSupportedTag(String tag) {
   return switch (tag) {
     'en' => 'en',
     'zh-Hant' => 'zh_Hant',
+    'zh-Hans' => 'zh_Hans',
     'de' => 'de',
     _ => 'system',
   };
@@ -74,9 +76,10 @@ String? mapTagToSupported(String raw) {
     if (part.length == 4) script ??= part.toLowerCase();
     if (part.length == 2) region ??= part.toUpperCase();
   }
-  if (script == 'hans') return null;
+  if (script == 'hans') return 'zh-Hans';
   if (script == 'hant') return 'zh-Hant';
   if (region == 'TW' || region == 'HK' || region == 'MO') return 'zh-Hant';
+  if (region == 'CN' || region == 'SG') return 'zh-Hans';
   if (subtags.isEmpty) return 'zh-Hant';
   return null;
 }

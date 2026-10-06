@@ -12,6 +12,7 @@ import 'package:go_router/go_router.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../l10n/generated/app_localizations.dart';
+import '../../../l10n/pid_labels.dart';
 import '../../../obd/pid/pid.dart';
 import '../../../obd/pid/pid_csv.dart';
 import '../../../obd/polling_engine.dart';
@@ -408,8 +409,12 @@ class _PidManagerScreenState extends ConsumerState<PidManagerScreen> {
     final visible = registry.where((pid) {
       if (_activeOnly && !activeIds.contains(pid.id)) return false;
       if (query.isEmpty) return true;
+      // Search the shipped name as well as the author's own text: a user who
+      // sees 冷却液温度 on the row must be able to type it.
       return pid.name.toLowerCase().contains(query) ||
           pid.shortName.toLowerCase().contains(query) ||
+          pidDisplayName(l10n, pid).toLowerCase().contains(query) ||
+          pidDisplayShortName(l10n, pid).toLowerCase().contains(query) ||
           pid.modeAndPid.toLowerCase().contains(query);
     }).toList();
 
@@ -772,7 +777,7 @@ class _PidRow extends StatelessWidget {
                   children: [
                     Flexible(
                       child: Text(
-                        pid.name,
+                        pidDisplayName(l10n, pid),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: context.texts.titleSmall,
@@ -851,10 +856,11 @@ class _PidRow extends StatelessWidget {
           // A bare switch announces only "on"/"off" with no subject. In a
           // list of twenty-three rows that is not enough to act on.
           //
-          // `pid.name` is the author's own text and goes through verbatim in
-          // either language; it is data, never a key.
+          // The label reads the name the row above shows, not `pid.name`: a
+          // screen reader hearing English over a row painted in Chinese would
+          // be the same defect as the row itself.
           Semantics(
-            label: l10n.pidRowShowOnDashboard(pid.name),
+            label: l10n.pidRowShowOnDashboard(pidDisplayName(l10n, pid)),
             child: Switch(
               value: isActive,
               onChanged: (_) => unawaited(onToggle()),
@@ -983,7 +989,7 @@ class _ArrangeSheet extends ConsumerWidget {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        pid.name,
+                                        pidDisplayName(l10n, pid),
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                         style: context.texts.titleSmall,
