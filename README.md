@@ -59,6 +59,11 @@ into confident-looking results.
 [![Watch the privacy-safe Toyota GT86 and BLE ELM327 demo](store/en-US/feature-1024x500.png)](https://youtu.be/Ugyg4RXhjVQ)
 
 **[Watch the Toyota GT86 and BLE ELM327 demo on YouTube](https://youtu.be/Ugyg4RXhjVQ).**
+
+The screenshots above are upstream's. This fork's own screenshots, taken on a
+phone against Demo ECU and showing the Simplified Chinese interface, live in
+[`store/zh-CN/`](store/zh-CN) and are shown in
+[README.zh-CN.md](README.zh-CN.md).
 It shows one real Samsung, adapter, and vehicle combination. The vehicle VIN is
 redacted; the demo is evidence for that observed setup, not a universal
 compatibility claim.

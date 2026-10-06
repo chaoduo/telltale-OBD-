@@ -43,17 +43,22 @@ OBD2 故障诊断。它的设计原则是诚实呈现不确定性，不把格式
 
 ## App 截图与实车示范
 
+下面这几张是本 fork 自己的简体中文截图（真机、Demo ECU）：
+
 <p align="center">
-  <img src="store/zh-TW/01-connect.png" width="30%" alt="Telltale 连接方式画面">
-  <img src="store/zh-TW/02-dashboard.png" width="30%" alt="Telltale 实时遥测仪表板">
-  <img src="store/zh-TW/03-dtc-freeze.png" width="30%" alt="Telltale Demo ECU 故障码与冻结帧画面">
+  <img src="store/zh-CN/02-dashboard.jpg" width="30%" alt="Telltale 简体中文实时遥测仪表板">
+  <img src="store/zh-CN/05-pids.jpg" width="30%" alt="Telltale 简体中文 PID 列表">
+  <img src="store/zh-CN/03-dtc-freeze.jpg" width="30%" alt="Telltale 简体中文故障码与冻结帧画面">
+</p>
+
+<p align="center">
+  <img src="store/zh-CN/04-dtc-stored.jpg" width="30%" alt="Telltale 简体中文已存储故障码列表">
 </p>
 
 [![观看 Toyota GT86 与 BLE ELM327 隐私遮蔽示范](store/zh-TW/feature-1024x500.png)](https://youtu.be/Ugyg4RXhjVQ)
 
-> 上面这组图仍是上游的繁体中文截图（`store/zh-TW/`）；本 fork 还没有自己的
-> 简体中文截图。[文档](#文档)一节指向的实车指南与协议差异说明同理，目前只有
-> 繁体中文版（`docs/*.zh-TW.md`）。
+> 上面那张横幅与下面链接的视频仍是上游素材（`store/zh-TW/`）。[文档](#文档)一节
+> 指向的实车指南与协议差异说明目前也只有繁体中文版（`docs/*.zh-TW.md`），尚未翻译。
 
 **[在 YouTube 观看 Toyota GT86 与 BLE ELM327 实车示范](https://youtu.be/Ugyg4RXhjVQ)。**
 视频记录一组 Samsung 手机、适配器与车辆的实际连接，实车 VIN 已遮蔽；这是该组合

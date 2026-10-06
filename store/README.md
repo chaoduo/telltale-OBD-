@@ -12,6 +12,7 @@ listing 的一部分**。一份英文 listing 配一組中文截圖，等於在�
 store/
 ├── en-US/          英文 listing 的素材
 ├── zh-TW/          繁體中文 listing 的素材
+├── zh-CN/          简体中文 listing 的素材（本 fork 新增）
 ├── icon-512.png    兩邊共用：圖示沒有文字
 └── preview-gt86-vin-redacted.mp4
 ```
