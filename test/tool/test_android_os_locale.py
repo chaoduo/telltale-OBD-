@@ -200,8 +200,8 @@ class AndroidOsLocaleLaneTest(unittest.TestCase):
         ).read_text(encoding="utf-8")
         self.assertIn('android:name="en"', xml)
         self.assertIn('android:name="zh-Hant"', xml)
+        self.assertIn('android:name="zh-Hans"', xml)
         self.assertIn('android:name="de"', xml)
-        self.assertNotIn("zh-Hans", xml)
         self.assertNotIn("zh-CN", xml)
         manifest = (
             ROOT / "android" / "app" / "src" / "main" / "AndroidManifest.xml"
@@ -210,6 +210,7 @@ class AndroidOsLocaleLaneTest(unittest.TestCase):
         ios = (ROOT / "ios" / "Runner" / "Info.plist").read_text(encoding="utf-8")
         self.assertIn("CFBundleLocalizations", ios)
         self.assertIn("zh-Hant", ios)
+        self.assertIn("zh-Hans", ios)
         macos = (ROOT / "macos" / "Runner" / "Info.plist").read_text(encoding="utf-8")
         self.assertIn("CFBundleLocalizations", macos)
 

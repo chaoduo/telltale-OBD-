@@ -184,7 +184,7 @@ def _set_app_locales(serial: str, locales: str) -> None:
         "set-app-localeconfig",
         PACKAGE,
         "--locales",
-        "en,zh-Hant,de",
+        "en,zh-Hant,zh-Hans,de",
     )
     if config.returncode != 0:
         raise GateError("android-os-locale could not set LocaleConfig")

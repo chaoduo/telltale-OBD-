@@ -32,7 +32,7 @@ data class AppLocaleMigration(
 object AppLocalePolicy {
     const val MIN_API = 33
 
-    val supportedTags: List<String> = listOf("en", "zh-Hant", "de")
+    val supportedTags: List<String> = listOf("en", "zh-Hant", "zh-Hans", "de")
 
     private val supportedTagSet: Set<String> = supportedTags.toSet()
 
@@ -69,6 +69,7 @@ object AppLocalePolicy {
         when (storedId) {
             "en" -> listOf("en")
             "zh_Hant" -> listOf("zh-Hant")
+            "zh_Hans" -> listOf("zh-Hans")
             "de" -> listOf("de")
             else -> emptyList()
         }
@@ -77,6 +78,7 @@ object AppLocalePolicy {
         when (tag) {
             "en" -> "en"
             "zh-Hant" -> "zh_Hant"
+            "zh-Hans" -> "zh_Hans"
             "de" -> "de"
             else -> "system"
         }
@@ -134,10 +136,11 @@ object AppLocalePolicy {
         if (language != "zh") return null
         val subtags = parts.drop(1)
         val script = subtags.firstOrNull { it.length == 4 }?.lowercase()
-        if (script == "hans") return null
+        if (script == "hans") return "zh-Hans"
         if (script == "hant") return "zh-Hant"
         val region = subtags.firstOrNull { it.length == 2 }?.uppercase()
         if (region == "TW" || region == "HK" || region == "MO") return "zh-Hant"
+        if (region == "CN" || region == "SG") return "zh-Hans"
         if (subtags.isEmpty()) return "zh-Hant"
         return null
     }

@@ -45,8 +45,19 @@ class AppLocalePolicyTest {
     @Test
     fun `an unknown request is rejected rather than stored as a pretend locale`() {
         assertNull(AppLocalePolicy.overrideFromRequestedTags(listOf("ja")))
-        assertNull(AppLocalePolicy.overrideFromRequestedTags(listOf("zh-Hans")))
         assertNull(AppLocalePolicy.overrideFromRequestedTags(listOf("en", "ja")))
+    }
+
+    @Test
+    fun `Simplified Chinese is a request the OS can honour`() {
+        assertEquals(
+            AppLocaleOverride(followsSystem = false, tags = listOf("zh-Hans")),
+            AppLocalePolicy.overrideFromRequestedTags(listOf("zh-Hans")),
+        )
+        assertEquals(
+            AppLocaleOverride(followsSystem = false, tags = listOf("zh-Hans")),
+            AppLocalePolicy.overrideFromRequestedTags(listOf("zh-CN")),
+        )
     }
 
     @Test
