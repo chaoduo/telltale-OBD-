@@ -1,13 +1,29 @@
-**English** | [繁體中文](README.zh-TW.md)
+**English** | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md)
 
 # Telltale
 
-> **GitHub home:** https://github.com/aa22396584/telltale  
-> Please open issues and pull requests there.  
-> **Also on:** [Codeberg](https://codeberg.org/ImL1s/telltale) · [GitLab](https://gitlab.com/aa22396584/telltale)  
-> Former GitHub account `ImL1s` is restricted; use `aa22396584` for browsing and contributions.
+> **This repository is a fork of Telltale that adds a Simplified Chinese
+> (简体中文) interface.** It is GPL-3.0, like upstream, and comes with no
+> warranty. [简体中文说明](README.zh-CN.md).
+>
+> **Fork home:** https://github.com/chaoduo/telltale-OBD- — issues and pull
+> requests about the Simplified Chinese build go here. What this fork changes is
+> listed under [Changes in this fork](#changes-in-this-fork); everything else is
+> upstream's, unchanged.
+>
+> **Upstream:** https://github.com/aa22396584/telltale — the original app
+> (English, Traditional Chinese, German). Also on
+> [Codeberg](https://codeberg.org/ImL1s/telltale) ·
+> [GitLab](https://gitlab.com/aa22396584/telltale). Former GitHub account
+> `ImL1s` is restricted; use `aa22396584` there for browsing and contributions.
+> The badges and release links below describe upstream, not this fork.
 
-> **Install / downtime notes:** prefer
+> **Install this fork:** build it from source — see
+> [Build and test](#build-and-test) — or take the APK from this repository's
+> Releases. It is not on Google Play, and it cannot be installed next to the
+> upstream app: same application id, different signing key.
+
+> **Upstream install / downtime notes:** prefer
 > **[Google Play](https://play.google.com/store/apps/details?id=com.cbstudio.telltale)**;
 > community APK **[v1.0.14 on Codeberg](https://codeberg.org/ImL1s/telltale/releases/tag/v1.0.14)**,
 > **[GitLab Releases](https://gitlab.com/aa22396584/telltale/-/releases)**, or
@@ -48,6 +64,10 @@ redacted; the demo is evidence for that observed setup, not a universal
 compatibility claim.
 
 ## Download and install
+
+**This fork is not on Google Play.** Build it from source — see
+[Build and test](#build-and-test) — or take the APK attached to this
+repository's Releases. Everything below describes **upstream's** builds.
 
 **Preferred:** **[Get the Play-signed build from Google Play](https://play.google.com/store/apps/details?id=com.cbstudio.telltale).**
 
@@ -236,10 +256,31 @@ and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for community expectations.
 
 If this project saved you some time, you can [buy me a coffee](https://buymeacoffee.com/iml1s).
 
+## Changes in this fork
+
+Upstream's app, with a Simplified Chinese interface added. Nothing else is
+intended to differ, and the change is small enough to review in one sitting:
+
+| File | Change |
+|---|---|
+| `lib/l10n/app_zh_Hans.arb` | New locale: 1220 messages, translated from `app_en.arb` |
+| `lib/l10n/pid_labels.dart` | New: maps a built-in PID to its shipped name |
+| `lib/obd/pid/pid.dart`, `pid_library.dart` | `Pid.l10nId`, set on the 25 built-in PIDs; `name`/`shortName` keep serving custom and catalog definitions verbatim |
+| `lib/ui/screens/pids/pid_manager_screen.dart`, `lib/ui/screens/dashboard/dashboard_screen.dart`, `lib/ui/screens/dtc/dtc_screen.dart`, `lib/ui/wear/wear_shell.dart`, `lib/ui/widgets/telemetry/telemetry_lane_selector.dart` | Draw the shipped PID name instead of the author's English one |
+| `lib/l10n/locale_resolution.dart`, `app_locales_sync.dart`, `lib/ui/widgets/language_picker.dart` | Offer 简体中文; map `zh-Hans`, `zh-CN`, `zh-SG` and follow-system devices onto it |
+| `android/app/src/main/kotlin/.../AppLocalePolicy.kt`, `android/app/src/main/res/xml/locales_config.xml`, `ios/Runner/Info.plist`, `macos/Runner/Info.plist` | Register `zh-Hans` with the OS, without which Android 13+ rejects an in-app switch to it as an unknown tag |
+| `tool/i18n/apply_translation.py`, `tool/build_apk.sh` | CSV → ARB importer with the repo's own checks, and a release build that sets `allowUnsignedRelease` |
+
+Files untouched by this fork are upstream's, and the tests that pin upstream
+copy still pin it. `test/l10n/` passes except upstream's `glossary_evidence_test`,
+whose citations into `README.md` and `app_en.arb` are stale in this snapshot.
+
 ## Licence and disclaimer
 
 Contributions are welcome under the [contributor guide](CONTRIBUTING.md).
-Telltale is licensed under [GPL-3.0](LICENSE). It is not affiliated with Ian
+Telltale is licensed under [GPL-3.0](LICENSE), and so is this fork: the modified
+files are the ones listed above, and the licence and the upstream copyright
+notices are unchanged. It is not affiliated with Ian
 Hawkins' Torque or Torque Pro and is neither an official nor derivative version
 of either product. The bundled official vehicle-data snapshots keep their own
 [source and reuse notices](assets/vehicle_catalog/NOTICE.md). Powertrain-battery
