@@ -1,0 +1,372 @@
+# Powertrain battery catalog third-party notices
+
+The bundled schema-v3 powertrain battery catalog is a curated index of **221
+source-backed profiles**: 205 metadata-only `researchOnly` entries, twelve
+cross-corroborated installable `community` entries, and four `experimental`
+entries (three pollable Mode 22 maps that may be installed as unverified
+PIDs, and one Mode 21 map that remains laboratory-only). The executable
+subset contains 157 bounded signals.
+The current snapshot has no `ready` profile.
+
+Telltale does not claim that any entry is supported. Community entries are
+independently corroborated source data, not physical-vehicle validation. A
+phone or synthetic-rig run may test the app and transport path, but it does
+not constitute physical-vehicle PID, formula, or BMS validation.
+
+## Apache License 2.0 sources
+
+### MG ZS EV Mk1 community subset
+
+- `peternixon/MG-EV-OBD-PID`, pinned at
+  `2f485fcbffa2259d9e1db92d14483c1bef55dcca`.
+- Source path: `extendedpids/MG ZS EV.csv`.
+- Pinned source-artifact SHA-256:
+  `f20ee02b2710def73c008fb54f086172a4e3323a751e8392efd1f0e3d9de0923`.
+
+Telltale transforms 9 Mode 22 rows into its formula dialect and 9 bounded
+signals. The independently implemented OVMS `vehicle_mgev` component (MIT)
+corroborates every shipped DID; the WiCAN vehicle profiles (GPL-3.0)
+additionally confirm the SoC, SoH and pack-voltage scales. The weakly
+corroborated range DID was dropped. The source identifies an
+Australian 2021 source vehicle; the Mk1 2019–2021 scope and the 781/789 BMS
+addressing pin come from the OVMS corroboration. Expected responder `789`
+remains an ISO 15765 physical-address inference. Installation requires an
+identity acknowledgement and a fresh per-connection vehicle confirmation.
+
+### Chevrolet, Nissan and Mitsubishi research boundaries
+
+Nissan Leaf and Mitsubishi Outlander PHEV entries record corroborated read
+contracts that require custom ELM327 flow control (`ATFCSM1`) and app-side
+raw ISO-TP reassembly, which Telltale does not implement; they therefore
+remain research-only.
+
+### Lexus RX450hL experimental subset
+
+- `NathanNam/obd2-logger`, pinned at
+  `f93d7a0afb1cfb8aff9681a7db33db46d55804a2`.
+- Source path: `src/profiles/builtin/lexus-rx450hl-2020.json`.
+- Pinned source-artifact SHA-256:
+  `8109db2ef0164a199d08afb2c6cfc2c419801d0a508cbfcaa52e657e0e46d29c`.
+
+Telltale limits the mapping to one documented 2020 Lexus RX450hL Premium source
+vehicle. Its market and ECU firmware remain unknown. Four Mode 21 commands
+(`61`, `62`, `63`, and `95`) become seven bounded signals. The upstream profile
+declares `7E2` to `7EA`, formulas, and ranges, and published artifacts support
+the selected byte slices. Full exact payload lengths are conservative Telltale
+contracts rather than independent raw-frame proof. RX450h, other trims, model
+years 2021–2022, and unresolved PID `98` are excluded. The 2026-09
+cross-source review found no independent confirmation of the claimed byte
+windows, so the subset is one-shot experimental only and cannot be installed.
+
+2026-09-11 re-evaluation: `NathanNam/obd2-logger` HEAD is unchanged at
+`f93d7a0afb1cfb8aff9681a7db33db46d55804a2`. Consulted disagreeing family:
+`Ircama/ELM327-emulator@73873172ecc162455fe5278b87f9b274e836927b`
+`elm/obd_message.py` SHA-256
+`dacc06ec40d56435324738a6ba0255929253e853d3c19d053ba9b460065e6f97`
+(`2161`/`2162` MG temperature, `2195` internal resistance). Official OVMS
+has no Lexus/RX module. Ircama is CC BY-NC-SA 4.0 and is not copied into
+the executable map.
+
+### Chevrolet Bolt metadata
+
+- `iternio/ev-obd-pids`, pinned at
+  `c45a018b60b3341d2d8bfb22cf0491c4e878165a`.
+
+The Bolt material points to a separate All EV Info mapping. Telltale retains
+traceable discovery metadata but no executable Bolt command because the
+available provenance/licensing chain, raw response evidence, and exact responder
+proof do not pass the executable gates.
+
+### VW and Renault corroboration roles
+
+- `iternio/ev-obd-pids` (same pin as above) additionally corroborates the
+  e-up! gen2 pack-voltage scale and the OVMS identity scope. Its dissenting
+  e-up! SoC scale (`/2.55` against the installed two-source `/2.5`) and its
+  conflicting pack-current formula are recorded on the entry as exclusions
+  or dissents, not installed. On the Zoe Ph1 entry it is supporting
+  material only, because its published init sequence sits outside
+  Telltale's transport safety subset.
+
+The catalog normalizes source formulas where retained, adds exact headers,
+payload bounds, status/evidence/identity metadata, and explicit limitations.
+These are Telltale modifications; the upstream authors do not endorse them.
+Apache-licensed source paths and immutable revisions remain on affected entries.
+
+Apache License 2.0:
+<https://www.apache.org/licenses/LICENSE-2.0>
+
+The complete Apache License 2.0 text is packaged at
+`assets/licenses/Apache-2.0.txt`. This notice and the packaged Apache-2.0,
+MIT (wican-bridge and OVMS) and GPL-3.0 texts are registered with Flutter's
+`LicenseRegistry` and are reachable in the app from Settings → Open-source
+and data licences.
+
+## MIT sources — Open Vehicle Monitoring System 3
+
+- `openvehicles/Open-Vehicle-Monitoring-System-3`, pinned at
+  `587a91d7b46bd7ce6d092e5acb7c2d3b7c5d7740` (MIT, full text packaged at
+  `assets/licenses/ovms-MIT.txt`).
+
+OVMS vehicle components corroborate — and for the Ioniq 5, Kona Electric,
+Niro EV, e-up! gen2, MG4, MG5 EV and Atto 3 community profiles, provide the
+primary decode formulas for — the installed BMS signals (`vehicle_mgev`
+including `vehicle_mg4` and `vehicle_mg5`, `vehicle_hyundai_ioniq5`,
+`vehicle_kianiroev`, `vehicle_vweup`, `vehicle_byd_atto3`). Per-file
+artifact SHA-256 digests are recorded on the affected catalog entries. The
+`vehicle_renaultzoe` component is recorded on the Zoe Ph1 entry as supporting
+material only: its mapping embeds CanZE's CSV verbatim, so it is not counted
+as independent corroboration. Telltale reimplements the decodes in its own
+formula dialect; no OVMS code is copied.
+
+## GPL-3.0 sources — WiCAN vehicle profiles
+
+- `meatpiHQ/wican-fw`, pinned at
+  `bc3ae6d4ad09f32b96ca101b31950e4fbf56b825` (GPL-3.0, full text packaged at
+  `assets/licenses/GPL-3.0.txt`).
+
+WiCAN vehicle-profile JSON corroborates DID positions and scales for the MG
+(ZS EV Mk1, MG5 EV), Hyundai/Kia, VW e-up! gen2, Renault Zoe Ph1 and BYD
+Atto 3 (pre-2024.10) community profiles. The
+adapted data (byte windows and scales, re-expressed in Telltale's formula
+dialect) is attributed here and on each entry; Telltale's app code is
+GPL-3.0 so redistribution terms are compatible.
+
+## Apache-2.0 sources — SoulEVSpy
+
+- `langemand/SoulEVSpy`, pinned at
+  `0a1cafb93a65d17e0c7e1bb3ad2bc9cb965d02a7` (Apache-2.0, full text packaged at
+  `assets/licenses/Apache-2.0.txt`); decode source `app/src/main/java/com/evranger/soulevspy/util/BMS2019Parser.java`.
+
+SoulEVSpy's `BMS2019Parser` provides the primary decode positions for the
+Kia Soul EV (SK3) community profile and independently confirms the
+Kona-family signed pack-current convention through its explicit
+two's-complement handling. Telltale re-expresses the byte windows and scales
+in its own formula dialect; no SoulEVSpy code is copied.
+
+## GPL-3.0 sources — CanZE
+
+- `fesch/CanZE`, pinned at
+  `e9554a6081187b034ff79d032e2eaeb94c1206b1` (GPL-3.0-or-later, full text
+  packaged at `assets/licenses/GPL-3.0.txt`).
+
+CanZE's Renault-DDT-derived field tables (`ZOE/_Fields.csv`,
+`ZOE/_FieldsAlt.csv`) provide the primary decode formulas for the Renault
+Zoe Ph1 community profile's EVC signals. Telltale re-expresses the byte
+windows and scales in its own formula dialect; no CanZE code is copied.
+
+## OBDb data — CC BY-SA 4.0
+
+Research-index metadata — and, for the community and Toyota experimental
+profiles (Prius TNGA, e-TNGA BEV, and MG4 corroboration), executable signal
+positions and scales — are adapted from
+individually pinned repositories in the
+[OBDb organization](https://github.com/OBDb). Each affected entry records the
+repository, full commit SHA, source path, and locator; executable entries
+also pin the source-artifact SHA-256. The adapted catalog data is distributed
+under CC BY-SA 4.0, which Creative Commons has declared one-way compatible
+with GPL-3.0, the licence of this application. Telltale adds its own
+non-support and protocol-safety limitations.
+
+CC BY-SA 4.0:
+<https://creativecommons.org/licenses/by-sa/4.0/>
+
+### Toyota Prius TNGA experimental subset
+
+- `OBDb/Toyota-Prius`, pinned at `0a8c4ec72be860861548a3aeb2be007eecd83941`;
+  signalset artifact SHA-256
+  `e037a50ab2f256e5f2668aefc63c1ddb30b7686c372be199b3421972b933bd4b`.
+
+Three Mode 22 commands (`1F5B`, `1F9A`, `106C` on `7D2`/`7DA`) become five
+bounded signals, verified against the repository's pinned real-car captures:
+
+- `tests/test_cases/2022/commands/7D2.7DA.221F5B|fc=1.yaml` SHA-256
+  `af5e20e780de2301cc9ea36573693f3a741f076c28660fd2b54fb0803dfa724a`
+- `tests/test_cases/2022/commands/7D2.7DA.221F9A.yaml` SHA-256
+  `1f8580d24165148d7bd3381c186f5930963f6ebf690cf60a1e9315cf5196a1d9`
+- `tests/test_cases/2022/commands/7D2.22106C|fc=1.yaml` SHA-256
+  `c38d484fdfe129320d0761953aa1307deedd1d6480ca0350a32903b3402fb319`
+- `tests/test_cases/2024/commands/7D2.7DA.221F5B|fc=1.yaml` SHA-256
+  `0adf705a837eaa9e3a35c8d1f29b32fbb0c5771ec1cc17a75fdcf73d8db996c6`
+- `tests/test_cases/2024/commands/7D2.7DA.221F9A.yaml` SHA-256
+  `d875fc777502c62f680822e4d74b8c45f29010c8afc0b8112d6bb637c3df2f2e`
+- `tests/test_cases/2024/commands/7D2.22106C|fc=1.yaml` SHA-256
+  `31301ac259f9ec5451fc7a58aa5e1a88ca1e50a21159f9c6f924f441b9155f24`
+- `tests/test_cases/2025/commands/7D2.7DA.221F5B|fc=1.yaml` SHA-256
+  `5d428ca89c6b88c62c82806eb9ee8d03c3ebb5dc9fd8421a0d29ffe9cd1ff2a5`
+- `tests/test_cases/2025/commands/7D2.7DA.221F9A.yaml` SHA-256
+  `87f8f9538679e15b4ed89da4c0f869c4ac5643fc94e34b0744a5d3d1710663e3`
+- `tests/test_cases/2025/commands/7D2.22106C|fc=1.yaml` SHA-256
+  `7107565c0881ece40cabef721054882689e619b8127bc45cfaea0230acc552af`
+
+All licensed evidence is one organization, so the subset stays experimental:
+it may be installed as unverified PIDs and is not community-corroborated.
+
+### Toyota bZ4X / Subaru Solterra e-TNGA experimental subset
+
+- `OBDb/Toyota-bZ4X`, pinned at `fad9ece2987eeccc5c0027921aadb7c8cc72a9aa`;
+  signalset artifact SHA-256
+  `11e8b5957fe6ec9643f6d9afb62494e135aebb9a8c6e737c0ccd873d34b2cfdb`.
+
+Two Mode 22 commands (`1F5B`, `106C` on `7D2`/`7DA`) become three bounded
+signals, verified against the repository's pinned MY2023/2024 real-car
+captures:
+
+- `tests/test_cases/2023/commands/7D2.7DA.221F5B|fc=1.yaml` SHA-256
+  `c02e5306f403bcd72c6aa0a14ea1ba6e8c4f463ac84b02795da42e1d4692bb44`
+- `tests/test_cases/2023/commands/7D2.7DA.22106C|fc=1.yaml` SHA-256
+  `475756f35244a38d2b80e989255f4647eaffbfe157a813ce626693e24896376f`
+- `tests/test_cases/2024/commands/7D2.7DA.221F5B|fc=1.yaml` SHA-256
+  `c4ab86c21c7e331a542968188781cc3076c239faa187b4250d38fe7db49539ea`
+- `tests/test_cases/2024/commands/7D2.7DA.22106C|fc=1.yaml` SHA-256
+  `6dee61bd1525e38c552eb3959a35bcb8b5d1df369580fd5469d9ceddfd74d70f`
+
+A second family (Kezar) agrees the `1F5B` formula but polls a different
+header, so the subset stays experimental: installable as unverified PIDs,
+not community-corroborated. `1F9A` is not shipped.
+
+Consulted, disagreeing family — **not counted as community corroboration**,
+and `7D2`/`7DA` are not merged with `747`/`74F`:
+
+- `kezarjg/etnga-obd`, pinned at `817da3ec8ab83bf31f000b0d1c85716280ccd843`.
+  Dual licence: `bin/` MIT; `docs/`, `ecus/`, and `messages` are CC-BY-4.0
+  (`SPDX-License-Identifier: CC-BY-4.0`, LICENSE SHA-256
+  `1171fcd1652f1f988c1bbeb4725d3cfb09f43c6bf140d9d4fc66e875fe27cae7`).
+  Decoded knowledge from etnga-obd (https://github.com/kezarjg/etnga-obd),
+  licensed under CC-BY-4.0.
+  CC-BY-4.0: <https://creativecommons.org/licenses/by/4.0/>
+  - `ecus/ev-battery.md` SHA-256
+    `7b88e91c23a5ddeb84edf13138bd4ed88c68d5e0d42b5e4ab5bb234aefc6d0a8`
+    — `1F5B` and `1F9A` on Battery ECU `0x747`/`0x74F`, ISO-TP standard,
+    service `0x22`, SoC = byte×100/255.
+  - `ecus/ev.md` SHA-256
+    `e17df203ecebc8f5ecb8166a1eadd433545babee3d1039cc4de186603dd8a02b`
+    — EV ECU `0x7D2`/`0x7DA`; lists `0x106C` length 3 with no min/max formula.
+
+- `kezarjg/Open-Vehicle-Monitoring-System-3` (fork, same author), pinned at
+  `21474124189f8b6483467c6accfd74381d233bed` (MIT,
+  Copyright (c) 2011-2017 Open Vehicles).
+  - `vehicle/OVMS.V3/components/vehicle_toyota_etnga/src/vehicle_toyota_etnga.cpp`
+    SHA-256
+    `0814ae0c3e4d448eb9545bebbef8f758e25adf13d87d30deb3b6f8bd08b8466d`
+    — polls `1F5B` on `747`/`74F` and `1F9A` on `7D2`/`7DA` (`ISOTP_STD`,
+    no `106C`).
+  - `vehicle/OVMS.V3/components/vehicle_toyota_etnga/src/etnga_metrics.cpp`
+    SHA-256
+    `9d66c15130f352b78545065d8884bde4985f51ca42ef2bff25bef0e61c5cd907`.
+
+Official `openvehicles/Open-Vehicle-Monitoring-System-3` master
+`85074a0ae7a983b308c6e2e081185492527ee073` has no etnga module.
+
+### Kia EV9 (E-GMP) experimental subset
+
+- `OBDb/Kia-EV9`, pinned at `85d8cff25e849a6e421cda20cbadfd4630fe85e7`;
+  signalset artifact SHA-256
+  `dd9e4c5c5009f96bfcc9711ea49aab7e0a7fa3aaf7f693b37f2cdcd8c7bfb975`.
+  Licence: CC-BY-SA-4.0. Source path: `signalsets/v3/default.json`.
+
+Two Mode 22 commands (`0101`, `0105` on `7E4`/`7EC`) become sixteen
+bounded signals, verified against the repository's pinned MY2024/MY2025
+real-car captures:
+
+- `tests/test_cases/2024/commands/7E4.7EC.220101|fc=1.yaml` SHA-256
+  `4f9f9dc234749313a119630219cb1208a62b86792c03b6bb364172ba7f273538`
+- `tests/test_cases/2024/commands/7E4.7EC.220105|fc=1.yaml` SHA-256
+  `1ca0d53a21c12613033b8dc0f535dbefd75799e89395c766ef4f916d44a026b1`
+- `tests/test_cases/2025/commands/7E4.7EC.220101|fc=1.yaml` SHA-256
+  `0c3679bd49a3caf5e0c1d20472244970e301aabf0948042c3b8eb3a623528df7`
+- `tests/test_cases/2025/commands/7E4.7EC.220105|fc=1.yaml` SHA-256
+  `0ebd4ee425214f5e3a45190d7c2c8b6eeec42d3cdf329f77729cac18241d6aff`
+- `generations.yaml` SHA-256
+  `4ac04ffbd255d96181b0899a848352c2212c558669a78e5fafd46f3611a2c209`
+
+All licensed evidence is one organization, so the subset stays experimental:
+it may be installed as unverified PIDs and is not community-corroborated.
+
+2026-09-11 re-evaluation: `OBDb/Kia-EV9` HEAD is unchanged at
+`85d8cff25e849a6e421cda20cbadfd4630fe85e7`. Official OVMS
+`85074a0ae7a983b308c6e2e081185492527ee073` still has no EV9 module.
+`meatpiHQ/wican-fw` has no `ev9.json`. Pack current remains the signed
+repair of OBDb's unsigned 6540.2 A capture expectation.
+
+Consulted, disagreeing family — **not counted as community corroboration**;
+polarity disagrees (evDash negates the signed `/10` decode) and Telltale
+does not send its `021003`/`3E00` session commands:
+
+- `nickn17/evDash`, pinned at `c8c1e2d3acd6afa4719fa78b10359cd6708c72b2`.
+  Licence: MIT, Copyright (c) 2020 NiCK.n17
+  (LICENSE SHA-256
+  `9dd9f5db06cebd36aa1918b925481f67804742fd6ed9361d83c7990f9c870e9d`).
+  - `src/CarKiaEV9.cpp` SHA-256
+    `7aeaf84a910a26d0b08bc579e8eb3f3cb3a7f77dccb53283e810feee157aa2d5`
+    — model-explicit E-GMP parser; 220101 current is
+    `-hexToDecFromResponse(26,30,2,true)/10.0`.
+
+### MG4 Electric community corroboration
+
+- `OBDb/MG-MG4`, pinned at `271f098e5020ca0be109db68dc277d7bfa962c1e`;
+  signalset artifact SHA-256
+  `a1e27bcde44001454960ad9959d353e2b876993e2d9263ca0f1556cc0726b10d`.
+
+Corroborates the OVMS `vehicle_mg4` 7DF/7ED Mode 22 map. Telltale
+re-expresses the agreed byte windows in its own formula dialect.
+
+## MIT-licensed upstream research
+
+- `AkinYavuz1/wican-bridge`, pinned at
+  `aa11ba72ede480bb9c9071b84837eadbd2b7e29a`.
+
+Telltale adds a research-only index entry derived from the upstream README's
+2021 IONIQ 5 72 kWh scope and responder table. No bridge code or Mode 22 signal
+mapping is copied. The Telltale entry adds explicit warnings about raw WiCAN
+SLCAN transport, lost consecutive-frame prefixes, the session-controlled
+odometer path, and the difference between SAE PID `015B` remaining-life
+semantics and traction-battery state of charge. It has no executable command,
+is not installable, and is not presented as Telltale physical-vehicle proof.
+
+MIT License: <https://opensource.org/license/mit>
+
+## U.S. EPA FuelEconomy.gov snapshot
+
+Fuel-cell, plug-in hybrid, hybrid, and mild-hybrid index entries reference the
+separately hash-checked bundled U.S. EPA FuelEconomy.gov vehicle snapshot.
+Every added entry cites exact make/model rows and EPA identifiers. Those rows
+establish searchable U.S. model years and the snapshot's vehicle-type
+classification only. For mild hybrids, the exact EPA model string also has to
+say `MHEV`; the catalog does not infer mild-hybrid status from a manufacturer or
+repository name. The rows do not provide ECU identifiers, CAN responders,
+transport requirements, signal layouts, fuel-cell stack commands, or
+traction-battery equations. U.S. federal government data is identified in the
+catalog as public-domain source material.
+
+Telltale's change is limited to normalizing those identity rows into
+non-installable, non-executable research profiles with explicit diagnostic
+limitations. No EPA entry contributes a vehicle command.
+
+## Safety and support boundary
+
+- The Settings opt-in only reveals the experimental laboratory. Every command
+  still needs fresh, one-use, short-lived consent for the current connection,
+  profile, source revision, catalog hash, selected year, and fixed command.
+- The laboratory can send one pinned Mode 21 or Mode 22 read only. It cannot
+  scan, batch, automatically retry, install, schedule polling, persist a decoded
+  telemetry value, or publish one to the dashboard.
+- Response acceptance requires an exact responder, positive-response echo,
+  payload length, signal byte window, finite formula result, and bounded range.
+- Session control, writes, security access, actuator commands, passive CAN,
+  TP2.0, unsupported bus widths, and guessed responders or identifiers stay
+  closed.
+- Community entries become installable only after every validator gate
+  passes: independent cross-source corroboration, pinned artifact hashes,
+  exact identity evidence, and an install-time plus per-connection driver
+  confirmation. `ready` additionally requires real-vehicle evidence and
+  remains empty.
+- Pollable (Mode 22) `experimental` entries may also install when every
+  command is a bounded read `PollableServices` accepts; every derived value
+  is labelled unverified. They are not community-corroborated. Mode 21
+  experimental stays laboratory-only: never installed, polled, persisted,
+  or dashboarded.
+- Vehicle year, market, make, model, variant, and powertrain metadata are
+  applicability gates, not compatibility promises.
+- Real vehicle behavior still depends on vehicle generation, market, adapter,
+  ECU software, addressing, timing, and transport quality. Synthetic rigs and
+  physical phones do not prove real-vehicle PIDs or decoding.

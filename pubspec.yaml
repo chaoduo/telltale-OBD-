@@ -1,0 +1,156 @@
+name: torque_obd
+description: "Telltale — real-time vehicle telemetry over ELM327"
+publish_to: 'none'
+homepage: https://github.com/aa22396584/telltale
+repository: https://github.com/aa22396584/telltale
+issue_tracker: https://github.com/aa22396584/telltale/issues
+version: 1.0.14+15
+
+environment:
+  sdk: ^3.13.0
+  flutter: ">=3.47.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.2
+
+  # The theme uses CupertinoPageTransitionsBuilder on iOS/macOS, which draws
+  # Cupertino glyphs. Without this the release build warns that the font is
+  # missing and those icons render as tofu on Apple platforms.
+  cupertino_icons: ^1.0.8
+
+  # State management. Riverpod 3 without codegen — plain Notifier/Provider
+  # classes keep the build a single `flutter run` with no build_runner step.
+  flutter_riverpod: ^3.4.2
+
+  # Navigation
+  go_router: ^17.5.0
+
+  # Transports. Wi-Fi uses dart:io Socket directly, so no package is needed
+  # for it; BLE and Bluetooth Classic each need platform channels.
+  # BSD-3-Clause, which is the reason it is this package and not
+  # flutter_blue_plus. flutter_blue_plus moved to a source-available licence
+  # whose Section 3 requires a paid commercial licence for "any use ... by or
+  # for a for-profit company or corporation — including commercial use by
+  # individuals", and this app is sold. Its Section 1.4 also reserves the right
+  # to send build-time telemetry (package name, app name, version, date), which
+  # sits badly with an app whose privacy policy is "collects nothing".
+  universal_ble: ^2.1.1
+  # Forked to add `connect(channel:)`, which opens an RFCOMM socket
+  # directly instead of looking the service up by UUID.
+  #
+  # Upstream 0.1.8 only calls createRfcommSocketToServiceRecord and its
+  # insecure twin, both of which need the device to publish a usable SPP
+  # record. ELM327 clones commonly listen on channel 1 and advertise
+  # nothing: they pair normally and then cannot be connected to at all.
+  #
+  # Pinned to a commit rather than a branch so the dependency cannot move
+  # underneath a build. Public Codeberg mirror (same pin as the GitHub fork):
+  # https://codeberg.org/ImL1s/flutter_classic_bluetooth
+  #
+  # 0703821 migrated the fork to Flutter's Built-in Kotlin. Before it, every
+  # build of this app printed "Future versions of Flutter will fail to build if
+  # your app uses plugins that apply KGP" — a deadline, not a style note.
+  # F-Droid builders cannot clone the private/GitHub-gated fork URL, so the
+  # dependency URL is Codeberg while the commit pin stays identical.
+  flutter_classic_bluetooth:
+    git:
+      url: https://codeberg.org/ImL1s/flutter_classic_bluetooth.git
+      # Quoted: this SHA is all digits, and YAML would otherwise parse it as an
+      # integer — pub then rejects it with "The 'ref' field ... must be a string".
+      ref: "0703821"
+  # Pinned below the current 13.x on purpose: that line pulls
+  # permission_handler_android 14.x, whose AAR metadata demands compileSdk >= 37,
+  # and Android Gradle Plugin 9.1.0 — the version Flutter 3.47 ships — caps out
+  # at 36. 12.x pulls permission_handler_android 13.x and builds cleanly.
+  # Revisit when AGP supports the new minor-versioned platforms (android-37.0).
+  permission_handler: ^12.0.1
+
+  # Persistence for PID definitions, dashboard layout and vehicle profile.
+  shared_preferences: ^2.5.5
+
+  # Trip / performance charts
+  fl_chart: ^1.2.0
+
+  # PID definition import & export in the CSV schema Torque users already
+  # have files in — the point is that an existing library imports as-is.
+  csv: ^8.0.0
+  share_plus: ^13.3.0
+  path_provider: ^2.1.6
+  file_picker: ^12.0.0
+
+  # Keeps the screen alive while the dashboard is live. A telemetry display
+  # that blanks after 30 seconds is useless in a moving car, and the driver
+  # cannot keep poking the screen to stop it.
+  wakelock_plus: ^1.7.0
+
+  # Opens the maintainer Shopee affiliate listing in the store app or browser.
+  url_launcher: ^6.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  # Drives the app on a real device through programmatic widget events rather
+  # than the system input layer, which is what makes the BLE path testable at
+  # all: `adb shell input` cannot reach an app behind a secure lockscreen, and
+  # every phone that is a useful BLE test target has one.
+  integration_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+  # Persist-false SharedPreferences store for custom-PID commit tests.
+  shared_preferences_platform_interface: 2.4.2
+
+# Launcher icons are generated from assets/icon/*.svg via Chrome headless into
+# the matching PNGs, then expanded to every density by:
+#   flutter pub run flutter_launcher_icons
+# The adaptive foreground is a separate render with the gauge scaled to 60% so
+# it survives Android's mask-and-parallax treatment.
+flutter_launcher_icons:
+  image_path: assets/icon/icon.png
+  android: true
+  adaptive_icon_background: "#06080C"
+  adaptive_icon_foreground: assets/icon/icon_foreground.png
+  adaptive_icon_monochrome: assets/icon/icon_foreground.png
+  ios: true
+  remove_alpha_ios: true
+  background_color_ios: "#06080C"
+  macos:
+    generate: true
+    image_path: assets/icon/icon.png
+
+flutter:
+  generate: true
+  # A command without --flavor must build/install the real field package, not
+  # both field and synthetic rig variants (which leaves Flutter unable to pick
+  # a single output APK). Rig automation always opts in explicitly.
+  default-flavor: field
+  uses-material-design: true
+
+  assets:
+    - THIRD_PARTY_NOTICES_POWERTRAIN_BATTERY.md
+    - assets/licenses/Apache-2.0.txt
+    - assets/licenses/wican-bridge-MIT.txt
+    - assets/licenses/ovms-MIT.txt
+    - assets/licenses/GPL-3.0.txt
+    - assets/powertrain_battery/powertrain_battery_catalog.json
+    - assets/powertrain_battery/powertrain_battery_catalog.manifest.json
+    - assets/vehicle_catalog/us_epa_vehicles.csv
+    - assets/vehicle_catalog/us_epa_vehicles.manifest.json
+    - assets/vehicle_catalog/tw_moeaea_vehicles.csv
+    - assets/vehicle_catalog/tw_moeaea_vehicles.manifest.json
+    - assets/vehicle_catalog/ca_nrcan_vehicles.csv
+    - assets/vehicle_catalog/ca_nrcan_vehicles.manifest.json
+
+  # Fonts are bundled rather than fetched at runtime: demo mode must work with
+  # no network, and a runtime fetch shows a fallback-font flash on first frame.
+  fonts:
+    - family: SpaceGrotesk
+      fonts:
+        - asset: assets/fonts/SpaceGrotesk[wght].ttf
+    - family: JetBrainsMono
+      fonts:
+        - asset: assets/fonts/JetBrainsMono[wght].ttf
